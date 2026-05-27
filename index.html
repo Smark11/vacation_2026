@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Northern Prelude & an Italian Summer · Summer 2026</title>
+<meta name="description" content="A family of three, nineteen days, June–July 2026: from the far North down through the Ligurian coast and the Italian lakes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4ead6;
+    --paper-2:#efe1c7;
+    --paper-3:#e7d6b6;
+    --ink:#241d14;
+    --ink-soft:#5c5040;
+    --terracotta:#bd4a26;
+    --teal:#15605b;
+    --gold:#bb8b2c;
+    --slate:#3f6781;      /* Iceland accent */
+    --nordic:#b23528;     /* Copenhagen accent */
+    --lake:#2c6f57;       /* Lakes accent */
+    --accent:var(--terracotta);
+    --maxw:1180px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --display:"Fraunces",Georgia,serif;
+    --body:"Newsreader",Georgia,serif;
+    --mono:"Courier Prime","Courier New",monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--body);font-size:clamp(17px,1.15vw,20px);line-height:1.65;
+    font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  /* film grain + paper warmth overlay */
+  body::after{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection{background:var(--terracotta);color:var(--paper);}
+
+  a{color:inherit;}
+  img{display:block;max-width:100%;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  .mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;}
+  .eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;color:var(--accent);font-weight:700;}
+
+  /* ---------- progress + nav ---------- */
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--terracotta);z-index:10000;transition:width .08s linear;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;justify-content:space-between;align-items:center;
+    padding:14px 28px;mix-blend-mode:difference;color:#fff;}
+  nav .brand{font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;}
+  nav .links{display:flex;gap:22px;}
+  nav .links a{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase;font-size:.66rem;text-decoration:none;opacity:.85;}
+  nav .links a:hover{opacity:1;}
+  @media(max-width:780px){nav .links{display:none;}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero .bg{position:absolute;inset:-8% 0 0 0;background-size:cover;background-position:center 40%;z-index:0;will-change:transform;}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(20,15,9,.45) 0%,rgba(20,15,9,.12) 35%,rgba(20,15,9,.35) 70%,rgba(36,29,20,.92) 100%);}
+  .hero .inner{position:relative;z-index:2;color:var(--paper);padding-bottom:8vh;width:100%;}
+  .hero h1{font-family:var(--display);font-weight:900;font-optical-sizing:144;
+    font-size:clamp(2.9rem,8.2vw,7.4rem);line-height:.95;letter-spacing:-.015em;margin:.18em 0 .28em;
+    text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.35);}
+  .hero h1 em{font-style:italic;color:#f3cf8e;font-weight:600;}
+  .hero .sub{font-size:clamp(1.05rem,1.7vw,1.4rem);max-width:34ch;color:#f1e6d2;font-weight:420;}
+  .hero .eyebrow{color:#f3cf8e;}
+  .hero .scrollcue{position:absolute;right:28px;bottom:6vh;z-index:2;color:var(--paper);writing-mode:vertical-rl;
+    font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.64rem;opacity:.8;}
+  .hero .scrollcue::after{content:"";display:block;width:1px;height:48px;background:currentColor;margin:12px auto 0;animation:cue 2.4s var(--ease) infinite;}
+  @keyframes cue{0%,100%{transform:scaleY(.4);opacity:.4;transform-origin:top;}50%{transform:scaleY(1);opacity:.9;}}
+
+  /* hero staggered entrance */
+  .rise{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease) forwards;}
+  .rise.d1{animation-delay:.15s;}.rise.d2{animation-delay:.35s;}.rise.d3{animation-delay:.55s;}.rise.d4{animation-delay:.75s;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+
+  /* ---------- route ribbon ---------- */
+  .route{background:var(--ink);color:var(--paper);padding:64px 0;}
+  .route h2{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2.2rem);margin:0 0 6px;}
+  .route .lead{color:#d8c6a6;max-width:60ch;margin:0 0 40px;}
+  .stops{display:flex;flex-wrap:wrap;gap:0;align-items:flex-start;}
+  .stop{flex:1 1 120px;min-width:120px;position:relative;padding-top:30px;text-align:center;}
+  .stop::before{content:"";position:absolute;top:8px;left:0;right:0;height:2px;
+    background-image:linear-gradient(90deg,#7d6c4d 0 60%,transparent 60%);background-size:12px 2px;}
+  .stop:first-child::before{left:50%;}
+  .stop:last-child::before{right:50%;}
+  .stop .dot{position:absolute;top:2px;left:50%;transform:translateX(-50%);width:13px;height:13px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--gold);}
+  .stop.key .dot{background:var(--terracotta);border-color:var(--terracotta);box-shadow:0 0 0 4px rgba(189,74,38,.25);}
+  .stop .place{font-family:var(--display);font-size:1.05rem;font-weight:600;}
+  .stop .coord{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:#b39d77;text-transform:uppercase;}
+  .stop .when{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:#e9d9b8;margin-top:4px;}
+  @media(max-width:680px){.stops{flex-direction:column;gap:0;}
+    .stop{display:flex;text-align:left;gap:14px;padding:14px 0 14px 4px;align-items:baseline;}
+    .stop::before{top:0;bottom:0;left:5px;right:auto;width:2px;height:auto;background-image:linear-gradient(180deg,#7d6c4d 0 60%,transparent 60%);background-size:2px 12px;}
+    .stop:first-child::before{top:50%;}.stop:last-child::before{bottom:50%;}
+    .stop .dot{top:18px;left:5px;transform:translateX(-50%);}
+    .stop .meta{padding-left:18px;}}
+
+  /* ---------- chapters ---------- */
+  .chapter{position:relative;padding:clamp(70px,9vw,130px) 0;}
+  .chapter .numeral{position:absolute;top:.1em;right:4%;font-family:var(--display);font-weight:900;
+    font-size:clamp(8rem,26vw,22rem);line-height:1;color:var(--accent);opacity:.08;z-index:0;pointer-events:none;}
+  .chapter .wrap{position:relative;z-index:1;}
+  .ch-head{max-width:62ch;margin-bottom:48px;}
+  .ch-head .eyebrow{margin-bottom:14px;display:block;}
+  .ch-head h2{font-family:var(--display);font-weight:600;font-optical-sizing:120;
+    font-size:clamp(2.1rem,5.2vw,4rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 .35em;text-wrap:balance;}
+  .ch-head h2 em{font-style:italic;color:var(--accent);}
+  .ch-head .lede{font-size:clamp(1.1rem,1.5vw,1.32rem);color:var(--ink);}
+  .ch-head .lede .drop{float:left;font-family:var(--display);font-weight:900;font-size:3.6em;line-height:.72;
+    padding:.06em .12em 0 0;color:var(--accent);}
+
+  .split{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;}
+  .split.flip{grid-template-columns:.85fr 1.15fr;}
+  .split.flip .media{order:2;}
+  @media(max-width:860px){.split,.split.flip{grid-template-columns:1fr;gap:30px;}.split.flip .media{order:0;}}
+
+  figure{margin:0;}
+  .frame{position:relative;overflow:hidden;border-radius:2px;box-shadow:0 26px 60px -28px rgba(36,25,12,.6);background:var(--paper-3);}
+  .frame img{width:100%;height:100%;object-fit:cover;filter:saturate(1.04) contrast(1.03);transition:transform 1.1s var(--ease);}
+  .frame:hover img{transform:scale(1.05);}
+  .frame.tall img{aspect-ratio:4/5;}
+  .frame.wide img{aspect-ratio:3/2;}
+  figcaption{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:.62rem;color:var(--ink-soft);margin-top:10px;}
+
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px;}
+  .gal .frame img{aspect-ratio:1/1;}
+  @media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr);}}
+
+  .highlights{list-style:none;padding:0;margin:26px 0 0;}
+  .highlights li{position:relative;padding:11px 0 11px 30px;border-top:1px solid rgba(92,80,64,.22);}
+  .highlights li:last-child{border-bottom:1px solid rgba(92,80,64,.22);}
+  .highlights li::before{content:"✦";position:absolute;left:0;top:11px;color:var(--accent);font-size:.8em;}
+  .highlights strong{font-weight:600;}
+
+  /* ticket / boarding pass */
+  .ticket{margin-top:30px;background:var(--paper-2);border:1px solid rgba(92,80,64,.3);border-radius:4px;
+    display:flex;overflow:hidden;box-shadow:0 14px 30px -22px rgba(36,25,12,.6);}
+  .ticket .stub{background:var(--accent);color:var(--paper);padding:16px 14px;display:flex;align-items:center;justify-content:center;
+    writing-mode:vertical-rl;text-orientation:mixed;font-family:var(--mono);letter-spacing:.24em;text-transform:uppercase;font-size:.62rem;font-weight:700;}
+  .ticket .body{padding:16px 20px;flex:1;}
+  .ticket .route-code{font-family:var(--display);font-weight:600;font-size:1.5rem;display:flex;align-items:center;gap:12px;}
+  .ticket .route-code span{color:var(--accent);}
+  .ticket .det{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;line-height:1.7;}
+
+  .pick{position:absolute;top:38px;left:4%;z-index:2;transform:rotate(-9deg);
+    font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;
+    color:var(--terracotta);border:2.5px solid var(--terracotta);border-radius:6px;padding:8px 14px;
+    background:rgba(244,234,214,.6);box-shadow:0 2px 0 rgba(189,74,38,.25);opacity:.92;}
+
+  .tag{display:inline-block;font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:.6rem;
+    padding:4px 10px;border:1px solid var(--accent);color:var(--accent);border-radius:100px;margin:0 8px 8px 0;}
+
+  /* divider */
+  .rule{display:flex;align-items:center;gap:16px;color:var(--ink-soft);margin:8px 0 0;}
+  .rule::before,.rule::after{content:"";height:1px;background:rgba(92,80,64,.3);flex:1;}
+  .rule span{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;}
+
+  .alt-band{background:var(--paper-2);}
+
+  /* ---------- itinerary ---------- */
+  .timeline{border-left:2px solid rgba(92,80,64,.25);margin:30px 0 0;padding-left:0;list-style:none;}
+  .timeline li{position:relative;padding:0 0 26px 30px;}
+  .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--terracotta);}
+  .timeline .date{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .timeline .ev{font-family:var(--display);font-size:1.15rem;font-weight:600;margin-top:2px;}
+  .timeline .note{color:var(--ink-soft);font-size:.95rem;}
+
+  /* ---------- numbers / cost ---------- */
+  .numbers{background:var(--ink);color:var(--paper);padding:clamp(70px,9vw,120px) 0;}
+  .numbers .eyebrow{color:var(--gold);}
+  .numbers h2{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5vw,3.6rem);margin:.2em 0 .5em;line-height:1.02;}
+  .numbers h2 em{font-style:italic;color:var(--gold);}
+  .numbers .intro{color:#d8c6a6;max-width:62ch;}
+  .ledger{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:46px 0 0;}
+  @media(max-width:720px){.ledger{grid-template-columns:1fr;}}
+  .card{background:#2c2419;border:1px solid #4a3d28;border-radius:6px;padding:28px;position:relative;}
+  .card.win{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset;}
+  .card h3{font-family:var(--display);font-weight:600;font-size:1.7rem;margin:0;display:flex;align-items:center;gap:12px;}
+  .card .flag{font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:3px 8px;border-radius:100px;}
+  .card .lines{margin:20px 0 0;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;}
+  .card .lines div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed #4a3d28;color:#d8c6a6;}
+  .card .lines div b{color:var(--paper);font-weight:700;}
+  .card .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:18px;}
+  .card .total .lbl{font-family:var(--mono);text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:#d8c6a6;}
+  .card .total .amt{font-family:var(--display);font-weight:900;font-size:2rem;color:var(--paper);}
+  .card.win .total .amt{color:var(--gold);}
+  .footnotes{margin:34px 0 0;color:#bdad7e;}
+  .footnotes p{color:#c9b893;font-size:.92rem;max-width:74ch;margin:.5em 0;}
+  .footnotes .mono{color:var(--gold);}
+
+  /* ---------- footer ---------- */
+  footer{background:#16110a;color:#9a8a6f;padding:60px 0 80px;font-size:.84rem;}
+  footer h4{font-family:var(--display);color:var(--paper);font-weight:600;font-size:1.3rem;margin:0 0 6px;}
+  footer .credits{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;line-height:1.9;color:#6f6249;margin-top:26px;text-transform:uppercase;}
+  footer a{color:#b6a47f;}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.08s;}.reveal.d2{transition-delay:.18s;}.reveal.d3{transition-delay:.28s;}.reveal.d4{transition-delay:.38s;}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;}
+    .reveal{opacity:1;transform:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+  <div class="brand">Senerth · MMXXVI</div>
+  <div class="links">
+    <a href="#north">North</a>
+    <a href="#riviera">Riviera</a>
+    <a href="#lakes">Lakes</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#numbers">The Numbers</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="bg" id="heroBg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Manarola_NW_Cinque_Terre_Sep23_A7C_07233.jpg/1920px-Manarola_NW_Cinque_Terre_Sep23_A7C_07233.jpg');"></div>
+  <div class="inner wrap">
+    <div class="eyebrow rise d1">June 25 – July 13, 2026 · A family of three</div>
+    <h1 class="rise d2">A Northern Prelude<br>& an <em>Italian Summer</em></h1>
+    <p class="sub rise d3">Boston to the edge of the Arctic, then south through the pastel villages of the Ligurian coast and the great Italian lakes. Nineteen days. One unforgettable arc — from glacier light to Riviera gold.</p>
+  </div>
+  <div class="scrollcue rise d4">Scroll</div>
+</header>
+
+<!-- ============ ROUTE RIBBON ============ -->
+<section class="route">
+  <div class="wrap">
+    <h2 class="reveal">The arc of the journey</h2>
+    <p class="lead reveal d1">One direction, no backtracking — a cool-weather opener, the warm heart of the Italian Riviera, and a lakes-and-castles finale that drifts you gently back toward the flight home.</p>
+    <div class="stops">
+      <div class="stop reveal"><span class="dot"></span><div class="meta"><div class="place">Boston</div><div class="coord">42°N · BOS</div><div class="when">Jun 25</div></div></div>
+      <div class="stop key reveal d1"><span class="dot"></span><div class="meta"><div class="place">Reykjavík<span style="opacity:.6"> / Copenhagen</span></div><div class="coord">64°N · KEF</div><div class="when">Jun 26–30</div></div></div>
+      <div class="stop key reveal d1"><span class="dot"></span><div class="meta"><div class="place">Cinque Terre</div><div class="coord">44°N · Monterosso</div><div class="when">Jul 1–5</div></div></div>
+      <div class="stop key reveal d2"><span class="dot"></span><div class="meta"><div class="place">Lake Como</div><div class="coord">46°N · Varenna</div><div class="when">Jul 5–8</div></div></div>
+      <div class="stop key reveal d2"><span class="dot"></span><div class="meta"><div class="place">Lake Garda</div><div class="coord">45°N · Peschiera</div><div class="when">Jul 8–12</div></div></div>
+      <div class="stop reveal d3"><span class="dot"></span><div class="meta"><div class="place">Milan → Home</div><div class="coord">45°N · MXP → EWR</div><div class="when">Jul 13</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER I — THE NORTH ============ -->
+<section class="chapter" id="north" style="--accent:var(--slate);">
+  <div class="numeral">I</div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Chapter One · The Northern Opener</span>
+      <h2>Begin where the <em>sun won't set</em></h2>
+      <p class="lede"><span class="drop">T</span>he trip opens far to the north, in a place engineered to make a nine-year-old's jaw drop — and to feel like a different planet before the Italian heat. Two ways to do it. We're leaning hard toward the first.</p>
+    </div>
+
+    <!-- Iceland -->
+    <div class="split reveal" style="position:relative;">
+      <div class="pick">★ Our pick</div>
+      <figure class="media">
+        <div class="frame wide"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kirkjufell%2C_Iceland%2C_20240714_1631_0713.jpg/1920px-Kirkjufell%2C_Iceland%2C_20240714_1631_0713.jpg" alt="Kirkjufell mountain reflected in still water, Iceland"></div>
+        <figcaption>Kirkjufell, Snæfellsnes — Iceland in summer</figcaption>
+      </figure>
+      <div class="content">
+        <h3 style="font-family:var(--display);font-weight:600;font-size:2rem;margin:0 0 .2em;">Reykjavík & the Ring of Fire</h3>
+        <p>Land of fire, ice, and the midnight sun. A five-hour red-eye from Boston drops you into a world of erupting geysers, black-sand beaches, and waterfalls you can walk <em>behind</em> — all beneath a sky that glows for twenty-one hours a day. Three or four days here, then a single Icelandair hop carries you straight on to Milan, no second ticket needed.</p>
+        <ul class="highlights">
+          <li><strong>The Blue &amp; Sky Lagoons</strong> — milky-turquoise geothermal soaks, kids welcome</li>
+          <li><strong>The Golden Circle</strong> — Þingvellir's rift, the Geysir, thundering Gullfoss</li>
+          <li><strong>The South Coast</strong> — Skógafoss, Seljalandsfoss & Reynisfjara's black sand</li>
+          <li><strong>Midnight sun</strong> — ~21 hours of daylight; bring the kid an eye-mask</li>
+        </ul>
+        <div class="ticket">
+          <div class="stub">Boarding</div>
+          <div class="body">
+            <div class="route-code">BOS <span>✈</span> KEF</div>
+            <div class="det">Icelandair FI630 · dep 8:50 PM · ~5h15<br>One ticket through to Milan (free Iceland stopover)</div>
+          </div>
+        </div>
+        <div class="gal">
+          <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Blue_Lagoon_with_%C3%9Eorbj%C3%B6rn%2C_Iceland%2C_20230430_1626_3692.jpg/1920px-Blue_Lagoon_with_%C3%9Eorbj%C3%B6rn%2C_Iceland%2C_20230430_1626_3692.jpg" alt="The Blue Lagoon geothermal spa, Iceland"></figure>
+          <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Gullfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_119.JPG/1920px-Gullfoss%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-16%2C_DD_119.JPG" alt="Gullfoss waterfall on the Golden Circle"></figure>
+          <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Sk%C3%B3gafoss_July_2014.JPG/1920px-Sk%C3%B3gafoss_July_2014.JPG" alt="Skógafoss waterfall, south Iceland"></figure>
+          <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Reynisfjara_and_Reynisdrangar%2C_Iceland.jpg/1920px-Reynisfjara_and_Reynisdrangar%2C_Iceland.jpg" alt="Reynisfjara black sand beach and sea stacks"></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule reveal" style="margin:60px 0;"><span>or, the storybook alternative</span></div>
+
+    <!-- Copenhagen -->
+    <div class="split flip reveal" style="--accent:var(--nordic);">
+      <figure class="media">
+        <div class="frame wide"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Kopenhagen_%28DK%29%2C_Nyhavn_--_2017_--_1711.jpg/1920px-Kopenhagen_%28DK%29%2C_Nyhavn_--_2017_--_1711.jpg" alt="Colourful townhouses along the Nyhavn canal, Copenhagen"></div>
+        <figcaption>Nyhavn's painted harbour, Copenhagen</figcaption>
+      </figure>
+      <div class="content">
+        <h3 style="font-family:var(--display);font-weight:600;font-size:2rem;margin:0 0 .2em;color:var(--nordic);">Copenhagen, the easy city</h3>
+        <p>The gentler option: seven hours overnight to a flat, bike-friendly capital of candy-coloured canals and the world's loveliest old amusement park. Warmer than Iceland, walkable end to end, and a pace a kid can keep — then a short hop down to Pisa lands you closest to the coast.</p>
+        <ul class="highlights">
+          <li><strong>Tivoli Gardens</strong> — 1843 amusement park, magic after dark</li>
+          <li><strong>Nyhavn &amp; the canals</strong> — boat tours past the painted houses</li>
+          <li><strong>Two wheels</strong> — the whole city, by bike, with the kid</li>
+          <li><strong>Closest landing</strong> — CPH → Pisa, then a 1.5-hr train to Monterosso</li>
+        </ul>
+        <div class="ticket">
+          <div class="stub">Boarding</div>
+          <div class="body">
+            <div class="route-code">BOS <span>✈</span> CPH</div>
+            <div class="det">SAS SK928 · dep 5:40 PM · ~7h25<br>Then CPH → Pisa (≈$30–60 budget hop)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER II — CINQUE TERRE ============ -->
+<section class="chapter alt-band" id="riviera" style="--accent:var(--teal);">
+  <div class="numeral">II</div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Chapter Two · The Ligurian Coast · Jul 1–5</span>
+      <h2>Five villages, <em>one little train</em></h2>
+      <p class="lede"><span class="drop">T</span>he warm heart of the trip, and the one fixed point on the calendar. Monterosso al Mare — the only Cinque Terre village with a real sandy beach — is home base for four days of swimming, focaccia, and pesto where it was invented.</p>
+    </div>
+    <div class="split reveal">
+      <figure class="media">
+        <div class="frame wide"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Porto_di_Monterosso_al_Mare.jpg/1920px-Porto_di_Monterosso_al_Mare.jpg" alt="The harbour of Monterosso al Mare, Cinque Terre"></div>
+        <figcaption>Monterosso al Mare — your base on the coast</figcaption>
+      </figure>
+      <div class="content">
+        <p>The five villages are stitched into the cliffs and linked by the <em>Cinque Terre Express</em>, a regional train that pops between tunnels every few minutes. Hop them at will, ride a boat past the headlands at golden hour, and take the gentle coastal paths between swims.</p>
+        <ul class="highlights">
+          <li><strong>Village-hop</strong> — Riomaggiore, Manarola, Corniglia, Vernazza, Monterosso</li>
+          <li><strong>Beach days</strong> — Monterosso's sand, sun, and seaside cafés</li>
+          <li><strong>By boat</strong> — the whole coast from the water at sunset</li>
+          <li><strong>Eat</strong> — trofie al pesto, fried anchovies, focaccia di Recco</li>
+        </ul>
+        <div style="margin-top:22px;">
+          <span class="tag">Fixed dates</span><span class="tag">Hotel booked</span><span class="tag">4 nights</span>
+        </div>
+      </div>
+    </div>
+    <figure class="reveal d1" style="margin-top:40px;">
+      <div class="frame" style="aspect-ratio:21/9;"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Cloudy_sunset_over_Vernazza.jpg/1920px-Cloudy_sunset_over_Vernazza.jpg" alt="Sunset over Vernazza harbour, Cinque Terre" style="height:100%;"></div>
+      <figcaption>Sunset over neighbouring Vernazza</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CHAPTER III — LAKE COMO ============ -->
+<section class="chapter" id="lakes" style="--accent:var(--lake);">
+  <div class="numeral">III</div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Chapter Three · The Lakes I · Jul 5–8</span>
+      <h2>Lake Como, <em>impossibly elegant</em></h2>
+      <p class="lede"><span class="drop">G</span>lacier-carved, villa-lined, and gorgeous from every angle. From a base in Varenna you ferry between the lake's prettiest towns, wander garden terraces, and swim off warm stone — somewhere brand new to all three of you.</p>
+    </div>
+    <div class="split flip reveal">
+      <figure class="media">
+        <div class="frame wide"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Town_of_Bellagio_%28Lake_Como%29_seen_from_the_lake_%2836722979021%29.jpg/1920px-Town_of_Bellagio_%28Lake_Como%29_seen_from_the_lake_%2836722979021%29.jpg" alt="Bellagio seen from Lake Como"></div>
+        <figcaption>Bellagio, "the pearl of Lake Como"</figcaption>
+      </figure>
+      <div class="content">
+        <p>Make Varenna your base — small, romantic, and on the train line — then let the ferries do the work. Bellagio and Menaggio are minutes across the water, and a boat ride away sits one of cinema's most famous villas.</p>
+        <ul class="highlights">
+          <li><strong>Ferry-hop</strong> — Varenna, Bellagio &amp; Menaggio across the lake</li>
+          <li><strong>Villa del Balbianello</strong> — the <em>Star Wars</em> &amp; James Bond villa, by boat</li>
+          <li><strong>Swim &amp; stroll</strong> — lakeside gardens and the Brunate funicular view</li>
+        </ul>
+        <figure style="margin-top:18px;">
+          <div class="frame wide"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Vista_dal_lago_su_Villa_del_Balbianello%2C_Bene_FAI_sul_Lago_di_Como.jpg/1920px-Vista_dal_lago_su_Villa_del_Balbianello%2C_Bene_FAI_sul_Lago_di_Como.jpg" alt="Villa del Balbianello on its wooded point, Lake Como"></div>
+          <figcaption>Villa del Balbianello on its wooded point</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER IV — LAKE GARDA ============ -->
+<section class="chapter alt-band" style="--accent:var(--lake);">
+  <div class="numeral">IV</div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Chapter Four · The Lakes II · Jul 8–12</span>
+      <h2>Lake Garda — <em>the fun one</em></h2>
+      <p class="lede"><span class="drop">I</span>taly's biggest lake, and its best for a nine-year-old. Theme-park thrills, a fairy-tale castle ringed by Roman ruins, lake swimming, and a 2,000-year-old arena a half-hour down the road in Verona.</p>
+    </div>
+    <div class="split reveal">
+      <figure class="media">
+        <div class="frame wide"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Sirmione%2C_lake_Garda_%2826241810639%29.jpg/1920px-Sirmione%2C_lake_Garda_%2826241810639%29.jpg" alt="The peninsula of Sirmione on Lake Garda from above"></div>
+        <figcaption>Sirmione, reaching out into Lake Garda</figcaption>
+      </figure>
+      <div class="content">
+        <p>Base in the south near Peschiera — train-connected and right by the rides. Then split the days between water, history, and pure kid joy.</p>
+        <ul class="highlights">
+          <li><strong>Gardaland</strong> — Italy's biggest theme park, a full day of rides</li>
+          <li><strong>Sirmione</strong> — the Scaliger water-castle &amp; Grotte di Catullo Roman ruins</li>
+          <li><strong>Verona day trip</strong> — the Roman Arena &amp; Juliet's balcony</li>
+          <li><strong>Malcesine</strong> — cable car up Monte Baldo, boats on the lake</li>
+        </ul>
+        <div class="gal" style="grid-template-columns:repeat(2,1fr);margin-top:20px;">
+          <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Malcesine_-_Castle_-_Goethe%27s_direction_of_view.jpg/1920px-Malcesine_-_Castle_-_Goethe%27s_direction_of_view.jpg" alt="Malcesine castle above Lake Garda"></figure>
+          <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/The_Verona_Arena_10.08.2012.jpg/1920px-The_Verona_Arena_10.08.2012.jpg" alt="The Roman Arena of Verona"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MILAN & HOME ============ -->
+<section class="chapter" style="--accent:var(--gold);">
+  <div class="numeral">V</div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Finale · Milan & Home · Jul 12–13</span>
+      <h2>One last night by the <em>Duomo</em></h2>
+      <p class="lede"><span class="drop">A</span> final northern-Italian evening beneath the cathedral's marble spires, then a daytime flight home — into Newark, the savviest way back and a short drive from Simsbury.</p>
+    </div>
+    <div class="split flip reveal">
+      <figure class="media">
+        <div class="frame wide"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Milano%2C_Duomo_with_Milan_Cathedral_and_Galleria_Vittorio_Emanuele_II%2C_2016.jpg/1920px-Milano%2C_Duomo_with_Milan_Cathedral_and_Galleria_Vittorio_Emanuele_II%2C_2016.jpg" alt="Milan Cathedral and the Galleria Vittorio Emanuele II"></div>
+        <figcaption>The Duomo & Galleria, Milan</figcaption>
+      </figure>
+      <div class="content">
+        <p>Rooftop views off the Duomo, a last gelato in the Galleria, and a night near the airport before the morning flight. You're home by late afternoon, a day inside the deadline.</p>
+        <div class="ticket" style="--accent:var(--gold);">
+          <div class="stub" style="color:var(--ink);">Homeward</div>
+          <div class="body">
+            <div class="route-code">MXP <span>✈</span> EWR</div>
+            <div class="det">United · daytime · nonstop<br>~$500–700 cheaper than flying into Boston</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ITINERARY ============ -->
+<section class="chapter alt-band" id="itinerary" style="--accent:var(--terracotta);">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">The whole trip, day by day</span>
+      <h2>Itinerary at a glance</h2>
+      <p class="lede">The Iceland version below; Copenhagen simply swaps the first leg (and lands you at Pisa instead of Milan).</p>
+    </div>
+    <ul class="timeline reveal">
+      <li><div class="date">Thu · Jun 25</div><div class="ev">Depart Boston</div><div class="note">1 PM out of Simsbury → evening flight north</div></li>
+      <li><div class="date">Jun 26–29</div><div class="ev">Reykjavík <span style="color:var(--ink-soft);font-weight:400;">/ or Copenhagen</span></div><div class="note">Lagoons, Golden Circle, South Coast — or Tivoli & the canals</div></li>
+      <li><div class="date">Tue · Jun 30</div><div class="ev">North → Milan</div><div class="note">Icelandair to Milan (or CPH → Pisa); a first Italian night</div></li>
+      <li><div class="date">Jul 1–5</div><div class="ev">Cinque Terre · Monterosso</div><div class="note">Four nights on the Ligurian coast — fixed</div></li>
+      <li><div class="date">Jul 5–8</div><div class="ev">Lake Como · Varenna</div><div class="note">Ferries, villas & a swim</div></li>
+      <li><div class="date">Jul 8–12</div><div class="ev">Lake Garda · Peschiera</div><div class="note">Gardaland, Sirmione, a Verona day trip</div></li>
+      <li><div class="date">Sun · Jul 12</div><div class="ev">Milan</div><div class="note">Last night by the Duomo, near the airport</div></li>
+      <li><div class="date">Mon · Jul 13</div><div class="ev">Fly home → Newark</div><div class="note">Daytime flight; ~2.5 hr drive to Simsbury · home a day early</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ THE NUMBERS ============ -->
+<section class="numbers" id="numbers">
+  <div class="wrap">
+    <span class="eyebrow reveal">Last of all · the money</span>
+    <h2 class="reveal d1">The <em>numbers</em></h2>
+    <p class="intro reveal d1">Best real fare data as of late May 2026, for the family of three, economy. The two options differ only on the opening leg — the home flight is identical. Treat these as live-verified ranges: peak-summer prices climb, so book sooner.</p>
+
+    <div class="ledger">
+      <div class="card win reveal d1">
+        <h3>Iceland <span class="flag">Our pick</span></h3>
+        <div class="lines">
+          <div><span>Outbound — BOS→Reykjavík→Milan (Icelandair, one ticket)</span><b>$1,215–1,365</b></div>
+          <div><span>Home — Milan→Newark (United, shared)</span><b>$1,350–1,950</b></div>
+        </div>
+        <div class="total"><span class="lbl">Family airfare</span><span class="amt">≈ $2,600–3,300</span></div>
+      </div>
+      <div class="card reveal d2">
+        <h3>Copenhagen</h3>
+        <div class="lines">
+          <div><span>Outbound — BOS→Copenhagen + Copenhagen→Pisa</span><b>$720–960</b></div>
+          <div><span>Home — Milan→Newark (United, shared)</span><b>$1,350–1,950</b></div>
+        </div>
+        <div class="total"><span class="lbl">Family airfare</span><span class="amt">≈ $2,100–2,900</span></div>
+      </div>
+    </div>
+
+    <div class="footnotes reveal">
+      <p>↪ <span class="mono">Copenhagen ≈ $450 cheaper</span> up front (the Pisa hop is a budget fare vs. Iceland's $200+ leg to Milan) — but Iceland wins on the kid-friendly 8:50 PM departure, the single through-ticket, and the shorter flight. The transatlantic crossings themselves are nearly a wash.</p>
+      <p>↪ <span class="mono">Flying home into Newark saves ≈ $500–700</span> for the family vs. flying into Boston. The home flight is daytime, so it's a relaxed drive back to Simsbury.</p>
+      <p>↪ Not shown: trains (≈ €250–400 total), lodging (Monterosso already booked), and Iceland add-ons (rental car or tours, Blue Lagoon). Verify every fare live before booking — prices for these peak dates only rise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <h4>The Senerth family · Summer 2026</h4>
+    <p style="max-width:60ch;color:#b3a282;">From glacier light to Riviera gold — built with care, and ready to book. Buon viaggio.</p>
+    <div class="credits">
+      Photography · Wikimedia Commons, used under their licenses —
+      Cinque Terre/Manarola © Timothy A. Gonsalves (CC BY-SA 4.0) ·
+      Kirkjufell © Jakub Hałun (CC BY 4.0) ·
+      Blue Lagoon © Jakub Hałun (CC BY-SA 4.0) ·
+      Gullfoss © Diego Delso (CC BY-SA 4.0) ·
+      Skógafoss © Martin Falbisoner (CC BY-SA 4.0) ·
+      Reynisfjara © Martin Falbisoner (CC BY-SA 4.0) ·
+      Nyhavn © Dietmar Rabich (CC BY-SA 4.0) ·
+      Tivoli © Jakub Hałun (CC BY-SA 4.0) ·
+      Vernazza © WikiLucas00 (CC BY-SA 4.0) ·
+      Monterosso © The Cosmonaut (CC BY-SA 2.5) ·
+      Bellagio © Ray Swi-hymn (CC BY-SA 2.0) ·
+      Villa del Balbianello © FAI (CC BY-SA 4.0) ·
+      Sirmione © Ekaterina Kuzmina (CC BY-SA 2.0) ·
+      Malcesine © H. Zell (CC BY-SA 3.0) ·
+      Verona Arena © Bo&amp;Ko (CC BY-SA 2.0) ·
+      Milan Duomo © Steffen Schmitz (CC BY-SA 4.0).
+    </div>
+  </div>
+</footer>
+
+<script>
+  // scroll progress
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;
+    prog.style.width=(p*100)+'%';
+    // hero parallax
+    var bg=document.getElementById('heroBg');
+    if(bg){var y=(h.scrollTop||document.body.scrollTop);if(y<window.innerHeight)bg.style.transform='translateY('+(y*0.28)+'px)';}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
