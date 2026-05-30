@@ -211,6 +211,23 @@
   .kidfact .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
   .kidfact p{margin:5px 0 0;font-size:.94rem;line-height:1.6;color:var(--ink);}
 
+  .opening-letter{max-width:62ch;margin:0 auto;}
+  .opening-letter h2{font-family:var(--display);font-weight:600;font-style:italic;font-size:clamp(2rem,4.5vw,3rem);margin:.4em 0 1em;line-height:1.05;letter-spacing:-.01em;color:var(--ink);text-align:center;}
+  .opening-letter p{font-size:1.06rem;line-height:1.85;color:var(--ink);}
+  .opening-letter .signoff{text-align:right;font-style:italic;color:var(--ink-soft);margin-top:26px;font-size:1rem;}
+
+  .voices{background:var(--paper-2);border-left:5px solid var(--accent);border-radius:0 6px 6px 0;padding:18px 24px;margin:24px 0;}
+  .alt-band .voices{background:var(--paper);}
+  .voices .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .voices p{margin:8px 0 0;font-size:.96rem;line-height:1.7;color:var(--ink);}
+
+  .huntlist{margin-top:18px;list-style:none;padding:0;}
+  .huntlist li{padding:11px 0 11px 38px;position:relative;border-bottom:1px solid rgba(92,80,64,.18);font-size:.97rem;}
+  .huntlist li:last-child{border-bottom:none;}
+  .huntlist li::before{content:"";position:absolute;left:0;top:14px;width:18px;height:18px;border:2px solid var(--accent);border-radius:3px;}
+  .huntlist strong{font-family:var(--display);font-weight:600;}
+  .huntlist .ctx{display:block;color:var(--ink-soft);margin-top:4px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;font-size:.58rem;}
+
   /* eat block */
   .eat{display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;align-items:start;margin-top:34px;background:var(--paper-2);border-radius:6px;padding:24px;border:1px solid rgba(92,80,64,.18);}
   .alt-band .eat{background:var(--paper);}
@@ -288,7 +305,7 @@
 <nav>
   <div class="brand">Senerth · MMXXVI</div>
   <div class="links">
-    <a href="#iceland">Iceland</a><a href="#cinqueterre">Cinque Terre</a><a href="#como">Como</a><a href="#garda">Garda</a><a href="#milan">Milan</a><a href="#itinerary">Itinerary</a><a href="#numbers">Numbers</a>
+    <a href="#before">Before</a><a href="#iceland">Iceland</a><a href="#cinqueterre">Cinque Terre</a><a href="#como">Como</a><a href="#garda">Garda</a><a href="#milan">Milan</a><a href="#bringhome">After</a><a href="#numbers">Numbers</a>
   </div>
 </nav>
 
@@ -302,6 +319,20 @@
   </div>
   <div class="scrollcue rise d5">Scroll</div>
 </header>
+
+<!-- ===== BEFORE WE GO ===== -->
+<section class="chapter alt-band" id="before" style="--accent:var(--rose);padding-top:90px;padding-bottom:80px;">
+  <div class="wrap">
+    <div class="opening-letter reveal">
+      <span class="eyebrow" style="display:block;text-align:center;">A note before the suitcases close</span>
+      <h2>Dear Adventurers,</h2>
+      <p>In a few weeks we are going to fly over the ocean in the middle of the night, land in the country closest to the Arctic, and spend four days inside a land of erupting fountains and waterfalls you can walk <em>behind</em>. Then we are going to travel two thousand miles south to a coast where the houses are painted like sherbet and the trains pop out of mountain tunnels every twelve minutes. Then we will spend a week on the two most beautiful lakes in Europe, eat gelato every evening, and ride a roller coaster called <em>Shaman</em>.</p>
+      <p>This little book is everything we are going to do, written down — so you can read about it on the plane, on the train, at the breakfast table the morning after a long day. It has pictures of every place we are going, the food worth knowing, a story about a tribe of children who rescue baby puffins by torchlight in August, and a list of small magical things to watch for as we go.</p>
+      <p>Read it cover to cover. We have nineteen days.</p>
+      <p class="signoff">— With love, the Trip Planner</p>
+    </div>
+  </div>
+</section>
 
 <section class="route">
   <div class="wrap">
@@ -565,6 +596,17 @@
       <p>Icelanders don't have surnames — they have patronymics. A man named Jón who fathers a son named Ólafur produces <strong>Ólafur Jónsson</strong> ("Jón's son"); his daughter is <strong>Katrín Jónsdóttir</strong> ("Jón's daughter"). Marriage doesn't change names; siblings only share a last name because they share a father. The phone book is therefore alphabetized by <em>first name</em> — because last names don't run in families and aren't useful as a sort key. Since 1925, first names must come from an official register (the <em>Mannanafnaskrá</em>) or be approved by the <em>Mannanafnanefnd</em>, the Naming Committee. This is why your tour guide will introduce herself just as Anna, and why the prime minister is "Katrín" on national television.</p>
     </div>
 
+    <div class="kidfact reveal">
+      <span class="ico">🌍</span>
+      <div><span class="lbl">For the small geologist</span><p>At Þingvellir on Day 2 you will walk down into a literal crack in the Earth — the Almannagjá rift. On your left is the <strong>North American</strong> continent; on your right is <strong>Europe</strong>. The two plates are pulling apart from each other at about 2.5 centimetres a year — exactly the speed your fingernails grow. By the time you are forty, the two continents will be roughly a metre further apart than they are right now. You are watching a very slow goodbye between two halves of the world.</p></div>
+    </div>
+
+    <span class="section-label">Voices & the local rhythm</span>
+    <div class="voices reveal">
+      <span class="lbl">What you'll hear on the street</span>
+      <p>The most-used Icelandic phrase is <strong>þetta reddast</strong> ("theh-tah RED-ast") — roughly, "it will work out in the end." It is said about everything from a snowstorm to a soup. The thank-you is <strong>takk fyrir</strong> ("tahk FEER-eer"). The phonebook lists people by first name — because surnames don't run in families — so the whole nation is, in a way, on a first-name basis with itself. Children's books rhyme in Old Norse practically unchanged for a thousand years; a nine-year-old in Reykjavík can read the same poems the Vikings did.</p>
+    </div>
+
     <div class="moment reveal">
       <span class="lbl">A moment to seek</span>
       <p>It's 10:45 PM and you're swimming in the lower pool at Reykjadalur. The sun is still up; the steam from the river curls into the cooler air; a sheep on the hillside above you bleats once and goes back to eating. Your kid is wearing a wool hat in a hot river and grinning like an Icelandic postcard. You realize the universe has handed you an absurd composition — glacier light, hot water, a child, basalt, silence, a faint sulfur memory in the nose. You will replay this single four-minute clip in your head for the rest of your life.</p>
@@ -716,6 +758,17 @@
       <p><strong>Etiquette:</strong> No swimsuits in village centres — locals are firm. No rolling suitcases on Sentiero Azzurro (banned and fined). <em>Buon pomeriggio</em> after 1 PM, not <em>buongiorno</em>. Coperto €1.50–€3 per person; round up €1–2 for good service.</p>
     </div>
 
+    <div class="kidfact reveal">
+      <span class="ico">🧱</span>
+      <div><span class="lbl">For the small mathematician</span><p>The terraces under the Cinque Terre vineyards are held up by <em>muretti a secco</em> — dry-stone walls — built by hand a thousand years ago, no mortar, just rock balanced on rock. If you stretched all of them out end to end they would reach about <strong>seven thousand kilometres</strong>, far enough to cross the Atlantic Ocean. From above, the cliffs look like they are wearing a knitted sweater.</p></div>
+    </div>
+
+    <span class="section-label">Voices & the local rhythm</span>
+    <div class="voices reveal">
+      <span class="lbl">What you'll hear on the harbour</span>
+      <p>The villages speak <strong>Zeneise</strong>, a dialect of Ligurian that sounds more like Provençal than Italian — cut-off endings, rolled <em>r</em>s, words like <em>tröfie</em>, <em>fugassa</em>, <em>çimma</em>. After 1 PM the greeting shifts from <em>buongiorno</em> to <strong>buon pomeriggio</strong>, and the locals will gently correct you. At dusk the whole village walks the harbour together — the <em>passeggiata</em> — older than the train tunnel under it. You'll fall in behind a grandfather and find your own rhythm.</p>
+    </div>
+
     <div class="moment reveal">
       <span class="lbl">A moment to seek</span>
       <p>It's the 7:32 PM boat back from Vernazza to Monterosso. Your nine-year-old has salt-dried curls and a half-eaten gelato. The sun is at exactly that low angle that turns every pastel façade into a Pantone swatch. The boat lifts and falls in its slow rhythm; an older Ligurian man across from you sees your kid yawning and says, with a fingertip kiss, <em>"buon appetito al sole"</em> — the sun is eating. You will think about this ninety seconds for years.</p>
@@ -853,6 +906,17 @@
       <p><strong>Getting in:</strong> Train from Milano Centrale to Varenna-Esino, ~1 hour on the Sondrio line, roughly hourly. The Varenna ferry pier is a 7-minute downhill walk from the station.</p>
       <p><strong>Getting around:</strong> Navigazione Laghi mid-lake day pass (€15.20). Don't drive — parking on the west shore is scarce and SS340 turns into a slow-motion conga line by 10 AM.</p>
       <p><strong>Locals' quirks:</strong> The lake breeze <em>breva</em> (south-up) arrives early afternoon; <em>tivano</em> (north-down) hits at dawn. Drink Franciacorta, not Prosecco — it's the Lombard answer.</p>
+    </div>
+
+    <div class="kidfact reveal">
+      <span class="ico">⭐</span>
+      <div><span class="lbl">For the small filmmaker</span><p>The villa at the wooded point — <em>Villa del Balbianello</em> — has been the set of two of the most famous wedding scenes ever filmed. In <em>Star Wars: Attack of the Clones</em>, the secret marriage of Anakin Skywalker and Padmé Amidala happens on the upper terrace, the lake standing in for the planet Naboo. In <em>Casino Royale</em>, James Bond convalesces under the very same loggia after a near-death encounter. Same terrace. Two universes. Look up at the loggia when you arrive by boat — that is the exact balcony.</p></div>
+    </div>
+
+    <span class="section-label">Voices & the local rhythm</span>
+    <div class="voices reveal">
+      <span class="lbl">What you'll see at six PM</span>
+      <p>The shore people speak <strong>Lombardo Comasco</strong> at home and Italian everywhere else. The rhythm of every day is set by the two winds the lake has named: <em>tivano</em>, the cold breeze that comes down from the north at dawn and flattens the water; <em>breva</em>, the warm one that climbs the lake from the south after lunch. Boats hug the shore in the morning, drift in the afternoon. The aperitivo hour is sacred. Sundays the church bells ring at four. The lake never quite quiets, but it always quietly listens.</p>
     </div>
 
     <div class="moment reveal">
@@ -1016,6 +1080,17 @@
       <p><strong>Locals' quirks:</strong> The <em>Ora</em> is the warm afternoon south wind; the <em>Pelèr</em> is the cool morning north one. Bardolino DOC red is served <em>chilled</em>, not at room temp.</p>
     </div>
 
+    <div class="kidfact reveal">
+      <span class="ico">🎭</span>
+      <div><span class="lbl">For the small musician</span><p>The Verona Arena was built by the Romans in <strong>30 AD</strong> — about the time of the emperor Tiberius. Gladiators fought here. Twenty thousand people sat on the same stone benches you will see. And now, almost two thousand years later, it is still used: every summer, twenty thousand people pack into those same benches to watch operas under the open sky. At the start of <em>Aida</em> the audience lights tiny candles and the whole arena flickers like a slow galaxy. The Verona Arena has been a place to gather for almost as long as people have lived in Italy.</p></div>
+    </div>
+
+    <span class="section-label">Voices & the local rhythm</span>
+    <div class="voices reveal">
+      <span class="lbl">What you'll hear on the lake</span>
+      <p>Garda is a border lake — three regions meet along its shores, and they pour different drinks at sunset. The south speaks Lombardo and pours <strong>Lugana</strong> white. The east speaks Veneto and pours <strong>Bardolino</strong> red, lightly chilled. The north speaks Italian with German loanwords and brings <em>carne salada</em>. The lake people name two winds: the <em>Ora</em> (warm, south-rising, afternoon) and the <em>Pelèr</em> (cool, north-rising, dawn). Sailors leave with the Pelèr, return with the Ora. Watch which way the boats are pointed and you'll know what time it is.</p>
+    </div>
+
     <div class="moment reveal">
       <span class="lbl">A moment to seek</span>
       <p>You've taken the slow afternoon ferry from Garda town back to Peschiera, the kind that calls at every dock. The sun is sinking behind Monte Baldo; the lake glassens. A vineyard worker boards at Lazise with a single fig branch in his hand, a green plastic crate at his feet. Your kid is dipping fingers off the stern, mesmerized by the wake. Somewhere a bell rings the hour. You crack one of those tiny bottles of cold Lugana you bought from a station kiosk. The whole pace of the place clarifies in twenty minutes: this is what people meant by <em>la dolce vita</em> before it was a brand.</p>
@@ -1163,6 +1238,12 @@
       <p><strong>Etiquette:</strong> Espresso <em>al banco</em> (at the bar) is €1–1.20; sitting at a table doubles it. Don't order cappuccino after 11 AM unless you want to be visibly foreign. Coperto often higher in centro (€3–5).</p>
     </div>
 
+    <span class="section-label">Voices & the local rhythm</span>
+    <div class="voices reveal">
+      <span class="lbl">What the city does at six</span>
+      <p>Milanese is its own language, not just a dialect — closer to Provençal than to Italian. You will catch it from the older bartenders: <em>cinch danee</em> for "five euros," <em>tradiment</em> for "betrayal." Order an espresso <em>al banco</em> (€1.20 at the bar) — sitting at a table doubles the price. Don't order a cappuccino after 11 AM unless you want to be visibly foreign. Aperitivo at six is sacred, and every bar puts food out — the city pours into the streets. It is, in three hours, the most civilised hour anywhere.</p>
+    </div>
+
     <div class="moment reveal">
       <span class="lbl">A moment to seek</span>
       <p>You're on the Duomo rooftop just before closing — late light, fewer people, the spires going from white to coral. A flock of starlings sweeps past at eye level. Your kid touches the warm marble of a flying buttress and asks how they got the saints up here. Below you the city hums; somewhere a No. 2 tram clangs. You don't answer right away. You just stand there and let the question hang against the Madonnina, who has watched over Milan since 1774, gold leaf flaking quietly into the smog.</p>
@@ -1178,6 +1259,65 @@
           <div class="body"><div class="route-code">MXP <span>✈</span> EWR</div><div class="det">United · daytime · nonstop · same airport as outbound</div></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT TO BRING HOME ===== -->
+<section class="chapter alt-band" id="bringhome" style="--accent:var(--gold);">
+  <div class="numeral">VI</div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Finale · After</span>
+      <h2>What to <em>bring home</em></h2>
+      <p class="lede"><span class="drop">A</span> trip becomes a memory by what you carry forward — a flavour, a phrase, a habit, a small ritual that survives the suitcase. Here are the things to plant, so that nineteen days in Iceland and Italy stay alive long after the flights home.</p>
+    </div>
+
+    <span class="section-label">In your suitcase</span>
+    <ul class="gems reveal">
+      <li><strong>A small bottle of Garda DOP olive oil</strong> — bought at Cisano's olive-oil museum. Use it sparingly through the autumn; finish it by Thanksgiving.</li>
+      <li><strong>A panettone from Marchesi</strong> — sealed in foil for the flight home. Open Christmas Eve.</li>
+      <li><strong>A jar of Ligurian pesto</strong> from Forno Ulisse — the real kind, mortar-and-pestle, made yesterday. Eat it on toast the night you land.</li>
+      <li><strong>An Icelandic <em>lopapeysa</em></strong> from Handprjónasamband — the Hand-Knitting Association of Iceland. Your sweater will be one of only a few thousand made each year, each by a different Icelandic grandmother.</li>
+      <li><strong>A small bottle of brennivín</strong> for the family bar (the bottle is the gift), and an Icelandic chocolate bar from <em>Omnom</em> for the small reader.</li>
+    </ul>
+
+    <span class="section-label">In your hands · small daily rituals</span>
+    <ul class="gems reveal">
+      <li><strong>The 6 PM aperitivo</strong> — even on a Tuesday in February. A spritz, an olive, a few minutes before dinner is started.</li>
+      <li><strong>A passeggiata after supper</strong> — a slow walk together, just to walk. The Italians have a word for it; we don't have to call it anything.</li>
+      <li><strong>The cinnamon-bun Saturday</strong> — a snúður on Saturday morning. We can recreate it; the smell from Brauð & Co should stay with you for a year.</li>
+      <li><strong>The Strokkur countdown</strong> — count to five with your daughter at every waterfall and geyser you see from now on.</li>
+    </ul>
+
+    <span class="section-label">In your head · phrases to keep</span>
+    <ul class="gems reveal">
+      <li><strong>Þetta reddast.</strong> Icelandic for "it will work out." For the flat tire, the lost glove, the bad week at school.</li>
+      <li><strong>Buon appetito al sole.</strong> Ligurian for "the sun is eating" — what you say at golden hour.</li>
+      <li><strong>La dolce vita.</strong> For when life is good. Use it sincerely; the Italians do.</li>
+    </ul>
+
+    <span class="section-label">The hunting list · small magic to spot</span>
+    <p class="cuisine-intro reveal">For the small adventurer — a checklist of magical moments to watch for. Tick them off in pencil as they happen.</p>
+    <ul class="huntlist reveal">
+      <li><strong>Strokkur erupting on the count of five</strong><span class="ctx">Iceland · Day 2 · Geysir geothermal area</span></li>
+      <li><strong>A puffin with a beak full of fish</strong><span class="ctx">Iceland · Day 3 Dyrhólaey or Day 4 Faxaflói bay</span></li>
+      <li><strong>The midnight sun still glowing at one in the morning</strong><span class="ctx">Iceland · any clear night</span></li>
+      <li><strong>Hot water in a river, cool steam rising in the cold air</strong><span class="ctx">Iceland · Day 4 Reykjadalur hot river</span></li>
+      <li><strong>A humpback whale breaching in Faxaflói Bay</strong><span class="ctx">Iceland · Day 4 whale-watching cruise</span></li>
+      <li><strong>The pastel face of Vernazza from the open sea</strong><span class="ctx">Cinque Terre · the 7:32 PM boat back to Monterosso</span></li>
+      <li><strong>A focaccia di Recco still warm from the oven</strong><span class="ctx">Cinque Terre · before 10 AM at Forno Ulisse</span></li>
+      <li><strong>An anchovy still tasting of the sea it was caught in</strong><span class="ctx">Cinque Terre · Trattoria da Oscar, Monterosso</span></li>
+      <li><strong>The wake of the last Bellagio ferry going silver in dusk</strong><span class="ctx">Lake Como · the 7:45 PM crossing back to Varenna</span></li>
+      <li><strong>The Star Wars wedding terrace in real life</strong><span class="ctx">Lake Como · Villa del Balbianello, by boat</span></li>
+      <li><strong>The audience candles lighting at the start of an opera</strong><span class="ctx">Lake Garda · Verona Arena if the timing is right</span></li>
+      <li><strong>The little gold Madonnina at the apex of the Duomo</strong><span class="ctx">Milan · cathedral rooftop, last hour before close</span></li>
+      <li><strong>The bull on the Galleria floor still being spun for luck</strong><span class="ctx">Milan · centre mosaic of the Galleria</span></li>
+    </ul>
+
+    <div class="moment reveal" style="margin-top:50px;">
+      <span class="lbl">After</span>
+      <p>The flight home is about six and a half hours, daytime, into Newark. You will leave Milan at ten in the morning and be home for dinner. The hardest part of any trip is not the journey out; it is the morning after the journey home, when the world looks slightly the same but you have been changed by it. Read this book again that morning. Make a cup of coffee. Light a candle if there is one. <em>Þetta reddast.</em></p>
     </div>
   </div>
 </section>
