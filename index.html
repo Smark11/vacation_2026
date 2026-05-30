@@ -182,6 +182,35 @@
   .moment .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700;}
   .moment p{font-family:var(--body);font-style:italic;font-size:1.08rem;line-height:1.7;color:var(--ink);margin:10px 0 0;}
 
+  /* Dishes grid */
+  .dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;}
+  .dishes .d{background:var(--paper);border:1px solid rgba(92,80,64,.22);border-radius:5px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 28px -22px rgba(36,25,12,.5);}
+  .alt-band .dishes .d{background:var(--paper);}
+  .dishes .d .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper-3);}
+  .dishes .d .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .dishes .d:hover .ph img{transform:scale(1.05);}
+  .dishes .d .pad{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column;}
+  .dishes .d .nm{font-family:var(--display);font-weight:600;font-size:1.04rem;line-height:1.15;}
+  .dishes .d .de{font-size:.86rem;color:var(--ink);margin-top:6px;line-height:1.55;flex:1;}
+  .dishes .d .try{font-family:var(--mono);font-size:.54rem;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-top:8px;display:block;}
+  @media(max-width:760px){.dishes{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.dishes{grid-template-columns:1fr;}}
+
+  .cuisine-intro{font-size:1.04rem;color:var(--ink);max-width:72ch;margin:0;font-style:italic;line-height:1.7;}
+
+  .drinks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px;}
+  .drinks .dr{background:var(--paper-2);border:1px solid rgba(92,80,64,.18);border-radius:5px;padding:14px 18px;}
+  .alt-band .drinks .dr{background:var(--paper);}
+  .drinks .dr .nm{font-family:var(--display);font-weight:600;font-size:1.04rem;}
+  .drinks .dr .de{font-size:.88rem;color:var(--ink-soft);margin-top:5px;line-height:1.55;}
+  @media(max-width:560px){.drinks{grid-template-columns:1fr;}}
+
+  .kidfact{background:var(--paper-2);border:2px dashed var(--accent);border-radius:6px;padding:16px 20px;margin:28px 0;display:flex;gap:16px;align-items:flex-start;}
+  .alt-band .kidfact{background:var(--paper);}
+  .kidfact .ico{font-size:1.7rem;flex-shrink:0;line-height:1;}
+  .kidfact .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .kidfact p{margin:5px 0 0;font-size:.94rem;line-height:1.6;color:var(--ink);}
+
   /* eat block */
   .eat{display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;align-items:start;margin-top:34px;background:var(--paper-2);border-radius:6px;padding:24px;border:1px solid rgba(92,80,64,.18);}
   .alt-band .eat{background:var(--paper);}
@@ -448,33 +477,87 @@
       </div>
     </div>
 
-    <!-- Puffin angle -->
-    <span class="section-label">The puffin angle</span>
-    <div class="split reveal" style="margin-top:18px;">
-      <figure class="media"><div class="frame" style="aspect-ratio:3/2;"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/027_Atlantic_puffin_in_flight_with_mouth_full_of_fishes_Photo_by_Giles_Laurent.jpg/1920px-027_Atlantic_puffin_in_flight_with_mouth_full_of_fishes_Photo_by_Giles_Laurent.jpg" alt="Atlantic puffin in flight"></div><figcaption>Atlantic puffin — a beakful of capelin</figcaption></figure>
+    <!-- Puffin feature -->
+    <span class="section-label">A field guide to the puffin</span>
+    <p class="cuisine-intro reveal">Half the world's Atlantic puffins — eight to ten million birds — breed on Iceland's cliffs every summer. You'll be there at the height of the chick-feeding season. They are likely to be the most magical encounter of the trip; here's everything to know.</p>
+
+    <div class="split reveal" style="margin-top:24px;">
+      <figure class="media"><div class="frame" style="aspect-ratio:3/2;"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Colony_of_Atlantic_puffins_on_a_cliff_on_the_Dyrh%C3%B3laey_peninsula_in_Iceland%2C_20240720_0931_2104.jpg/1920px-Colony_of_Atlantic_puffins_on_a_cliff_on_the_Dyrh%C3%B3laey_peninsula_in_Iceland%2C_20240720_0931_2104.jpg" alt="Colony of Atlantic puffins on Dyrhólaey cliffs"></div><figcaption>A colony at Dyrhólaey — you'll see this in person on Day 3</figcaption></figure>
       <div class="content">
-        <p>Atlantic puffins (<em>Fratercula arctica</em>) summer in Iceland from mid-April to mid-August, with peak chick-feeding viewing from mid-June through July — exactly the window we're in. The closest sighting from the trip is at <strong>Dyrhólaey</strong> (Day 3, west of Vík; access restricted during nesting, check vegagerdin.is). For a kid-friendly puffin fix from town, <strong>Special Tours' Puffin Express</strong> runs a one-hour RIB to the small islands in Faxaflói bay where puffins nest a hundred metres off the boat — easy add-on to Day 4 whale watching.</p>
+        <h3 class="subhead">Fratercula arctica</h3>
+        <p>The Old Norse name <em>lundi</em> means "little brother of the friars" — a nod to the black-and-white robe. Puffins live most of their lives out on the open North Atlantic, returning to land only to breed. They mate for life, live twenty to thirty years, and recognise their partner each spring by a small rub of the beak. They are extraordinary at almost everything except looking dignified on take-off.</p>
       </div>
     </div>
 
-    <!-- Eats with story -->
-    <span class="section-label">À table · where to eat in Reykjavík</span>
-    <div class="eat reveal">
-      <figure class="media frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kj%C3%B6ts%C3%BApa.JPG/1920px-Kj%C3%B6ts%C3%BApa.JPG" alt="Kjötsúpa — Icelandic lamb soup"></figure>
-      <div>
-        <ul class="eats">
-          <li><div class="nm">Dill</div><span class="px">$$$$</span><div class="de">Iceland's first Michelin-starred restaurant (2017). Chef Gunnar Karl Gíslason's hyper-local New Nordic tasting menu — skyr, foraged herbs, lamb, kelp. Book before you book your flight.</div></li>
-          <li><div class="nm">Matur og Drykkur</div><span class="px">$$$</span><div class="de">"Food and Drink." Chef Gísli Matt resurrects forgotten Icelandic dishes from 19th-century cookbooks. New Grandi space since 2024. Pork from Hrísey, salted cod, geothermal-baked rye.</div></li>
-          <li><div class="nm">Bæjarins Beztu Pylsur</div><span class="px">$</span><div class="de">A hot-dog stand by the Old Harbour, since 1937. Lamb-based dog "with everything" — raw + crispy onions, remoulade, sweet mustard, ketchup. The country's most beloved snack.</div></li>
-          <li><div class="nm">Café Loki</div><span class="px">$$</span><div class="de">Across the street from Hallgrímskirkja. A bowl of <em>kjötsúpa</em> (lamb soup) and a slice of dark <em>rúgbrauð</em> for the perfect cool-weather lunch.</div></li>
-          <li><div class="nm">Brauð & Co</div><span class="px">$</span><div class="de">The bakery with the rainbow-painted exterior below Hallgrímskirkja. Locals queue from 8 AM for cinnamon snúðar and sourdough. The smell from the door is the city's morning olfactory landmark.</div></li>
-          <li><div class="nm">Reykjavík Fish</div><span class="px">$</span><div class="de">Proper fish and chips — daily-fresh cod and haddock, mushy peas. The kid-pleaser of all eats here.</div></li>
-          <li><div class="nm">Grandi Mathöll</div><span class="px">$$</span><div class="de">A food hall with eight stalls in the old fish-net factory — lobster soup, ramen, fish tacos, vegan. Perfect when family eaters disagree.</div></li>
-          <li><div class="nm">Sandholt</div><span class="px">$</span><div class="de">Fourth-generation bakery on Laugavegur. Rúgbrauð sandwiches and an open kitchen full of laminated dough.</div></li>
-        </ul>
-        <p class="eatnote">Iceland is expensive. Tap water is free (and excellent). Tipping isn't a thing.</p>
-      </div>
+    <span class="section-label">Things to know (for the small biologist)</span>
+    <div class="practical reveal">
+      <div class="p"><div class="k">Dive depth</div><h5>60 metres deep</h5><p>Pursuit-divers with wings as flippers. They can stay underwater for ~30 seconds at a time, chasing capelin and sand-eels.</p></div>
+      <div class="p"><div class="k">Wing-beats</div><h5>~400 per minute</h5><p>The tiny wings beat about as fast as a hummingbird's — top speed 55 mph. Looks chaotic; perfectly efficient.</p></div>
+      <div class="p"><div class="k">The beak</div><h5>Up to 12 fish at once</h5><p>Backward-pointing barbs on the upper palate hold a row of fish while the puffin keeps catching more — a clothesline of dinner.</p></div>
+      <div class="p"><div class="k">The colour</div><h5>Only for summer</h5><p>The bright orange beak and feet are breeding plumage. After breeding the colourful outer beak plates shed and turn a duller grey.</p></div>
+      <div class="p"><div class="k">The burrow</div><h5>1 metre deep, dug by claw</h5><p>One egg, one chick (a <em>puffling</em>) per year. Both parents take turns warming and feeding, swapping every few hours.</p></div>
+      <div class="p"><div class="k">Lifespan</div><h5>25–30 years</h5><p>Couples re-find each other at the same burrow every spring. They preen each other's faces — "billing" — for hours.</p></div>
     </div>
+
+    <div class="kidfact reveal">
+      <span class="ico">🐦</span>
+      <div><span class="lbl">A story for the small reader · the Puffling Patrol</span><p>On the island of Heimaey (Vestmannaeyjar) every August, baby puffins fledge from their burrows for the first time and try to fly out to sea — but the village's electric lights confuse them, and hundreds end up lost in town instead of out on the water. So the children of Heimaey go on a <strong>Puffling Patrol</strong>: every night with cardboard boxes and torches, hunting for lost pufflings on porches and under cars, taking them home to be weighed and tagged, then carrying them to the cliffs at sunset and gently throwing them into the sea breeze so they can soar at last. Over a thousand pufflings get rescued every August. It is, by national consensus, the best job a nine-year-old can have.</p></div>
+    </div>
+
+    <span class="section-label">Where you'll see them on this trip</span>
+    <div class="practical reveal">
+      <div class="p"><div class="k">Day 3</div><h5>Dyrhólaey (west of Vík)</h5><p>The cliffs west of Vík host one of the South Coast's biggest colonies. Walk the clifftop above the arch — puffins burrow in the grass at your feet. <em>Note:</em> access can be restricted late-May through late-June during peak nesting; check vegagerdin.is the night before.</p></div>
+      <div class="p"><div class="k">Day 4</div><h5>Faxaflói Bay (from Reykjavík)</h5><p>From the Old Harbour, <strong>Special Tours' Puffin Express</strong> runs a 1-hour RIB to the small islands where puffins nest a few metres off the boat. Pairs neatly with whale-watching on <strong>Elding</strong>.</p></div>
+      <div class="p"><div class="k">Even closer</div><h5>Lundey ("Puffin Island")</h5><p>A 30-minute boat ride from Reykjavík harbour to an island of ~30,000 pairs. Viewing only from sea — you cannot land. Both Special Tours and Elding run trips.</p></div>
+    </div>
+
+    <span class="section-label">Photo album</span>
+    <div class="gal reveal" style="grid-template-columns:repeat(3,1fr);">
+      <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/027_Atlantic_puffin_in_flight_with_mouth_full_of_fishes_Photo_by_Giles_Laurent.jpg/1920px-027_Atlantic_puffin_in_flight_with_mouth_full_of_fishes_Photo_by_Giles_Laurent.jpg" alt="Puffin in flight with a beakful of fish"><figcaption>In flight, beakful</figcaption></figure>
+      <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Atlantic_puffins_courtship_billing_%284188074660%29.jpg" alt="Atlantic puffins billing each other"><figcaption>Courtship — "billing"</figcaption></figure>
+      <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Puffin_%28Fratercula_arctica%29_outside_burrow.jpg/1920px-Puffin_%28Fratercula_arctica%29_outside_burrow.jpg" alt="Puffin outside its burrow"><figcaption>Outside the burrow</figcaption></figure>
+      <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Adult_Atlantic_Puffins_and_a_Puffling.jpg/1920px-Adult_Atlantic_Puffins_and_a_Puffling.jpg" alt="Adult puffins with a puffling chick"><figcaption>Adults & a puffling</figcaption></figure>
+      <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Puffins_Heimaey_%281408144280%29.jpg/1920px-Puffins_Heimaey_%281408144280%29.jpg" alt="Puffins on Heimaey, Vestmannaeyjar"><figcaption>Heimaey colony</figcaption></figure>
+      <figure class="frame"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Iceland_-_Puffin_-_Dyrholaey_-_Road_Trip_-_Chordata_%284889976223%29.jpg/1920px-Iceland_-_Puffin_-_Dyrholaey_-_Road_Trip_-_Chordata_%284889976223%29.jpg" alt="Puffin at Dyrhólaey"><figcaption>Dyrhólaey</figcaption></figure>
+    </div>
+
+    <!-- Iceland food (deep) -->
+    <span class="section-label">À table · the food of Iceland</span>
+    <p class="cuisine-intro reveal">A pantry forged by isolation — lamb, fish, rye, dairy. For centuries every ingredient came from the sea, the mountainside, or a barrel buried in geothermal earth. The modern Reykjavík revolution, led by Dill and a generation of New Nordic chefs, has reclaimed all of it: salted cod, foraged herbs, hand-dived scallops, skyr alongside elderflower. Eat curiously.</p>
+
+    <span class="section-label">Classic dishes to try</span>
+    <div class="dishes reveal">
+      <div class="d"><div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Icelandic_hot_dog.jpg/1920px-Icelandic_hot_dog.jpg" alt="Pylsur — Icelandic lamb hot dog"></div><div class="pad"><div class="nm">Pylsur</div><div class="de">The national hot dog — mostly lamb, slightly smoky, snappy. Order it <em>eina með öllu</em> ("one with everything"): raw and crispy onions, ketchup, sweet brown mustard, remoulade.</div><span class="try">Bæjarins Beztu · since 1937</span></div></div>
+      <div class="d"><div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kj%C3%B6ts%C3%BApa.JPG/1920px-Kj%C3%B6ts%C3%BApa.JPG" alt="Kjötsúpa — lamb soup"></div><div class="pad"><div class="nm">Kjötsúpa</div><div class="de">A slow-simmered lamb-and-root-veg broth — carrots, leeks, swede, the lamb falling off the bone. The national hug.</div><span class="try">Café Loki, opp. Hallgrímskirkja</span></div></div>
+      <div class="d"><div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Plokkfiskur.jpg/1920px-Plokkfiskur.jpg" alt="Plokkfiskur"></div><div class="pad"><div class="nm">Plokkfiskur</div><div class="de">Creamy mashed cod with potatoes, butter, and béchamel — the Tuesday-night standby in every Icelandic home. Eat it with dark rye and an extra knob of butter.</div><span class="try">Íslenski Barinn</span></div></div>
+      <div class="d"><div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Icelandic_Skyr.jpg" alt="Skyr — cultured dairy"></div><div class="pad"><div class="nm">Skyr</div><div class="de">Thicker than yoghurt, lighter than cheese, technically neither — a millennia-old Icelandic cultured dairy, ladled with cream and berries. Vikings ate it. Your nine-year-old will too.</div><span class="try">Any supermarket dairy aisle</span></div></div>
+      <div class="d"><div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/R%C3%BAgbrau%C3%B0_brennivin.jpg/1920px-R%C3%BAgbrau%C3%B0_brennivin.jpg" alt="Rúgbrauð — geothermal rye bread"></div><div class="pad"><div class="nm">Rúgbrauð</div><div class="de">Dark, dense, slightly sweet rye — traditionally steam-baked in a wooden box <em>buried in the geothermal earth</em> for 24 hours. Slathered with butter, topped with cured trout.</div><span class="try">Sandholt, Laugavegur</span></div></div>
+      <div class="d"><div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Hallgr%C3%ADmskirkja%2C_Reykjav%C3%ADk%2C_Iceland%2C_20230506_1701_5380.jpg/1920px-Hallgr%C3%ADmskirkja%2C_Reykjav%C3%ADk%2C_Iceland%2C_20230506_1701_5380.jpg" alt="Brauð & Co bakery near Hallgrímskirkja"></div><div class="pad"><div class="nm">Snúður</div><div class="de">The Icelandic cinnamon roll — soft, spiral, drizzled with caramel or chocolate. The smell from Brauð & Co at 8 AM is the city's morning olfactory landmark.</div><span class="try">Brauð & Co · the rainbow bakery</span></div></div>
+    </div>
+
+    <div class="kidfact reveal">
+      <span class="ico">🥖</span>
+      <div><span class="lbl">For the small reader</span><p>The dark rye on your plate was probably baked <em>underground</em>. Bakeries put the dough in a sealed wooden box and bury it in the geothermal earth for 24 hours — the steam from the volcano does the cooking, no oven required. Ask if you can take a slice home to compare against ordinary bread.</p></div>
+    </div>
+
+    <span class="section-label">A drink with that</span>
+    <div class="drinks reveal">
+      <div class="dr"><div class="nm">Brennivín</div><div class="de">The clear, caraway-flavoured spirit nicknamed "Black Death" — traditionally chased with a cube of fermented shark. A tiny taste is plenty; the bottle is the gift.</div></div>
+      <div class="dr"><div class="nm">Bjór (beer)</div><div class="de">Bizarrely, beer was illegal in Iceland until <strong>March 1, 1989</strong> — celebrated every year as Beer Day. Local craft brewers (Einstök, Borg, Lady Brewery) have made up for lost time.</div></div>
+    </div>
+
+    <span class="section-label">Where to eat in Reykjavík</span>
+    <ul class="eats reveal">
+      <li><div class="nm">Dill</div><span class="px">$$$$</span><div class="de">Iceland's first Michelin-starred restaurant (2017). Chef Gunnar Karl Gíslason's hyper-local New Nordic tasting menu — skyr, foraged herbs, lamb, kelp. Book before you book your flight.</div></li>
+      <li><div class="nm">Matur og Drykkur</div><span class="px">$$$</span><div class="de">"Food and Drink." Chef Gísli Matt resurrects forgotten Icelandic dishes from 19th-century cookbooks. New Grandi space since 2024.</div></li>
+      <li><div class="nm">Bæjarins Beztu Pylsur</div><span class="px">$</span><div class="de">The hot-dog stand by the Old Harbour, since 1937. Bill Clinton ate one in 2004. So has every Icelandic prime minister.</div></li>
+      <li><div class="nm">Café Loki</div><span class="px">$$</span><div class="de">Across from Hallgrímskirkja. A bowl of kjötsúpa, a slice of rúgbrauð, and rhubarb-jam pönnukökur — the perfect cool-weather lunch.</div></li>
+      <li><div class="nm">Brauð & Co</div><span class="px">$</span><div class="de">The bakery with the rainbow-painted exterior below Hallgrímskirkja. Locals queue from 8 AM.</div></li>
+      <li><div class="nm">Reykjavík Fish</div><span class="px">$</span><div class="de">Proper fish and chips — daily-fresh cod and haddock, mushy peas. The kid-pleaser of all eats here.</div></li>
+      <li><div class="nm">Grandi Mathöll</div><span class="px">$$</span><div class="de">A food hall with eight stalls in the old fish-net factory — lobster soup, ramen, fish tacos. Perfect when family eaters disagree.</div></li>
+      <li><div class="nm">Sandholt</div><span class="px">$</span><div class="de">Fourth-generation bakery on Laugavegur. Rúgbrauð sandwiches and chocolate snúðar.</div></li>
+    </ul>
+    <p class="eatnote">Iceland is expensive. Tap water is free (and excellent). Tipping isn't a thing.</p>
 
     <!-- The naming convention story -->
     <span class="section-label">A small Icelandic quirk</span>
@@ -1128,7 +1211,7 @@
     <p style="max-width:60ch;color:#b3a282;">From glacier light to Riviera gold — researched, photographed, and now in motion. Buon viaggio.</p>
     <div class="credits">
       Photography · Wikimedia Commons, used under their licenses —
-      Manarola hero © Timothy A. Gonsalves (CC BY-SA 4.0) · Kirkjufell © Jakub Hałun (CC BY 4.0) · Blue Lagoon, Hallgrímskirkja © Jakub Hałun (CC BY-SA 4.0) · Gullfoss & Þingvellir © Diego Delso (CC BY-SA 4.0) · Skógafoss & Reynisfjara © Martin Falbisoner (CC BY-SA 4.0) · Seljalandsfoss © Jakub Hałun (CC BY 4.0) · Strokkur © Andreas Tille (CC BY-SA 3.0) · Friðheimar © Eric Kilby (CC BY-SA 2.0) · Sólheimajökull © Hyppolyte de Saint-Rambert (CC BY-SA 4.0) · Reykjavík Old Harbour © Richard Bartz (CC BY-SA 3.0) · Atlantic puffin © Giles Laurent (CC BY-SA 4.0) · Manarola village © Anyul Rivas (CC BY 2.0) · Riomaggiore © СССР (CC BY-SA 2.5) · Corniglia © Luca Aless (CC BY-SA 4.0) · Sentiero Azzurro © СССР (CC BY-SA 2.5) · Corniglia station © Timothy A. Gonsalves (CC BY-SA 4.0) · Vernazza © WikiLucas00 (CC BY-SA 4.0) · Monterosso © The Cosmonaut (CC BY-SA 2.5) · Varenna © Diego Delso (CC BY-SA 4.0) · Bellagio © Ray Swi-hymn (CC BY-SA 2.0) · Menaggio © Maurizio Moro5153 (CC BY-SA 4.0) · Como Cathedral © Romain Pontida (CC BY-SA 4.0) · Villa del Balbianello © FAI (CC BY-SA 4.0) · Villa Carlotta © Phyrexian (CC BY-SA 4.0) · Como-Brunate funicular © Rehman Abubakr (CC BY-SA 4.0) · Peschiera del Garda © Vvlasenko (CC BY-SA 3.0) · Sirmione © Ekaterina Kuzmina (CC BY-SA 2.0) · Bardolino © Richard Giles (CC BY-SA 2.0) · Malcesine © H. Zell (CC BY-SA 3.0) · Riva del Garda © Matteo Ianeselli (CC BY-SA 4.0) · Limone sul Garda © Dguendel (CC BY 4.0) · Verona Arena © Bo&amp;Ko (CC BY-SA 2.0) · Casa di Giulietta © Veronika Bashak (CC BY-SA 4.0) · Piazza delle Erbe © High Contrast (CC BY 3.0 DE) · Milan Duomo & Galleria © Steffen Schmitz / Jakub Hałun (CC BY-SA 4.0) · Castello Sforzesco © Terragio67 (CC BY-SA 4.0) · Navigli © Matteo Gabrieli (CC BY 2.0) · Santa Maria delle Grazie © Marcin Białek (CC BY-SA 3.0) · Kjötsúpa © Ypsilon (CC0) · Trofie al pesto © Eluinie (CC BY-SA 4.0) · Focaccia di Recco © Michele Ursino (CC BY-SA 2.0) · Polenta © J.P.Lon (CC BY-SA 3.0) · Risotto alla milanese © Number55 (CC BY-SA 3.0) · Ossobuco © E4024 (CC BY-SA 4.0) · Gelato © Ruth Hartnup (CC BY 2.0) · Aperitivo © Indrajit Das (CC BY-SA 4.0) · Reykjadalur © Jakub Hałun (CC BY-SA 4.0) · Laugavegur © Steven Lek (CC BY-SA 4.0) · Vesturbæjarlaug © Jabbi (PD) · Hlemmur © Jonathan Cypp0847 (CC BY-SA 4.0) · Via dell'Amore © Twice25 (CC BY 2.5) · Cinque Terre boat © Miriam Rossignoli (CC BY 2.0) · Spiaggia di Fegina © Davide Papalini (CC BY-SA 3.0) · Il Gigante © Waldemar L (CC BY-SA 4.0) · Convento dei Cappuccini © GIANFRANCONEGRI (CC BY-SA 4.0) · Lake Como ferry (Bellagio) © Daniel Case (CC BY-SA 3.0) · Castello di Vezio © Diego Delso (CC BY-SA 4.0) · Varenna lakefront © Oursana (CC0) · Lazise harbour © Hoppend (CC0) · Terme di Sirmione © Sandra Grampa (CC BY-SA 4.0) · Via Brera © C messier (CC BY-SA 4.0) · Piazza Gae Aulenti © Dexterino86 (CC BY-SA 4.0) · Pinacoteca di Brera © FrDr (CC BY-SA 4.0) · Teatro alla Scala interior (CC BY-SA 3.0) · Milan skyline / Bosco Verticale © Daniel Case (CC BY-SA 3.0).
+      Manarola hero © Timothy A. Gonsalves (CC BY-SA 4.0) · Kirkjufell © Jakub Hałun (CC BY 4.0) · Blue Lagoon, Hallgrímskirkja © Jakub Hałun (CC BY-SA 4.0) · Gullfoss & Þingvellir © Diego Delso (CC BY-SA 4.0) · Skógafoss & Reynisfjara © Martin Falbisoner (CC BY-SA 4.0) · Seljalandsfoss © Jakub Hałun (CC BY 4.0) · Strokkur © Andreas Tille (CC BY-SA 3.0) · Friðheimar © Eric Kilby (CC BY-SA 2.0) · Sólheimajökull © Hyppolyte de Saint-Rambert (CC BY-SA 4.0) · Reykjavík Old Harbour © Richard Bartz (CC BY-SA 3.0) · Atlantic puffin © Giles Laurent (CC BY-SA 4.0) · Manarola village © Anyul Rivas (CC BY 2.0) · Riomaggiore © СССР (CC BY-SA 2.5) · Corniglia © Luca Aless (CC BY-SA 4.0) · Sentiero Azzurro © СССР (CC BY-SA 2.5) · Corniglia station © Timothy A. Gonsalves (CC BY-SA 4.0) · Vernazza © WikiLucas00 (CC BY-SA 4.0) · Monterosso © The Cosmonaut (CC BY-SA 2.5) · Varenna © Diego Delso (CC BY-SA 4.0) · Bellagio © Ray Swi-hymn (CC BY-SA 2.0) · Menaggio © Maurizio Moro5153 (CC BY-SA 4.0) · Como Cathedral © Romain Pontida (CC BY-SA 4.0) · Villa del Balbianello © FAI (CC BY-SA 4.0) · Villa Carlotta © Phyrexian (CC BY-SA 4.0) · Como-Brunate funicular © Rehman Abubakr (CC BY-SA 4.0) · Peschiera del Garda © Vvlasenko (CC BY-SA 3.0) · Sirmione © Ekaterina Kuzmina (CC BY-SA 2.0) · Bardolino © Richard Giles (CC BY-SA 2.0) · Malcesine © H. Zell (CC BY-SA 3.0) · Riva del Garda © Matteo Ianeselli (CC BY-SA 4.0) · Limone sul Garda © Dguendel (CC BY 4.0) · Verona Arena © Bo&amp;Ko (CC BY-SA 2.0) · Casa di Giulietta © Veronika Bashak (CC BY-SA 4.0) · Piazza delle Erbe © High Contrast (CC BY 3.0 DE) · Milan Duomo & Galleria © Steffen Schmitz / Jakub Hałun (CC BY-SA 4.0) · Castello Sforzesco © Terragio67 (CC BY-SA 4.0) · Navigli © Matteo Gabrieli (CC BY 2.0) · Santa Maria delle Grazie © Marcin Białek (CC BY-SA 3.0) · Kjötsúpa © Ypsilon (CC0) · Trofie al pesto © Eluinie (CC BY-SA 4.0) · Focaccia di Recco © Michele Ursino (CC BY-SA 2.0) · Polenta © J.P.Lon (CC BY-SA 3.0) · Risotto alla milanese © Number55 (CC BY-SA 3.0) · Ossobuco © E4024 (CC BY-SA 4.0) · Gelato © Ruth Hartnup (CC BY 2.0) · Aperitivo © Indrajit Das (CC BY-SA 4.0) · Reykjadalur © Jakub Hałun (CC BY-SA 4.0) · Laugavegur © Steven Lek (CC BY-SA 4.0) · Vesturbæjarlaug © Jabbi (PD) · Hlemmur © Jonathan Cypp0847 (CC BY-SA 4.0) · Via dell'Amore © Twice25 (CC BY 2.5) · Cinque Terre boat © Miriam Rossignoli (CC BY 2.0) · Spiaggia di Fegina © Davide Papalini (CC BY-SA 3.0) · Il Gigante © Waldemar L (CC BY-SA 4.0) · Convento dei Cappuccini © GIANFRANCONEGRI (CC BY-SA 4.0) · Lake Como ferry (Bellagio) © Daniel Case (CC BY-SA 3.0) · Castello di Vezio © Diego Delso (CC BY-SA 4.0) · Varenna lakefront © Oursana (CC0) · Lazise harbour © Hoppend (CC0) · Terme di Sirmione © Sandra Grampa (CC BY-SA 4.0) · Via Brera © C messier (CC BY-SA 4.0) · Piazza Gae Aulenti © Dexterino86 (CC BY-SA 4.0) · Pinacoteca di Brera © FrDr (CC BY-SA 4.0) · Teatro alla Scala interior (CC BY-SA 3.0) · Milan skyline / Bosco Verticale © Daniel Case (CC BY-SA 3.0) · Pylsur © Owlsmcgee (CC BY-SA 4.0) · Skyr © IcelandicProvisions (CC BY-SA 4.0) · Plokkfiskur © Jasnaah (CC BY-SA 4.0) · Rúgbrauð © Bapak Alex (CC BY 4.0) · Puffin cliff colony © Jakubhal (CC BY 4.0) · Puffin pair billing (PD) · Puffin at burrow © Charles J. Sharp (CC BY-SA 4.0) · Adult puffins & puffling © OceanFlowers (CC BY-SA 4.0) · Heimaey puffins (CC BY-SA 2.0) · Dyrhólaey puffin © CGP Grey (CC BY 2.0).
     </div>
   </div>
 </footer>
