@@ -298,6 +298,48 @@
   .reveal.in{opacity:1;transform:none;}
   .reveal.d1{transition-delay:.08s;}.reveal.d2{transition-delay:.18s;}.reveal.d3{transition-delay:.28s;}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+  /* Interactive hunting list (clickable, persists in localStorage) */
+  .huntlist li{cursor:pointer;transition:opacity .3s ease, transform .3s ease;}
+  .huntlist li:hover{transform:translateX(4px);}
+  .huntlist li.checked{opacity:.5;}
+  .huntlist li.checked::before{background:var(--accent);}
+  .huntlist li.checked::after{content:"\2713";position:absolute;left:3px;top:9px;color:#fff;font-size:.95em;font-weight:700;line-height:1;}
+  .huntlist li.checked strong{text-decoration:line-through;}
+
+  /* Print stylesheet — saves beautifully as a PDF book */
+  @media print {
+    body{background:#fff;color:#000;font-size:11pt;line-height:1.5;}
+    body::after,#progress,nav,.scrollcue,.hero .scrollcue{display:none!important;}
+    .hero{min-height:auto;padding:40px 28px;page-break-after:always;background:#fff;display:block;}
+    .hero::before,.hero .bg{display:none!important;}
+    .hero h1{color:#000!important;text-shadow:none;font-size:36pt;line-height:1.05;}
+    .hero h1 em,.ch-head h2 em{color:#444!important;}
+    .hero .sub,.hero .eyebrow{color:#333!important;}
+    .hero .booked-stamp{color:#000!important;background:#eee!important;}
+    .chapter{padding:30px 0 20px;page-break-before:always;}
+    .chapter .numeral{display:none;}
+    .reveal{opacity:1!important;transform:none!important;}
+    figure,.frame,img,.day,.eat,.dishes .d,.lay .l,.practical .p,.voices,.kidfact,.moment,.huntlist li,.timeline li{break-inside:avoid;page-break-inside:avoid;}
+    .day-grid,.dishes,.practical,.lay,.drinks{display:block;}
+    .day-grid > *,.dishes > *,.practical > *,.lay > *,.drinks > *{margin-bottom:16px;}
+    .numbers,footer{background:#fff;color:#000;page-break-before:always;}
+    .numbers h2,.numbers .eyebrow,.numbers .intro,.card,.card h3,.footnotes p,.footnotes p .mono,footer h4,footer p,footer .credits{color:#000!important;}
+    .card{background:#fff!important;border:1px solid #000;box-shadow:none;}
+    .card.win{box-shadow:none;}
+    .card .lines div{color:#333!important;border-bottom:1px dashed #999;}
+    .card .lines div b{color:#000!important;}
+    .card .total .amt{color:#000!important;}
+    .card .flag{background:#000!important;color:#fff!important;}
+    a{text-decoration:none;color:#000;}
+    img{max-width:100%!important;}
+    .ticket .stub{background:#000!important;color:#fff!important;}
+    .moment{background:#f4f4f4!important;border-left:5px solid #000;}
+    .moment::before{display:none;}
+    .ch-head h2{font-size:24pt;}
+    .ch-head .lede{font-size:12pt;}
+    .opening-letter h2{font-size:28pt;}
+  }
 </style>
 </head>
 <body>
@@ -1315,6 +1357,11 @@
       <li><strong>The bull on the Galleria floor still being spun for luck</strong><span class="ctx">Milan · centre mosaic of the Galleria</span></li>
     </ul>
 
+    <div class="kidfact reveal" style="background:var(--paper);">
+      <span class="ico">📖</span>
+      <div><span class="lbl">Make it a real book</span><p>This site prints beautifully. Try <strong>Cmd-P</strong> (or File → Print) and pick "Save as PDF" to make a paper-or-pocket copy that travels offline, gets handed to a grandparent, gets scribbled in by a nine-year-old. The <strong>hunting list above is interactive</strong> — tap any line to tick it off; your progress will be remembered the next time you open the page.</p></div>
+    </div>
+
     <div class="moment reveal" style="margin-top:50px;">
       <span class="lbl">After</span>
       <p>The flight home is about six and a half hours, daytime, into Newark. You will leave Milan at ten in the morning and be home for dinner. The hardest part of any trip is not the journey out; it is the morning after the journey home, when the world looks slightly the same but you have been changed by it. Read this book again that morning. Make a cup of coffee. Light a candle if there is one. <em>Þetta reddast.</em></p>
@@ -1425,6 +1472,19 @@
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
   },{threshold:0.08,rootMargin:'0px 0px -4% 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // Interactive hunting list — toggle "checked" + persist in localStorage
+  document.querySelectorAll('.huntlist li').forEach(function(li,i){
+    var key='vacation2026_hunt_'+i;
+    try{ if(localStorage.getItem(key)) li.classList.add('checked'); }catch(e){}
+    li.addEventListener('click',function(){
+      li.classList.toggle('checked');
+      try{
+        if(li.classList.contains('checked')) localStorage.setItem(key,'1');
+        else localStorage.removeItem(key);
+      }catch(e){}
+    });
+  });
 </script>
 </body>
 </html>
