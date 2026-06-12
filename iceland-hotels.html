@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where We'll Sleep in Iceland · Verified Hotel Shortlist · 2026</title>
-<meta name="description" content="Live-checked hotel shortlist for the Iceland leg of the Senerth 2026 trip — South Coast (Jun 26-28) and Reykjavik (Jun 28-30), with availability verified in a browser, prices, reviews and prefilled booking links.">
+<title>Rick Steves' Iceland Hotel Picks · Availability-Checked · 2026</title>
+<meta name="description" content="Rick Steves' own Iceland hotel picks for the South Coast (Jun 26-28) and downtown Reykjavik (Jun 28-30), recovered from his guidebook and live-checked in a browser for availability, with prices and prefilled booking links.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
@@ -344,22 +344,22 @@
   /* ===== Iceland hotel-shortlist page additions ===== */
   .hb-hero{padding:120px 0 56px;text-align:center;border-bottom:1px solid rgba(92,80,64,.18);}
   .hb-hero h1{font-family:var(--display);font-weight:600;font-style:italic;font-size:clamp(2.2rem,6vw,4rem);line-height:1.02;margin:.15em 0 .3em;}
-  .hb-hero .sub{max-width:60ch;margin:0 auto;font-size:1.08rem;color:var(--ink);}
+  .hb-hero .sub{max-width:62ch;margin:0 auto;font-size:1.08rem;color:var(--ink);}
   .checkstamp{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--moss);padding:8px 14px;border-radius:100px;}
   .hcards{display:grid;grid-template-columns:1fr;gap:26px;margin-top:22px;}
   @media(min-width:780px){.hcards{grid-template-columns:1fr 1fr;}}
   .hotel{background:var(--paper);border:1px solid rgba(92,80,64,.22);border-radius:6px;overflow:hidden;box-shadow:0 18px 40px -30px rgba(36,25,12,.6);display:flex;flex-direction:column;}
-  .hotel.sold{opacity:.66;}
   .hph{position:relative;aspect-ratio:16/10;background:var(--paper-2);overflow:hidden;}
   .hph img{width:100%;height:100%;object-fit:cover;display:block;}
   .badge-av{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--moss);padding:6px 11px;border-radius:100px;box-shadow:0 4px 12px -4px rgba(0,0,0,.4);}
   .badge-av.out{background:#9a4b3b;}
+  .badge-rs{position:absolute;top:12px;right:12px;font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#3a2e16;background:#e3bd63;padding:6px 10px;border-radius:100px;box-shadow:0 4px 12px -4px rgba(0,0,0,.45);}
   .hbody{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;}
   .hotel h4{font-family:var(--display);font-weight:600;font-size:1.32rem;margin:0;line-height:1.1;}
   .hmeta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0 2px;}
   .chip{font-family:var(--mono);font-size:.6rem;letter-spacing:.07em;text-transform:uppercase;background:var(--paper-2);border:1px solid rgba(92,80,64,.25);border-radius:100px;padding:4px 9px;color:var(--ink);}
   .chip.score{background:var(--accent);color:#fff;border:none;font-weight:700;}
-  .chip.rs{background:transparent;border-style:dashed;}
+  .chip.tier{background:transparent;border-style:dashed;}
   .why{font-size:.98rem;margin:10px 0 0;}
   .hotel .gems{margin-top:12px;}
   .hotel .gems li{font-size:.9rem;padding:9px 0 9px 26px;}
@@ -376,24 +376,52 @@
   .altlink{font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:1px;}
   .soldstrip{margin-top:24px;font-size:.92rem;background:var(--paper-2);border:1px dashed rgba(92,80,64,.35);border-radius:6px;padding:16px 20px;}
   .soldstrip strong{font-family:var(--display);}
-  .rs-foot{margin-top:18px;font-size:.82rem;font-style:italic;color:var(--ink);opacity:.8;max-width:70ch;}
+  .morepicks{margin-top:26px;}
+  .morepicks .mp-h{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:6px;}
+  .morepicks ul{list-style:none;padding:0;margin:0;}
+  .morepicks li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-top:1px solid rgba(92,80,64,.18);flex-wrap:wrap;}
+  .morepicks li:last-child{border-bottom:1px solid rgba(92,80,64,.18);}
+  .mp-name{font-size:.98rem;}
+  .mp-name b{font-family:var(--display);font-weight:600;}
+  .mp-name .tg{font-family:var(--mono);font-size:.6rem;letter-spacing:.04em;color:var(--accent);margin-left:7px;}
+  .mp-name .av{font-family:var(--mono);font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;color:var(--moss);margin-left:7px;font-weight:700;}
+  .mp-book{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;text-decoration:none;color:#fff;background:var(--accent);padding:8px 13px;border-radius:4px;white-space:nowrap;}
 </style>
 </head>
 <body>
 <div id="progress"></div>
 <nav>
   <div class="brand">Senerth · MMXXVI</div>
-  <div class="links"><a href="index.html">← The trip</a><a href="index.html#iceland">Iceland</a><a href="#south">South Coast</a><a href="#reykjavik">Reykjavík</a></div>
+  <div class="links"><a href="index.html">← The trip</a><a href="#ricksteves">Rick Steves</a><a href="#south">South Coast</a><a href="#reykjavik">Reykjavík</a></div>
 </nav>
 
 <header class="hb-hero">
   <div class="wrap">
     <span class="eyebrow">Where you'll sleep · Iceland</span>
-    <h1>Four nights, two beds</h1>
-    <p class="sub">The hotel shortlist for the Icelandic leg — the <strong>South Coast</strong> for the Westman Islands ferry, then downtown <strong>Reykjavík</strong>. Rick-Steves-minded, walkable to dinner, and every “✓ Available” below was loaded in a <strong>live browser</strong> for your exact dates.</p>
-    <div class="checkstamp">✓ Live-checked Jun 11, 2026 · 2 adults + 1 child · lowest 2-night rate shown</div>
+    <h1>Rick's picks, checked</h1>
+    <p class="sub">Rick Steves' <em>own</em> hotel recommendations for your two Icelandic stays — the <strong>South Coast</strong> (near the Westman Islands ferry) and downtown <strong>Reykjavík</strong> — every one loaded in a <strong>live browser</strong> to confirm it's bookable for your exact dates. The <span style="color:#b8923a;">★</span> hotels are straight from his book.</p>
+    <div class="checkstamp">★ Rick Steves picks · ✓ availability live-checked Jun 12, 2026 · 2 adults + 1 child</div>
   </div>
 </header>
+
+<!-- ===== RICK STEVES ===== -->
+<section class="chapter alt-band" id="ricksteves" style="--accent:var(--gold);">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Listening to Rick Steves</span>
+      <h2>His <em>actual</em> picks — recovered</h2>
+      <p class="lede">You wanted his real recommendations, not my guesses. So I went into the book and pulled them.</p>
+    </div>
+    <div class="ctx reveal">
+      <p>Rick's <em>Iceland</em> guidebook lists specific hotels in its "Sleeping in Reykjavík" and "Sleeping on the South Coast" sections — and those picks aren't posted on his website. I recovered them by reading the <strong>book's own text</strong> (via Google Books' full-text search across the current edition and the <em>Snapshot Reykjavík</em> companion), then cross-checked against his official closures list. The happy result: <strong>most of the hotels I'd already lined up are genuinely his</strong> — and I found several more. Every <span style="color:#b8923a;">★</span> below was read in his book; I then checked each one's live availability for your dates.</p>
+    </div>
+    <ul class="gems reveal">
+      <li><strong>His $-tiers, on every card.</strong> Rick rates by price: <em>$$ moderate · $$$ pricier · $$$$ splurge</em> (ISK bands). I've put his tier on each pick so you can read it his way.</li>
+      <li><strong>His instinct is value, family-run, walkable.</strong> Downtown Reykjavík is "starting to feel like an Icelandic theme park" (per his co-author Ian Watson) — so his list leans to guesthouses just off the core, like <strong>Galtafell</strong>.</li>
+      <li><strong>One honesty note:</strong> the book text came from a single primary source (Google Books). It's high-confidence and internally consistent, but if you want zero doubt, a library Libby/OverDrive copy confirms the "Sleeping" pages in a minute.</li>
+    </ul>
+  </div>
+</section>
 
 <!-- ===== SOUTH COAST ===== -->
 <section class="chapter" id="south" style="--accent:var(--moss);">
@@ -401,53 +429,76 @@
     <div class="ch-head reveal">
       <span class="eyebrow">Stay 1 · the South Coast · Jun 26 → 28</span>
       <h2>Near the <em>8:15 ferry</em></h2>
-      <p class="lede">Two nights within an easy morning drive of Landeyjahöfn for the Westman Islands ferry, and ideally walkable to a langoustine dinner. I checked six — here's what's actually bookable for your dates.</p>
+      <p class="lede">His South Coast picks within reach of the Landeyjahöfn ferry — plus the one non-Rick lodge that's simply the best family fit. Checked live; here's what's bookable.</p>
     </div>
     <div class="hcards reveal">
 
       <article class="hotel">
-        <div class="hph"><span class="badge-av">✓ Available</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/881759119.jpg?k=52689ccf4719aa3f971969ace4c61c896521bdd8ee42aa79cf670e44dcd1eba8&o=" alt="Midgard Base Camp"></div>
+        <div class="hph"><span class="badge-av">✓ Available</span><span class="badge-rs">★ Rick Steves pick</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/862469902.jpg?k=bd5ae5414cf199bfb6f5fe5b352a007abdffaf3a6e362fa3dfc2d99fc716ec3e&o=" alt="Hótel Lækur"></div>
         <div class="hbody">
-          <h4>Midgard Base Camp <span style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--accent);">· BEST FIT</span></h4>
-          <div class="hmeta"><span class="chip score">9.3 Booking</span><span class="chip">2,228 reviews</span><span class="chip rs">My pick (not RS-listed)</span></div>
-          <p class="why">The best all-round family fit — an adventure lodge with a rooftop hot tub &amp; sauna, the town's top-rated restaurant on site, and the café-and-pizza row a short walk away.</p>
+          <h4>Hótel Lækur</h4>
+          <div class="hmeta"><span class="chip tier">Rick's tier: $$$</span><span class="chip">renovated barn + cottages</span></div>
+          <p class="why">The hotel the Rick Steves forum explicitly flags as <em>the</em> guidebook pick for this stretch — 21 rooms in a renovated barn with a modern annex, on a quiet farm near Hella.</p>
           <ul class="gems">
-            <li><strong>Family room, double + bunk</strong> with a private bathroom — exactly your configuration.</li>
-            <li><strong>Rooftop hot tub + sauna</strong> — the post-ferry, midnight-sun soak a 9-year-old will never forget.</li>
-            <li><strong>#1 restaurant in town on-site</strong> (4.8★) plus Eldstó café &amp; Gallerý Pizza walkable.</li>
+            <li><strong>Junior Suite with Terrace</strong> — queen bed + sofa bed, fits your three, private bath + kitchenette.</li>
+            <li><strong>Rick's South Coast pick</strong>, framed as a good no-backtracking base heading east.</li>
           </ul>
-          <div class="watch">⚠ <strong>Only 1 family room left</strong> for your dates when I checked — and the on-site kitchen doesn't do langoustine (see the dinner note below).</div>
-          <div class="loc">📍 Landeyjahöfn ferry ~23 min · Seljalandsfoss ~25 min · in Hvolsvöllur, dining walkable</div>
-          <div class="priceline"><div><span class="amt">$645</span><span class="per">family room · 2 nights · breakfast + free cancel</span></div><div class="left">Only 1 left</div></div>
-          <div class="cta-row"><a class="bookbtn" href="https://www.booking.com/hotel/is/midgard.html?checkin=2026-06-26&checkout=2026-06-28&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book — dates filled in</a><a class="altlink" href="https://midgardbasecamp.is/" target="_blank" rel="noopener">Official</a><a class="altlink" href="hotel-proof/midgard.png" target="_blank" rel="noopener">📸 proof</a></div>
+          <div class="watch">⚠ <strong>1 left.</strong> ~35–40 min to the ferry; one forum reader found a Hella base a touch far from the <em>far</em>-east sights (fine for the ferry &amp; the waterfalls).</div>
+          <div class="loc">📍 Landeyjahöfn ferry ~35–40 min · Seljalandsfoss ~25 min · rural (dinner on-site / drive to Hvolsvöllur)</div>
+          <div class="priceline"><div><span class="amt">$682</span><span class="per">junior suite · 2 nights</span></div><div class="left">Only 1 left</div></div>
+          <div class="cta-row"><a class="bookbtn" href="https://www.booking.com/hotel/is/ha3tel-la-kur.html?checkin=2026-06-26&checkout=2026-06-28&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book — dates filled in</a><a class="altlink" href="hotel-proof/laekur.png" target="_blank" rel="noopener">📸 proof</a></div>
         </div>
       </article>
 
       <article class="hotel">
-        <div class="hph"><span class="badge-av">✓ Available</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/726951097.jpg?k=c25abc017f9221cce002ceb555d44c36171139669bcbb1f7b6c389516f687f50&o=" alt="Hótel Rangá"></div>
+        <div class="hph"><span class="badge-av">✓ Available</span><span class="badge-rs">★ Rick Steves pick</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/726951097.jpg?k=c25abc017f9221cce002ceb555d44c36171139669bcbb1f7b6c389516f687f50&o=" alt="Hótel Rangá"></div>
         <div class="hbody">
           <h4>Hótel Rangá <span style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--accent);">· THE SPLURGE</span></h4>
-          <div class="hmeta"><span class="chip score">9.0 Booking</span><span class="chip">377 reviews</span><span class="chip rs">Not RS-listed</span></div>
-          <p class="why">Iceland's famous 4-star log lodge — riverside outdoor hot tubs under the midnight sun, a proper restaurant, and rooms that genuinely sleep three.</p>
+          <div class="hmeta"><span class="chip score">9.0 Booking</span><span class="chip tier">Rick's tier: $$$$</span></div>
+          <p class="why">Rick's splurge pick for the corridor — Iceland's famous 4-star log lodge with riverside hot tubs, an observatory, and rooms that genuinely sleep three.</p>
           <ul class="gems">
-            <li><strong>Deluxe rooms sleep 3</strong> (king + sofa bed), kids' menu downstairs.</li>
-            <li><strong>Outdoor riverside hot tubs</strong> + the country's best aurora/stargazing cred.</li>
-            <li><strong>Full restaurant on site</strong>, dinner until 10 pm — easy after the ferry.</li>
+            <li><strong>Deluxe rooms sleep 3</strong> (king + sofa bed); a real restaurant, dinner till 10 pm.</li>
+            <li><strong>Outdoor riverside hot tubs</strong> + the country's best aurora cred.</li>
           </ul>
-          <div class="watch">⚠ Top of / above budget — and despite the rumor, its “lobster” is a langoustine <em>garnish</em>, not a lobster dinner (real one's in the note below).</div>
-          <div class="loc">📍 Landeyjahöfn ferry ~30–35 min · between Hella &amp; Hvolsvöllur (rural, not walkable to town)</div>
+          <div class="watch">⚠ Top of / above budget — and its "lobster" is a langoustine <em>garnish</em>, not a lobster dinner (see the note below).</div>
+          <div class="loc">📍 Landeyjahöfn ferry ~30–35 min · by Hvolsvöllur (rural, not walkable to town)</div>
           <div class="priceline"><div><span class="amt">$1,384</span><span class="per">standard · 2 nights (deluxe ~$1,800)</span></div><div class="left">Limited supply</div></div>
           <div class="cta-row"><a class="bookbtn" href="https://www.booking.com/hotel/is/ranga-hella.html?checkin=2026-06-26&checkout=2026-06-28&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book — dates filled in</a><a class="altlink" href="https://hotelranga.is/" target="_blank" rel="noopener">Official</a><a class="altlink" href="hotel-proof/ranga.png" target="_blank" rel="noopener">📸 proof</a></div>
         </div>
       </article>
 
+      <article class="hotel">
+        <div class="hph"><span class="badge-av">✓ Available</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/881759119.jpg?k=52689ccf4719aa3f971969ace4c61c896521bdd8ee42aa79cf670e44dcd1eba8&o=" alt="Midgard Base Camp"></div>
+        <div class="hbody">
+          <h4>Midgard Base Camp <span style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--accent);">· BEST FAMILY FIT</span></h4>
+          <div class="hmeta"><span class="chip score">9.3 Booking</span><span class="chip">Not Rick's — my add</span></div>
+          <p class="why">Not in his book, but the best all-round family pick: an adventure lodge with a rooftop hot tub &amp; sauna, the town's top restaurant on-site, and the café row a short walk away.</p>
+          <ul class="gems">
+            <li><strong>Family room, double + bunk</strong>, private bath — exactly your configuration.</li>
+            <li><strong>Rooftop hot tub + sauna</strong>, and walkable dining in Hvolsvöllur.</li>
+          </ul>
+          <div class="watch">⚠ <strong>Only 1 family room left</strong> when I checked.</div>
+          <div class="loc">📍 Landeyjahöfn ferry ~23 min · Seljalandsfoss ~25 min · dining walkable in town</div>
+          <div class="priceline"><div><span class="amt">$645</span><span class="per">family room · 2 nights · breakfast</span></div><div class="left">Only 1 left</div></div>
+          <div class="cta-row"><a class="bookbtn" href="https://www.booking.com/hotel/is/midgard.html?checkin=2026-06-26&checkout=2026-06-28&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book — dates filled in</a><a class="altlink" href="https://midgardbasecamp.is/" target="_blank" rel="noopener">Official</a><a class="altlink" href="hotel-proof/midgard.png" target="_blank" rel="noopener">📸 proof</a></div>
+        </div>
+      </article>
+
     </div>
 
-    <div class="soldstrip reveal"><strong>Also checked — sold out for Jun 26–28:</strong> Hotel Selja (closest to the ferry, gone), Umi Hotel, and Stracta Hotel. <strong>Hótel Lóa</strong> (brand-new, opened 2025) isn't bookable on Booking yet — check <a href="https://hotelloa.is/" target="_blank" rel="noopener">hotelloa.is</a> directly if you want the newest option in town.</div>
+    <div class="morepicks reveal">
+      <div class="mp-h">★ More of Rick's South Coast picks — also available for Jun 26–28</div>
+      <ul>
+        <li><span class="mp-name"><b>Lindartún Guesthouse</b> <span class="tg">$$</span> <span class="av">✓ available</span> — value rooms + cabins on a working farm near Hella</span><a class="mp-book" href="https://www.booking.com/hotel/is/lindartun-guesthouse.html?checkin=2026-06-26&checkout=2026-06-28&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+        <li><span class="mp-name"><b>Skálakot Manor Hotel</b> <span class="tg">$$$$</span> <span class="av">✓ available</span> — upscale country manor + spa, foothills near Seljalandsfoss</span><a class="mp-book" href="https://www.booking.com/hotel/is/skalakot-manor-hote.html?checkin=2026-06-26&checkout=2026-06-28&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+      </ul>
+    </div>
+
+    <div class="soldstrip reveal"><strong>Sold out for Jun 26–28:</strong> <strong>Hotel Selja</strong> (one of Rick's picks, gone), plus Umi and Stracta. And his pick <strong>Hótel Anna</strong> couldn't be matched on Booking (a different hotel comes up) — book it via <a href="https://www.hotelanna.is/" target="_blank" rel="noopener">hotelanna.is</a> directly.</div>
 
     <div class="kidfact reveal" style="margin-top:24px;">
       <span class="ico">🦞</span>
-      <div><span class="lbl">The langoustine dinner — a logistics tip</span><p>Iceland's legendary lobster-soup spot is <strong>Fjöruborðið</strong> in Stokkseyri — but it's ~50 min <em>west</em> of your base, so a ferry-night run is a slog. Best move: eat there on <strong>Fri Jun 26 on the drive in</strong> — Stokkseyri sits right on the route from Keflavík, so it costs almost no extra driving. Keep ferry-night dinner (Jun 27) near base.</p></div>
+      <div><span class="lbl">The langoustine dinner — a logistics tip</span><p>Iceland's legendary lobster-soup spot is <strong>Fjöruborðið</strong> in Stokkseyri — but it's ~50 min <em>west</em> of your base, so a ferry-night run is a slog. Best move: eat there on <strong>Fri Jun 26 on the drive in</strong> — Stokkseyri sits right on the route from Keflavík. Keep ferry-night dinner (Jun 27) near base.</p></div>
     </div>
   </div>
 </section>
@@ -458,40 +509,38 @@
     <div class="ch-head reveal">
       <span class="eyebrow">Stay 2 · Reykjavík · Jun 28 → 30</span>
       <h2>Walk to <em>Messinn</em></h2>
-      <p class="lede">Two downtown nights, walkable to dinner at Messinn and the sights, before the Jun 30 flight to Milan. All four below were live-checked and bookable for your dates.</p>
+      <p class="lede">Every card here is one of Rick's downtown picks — walkable to Messinn and the sights — and all four are bookable for your dates.</p>
     </div>
     <div class="hcards reveal">
 
       <article class="hotel">
-        <div class="hph"><span class="badge-av">✓ Available</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/839068449.jpg?k=718b49883cdb3a54ded52700a31016b2b44143a7a910c3e95bc3b25e854247f4&o=" alt="Guesthouse Galtafell"></div>
+        <div class="hph"><span class="badge-av">✓ Available</span><span class="badge-rs">★ Rick Steves pick</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/839068449.jpg?k=718b49883cdb3a54ded52700a31016b2b44143a7a910c3e95bc3b25e854247f4&o=" alt="Guesthouse Galtafell"></div>
         <div class="hbody">
           <h4>Guesthouse Galtafell <span style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--accent);">· VALUE + PARKING</span></h4>
-          <div class="hmeta"><span class="chip score">8.7 Booking</span><span class="chip">1,442 reviews</span><span class="chip rs">On your RS shortlist*</span></div>
-          <p class="why">The value pick with the rarest thing in 101 — <strong>free parking</strong>. A 1916 villa of self-catering apartments in a quiet embassy district, walkable to everything.</p>
+          <div class="hmeta"><span class="chip score">8.7 Booking</span><span class="chip tier">Rick's tier: $$$</span></div>
+          <p class="why">The closest match to Rick's ethos — a quiet 1916 villa of self-catering apartments with the rarest thing in 101: <strong>free parking</strong>.</p>
           <ul class="gems">
             <li><strong>Apartment with private bath + kitchenette</strong> (fridge, kettle, extra beds).</li>
-            <li><strong>Free on-site &amp; street parking</strong> — almost unheard of downtown, perfect with the rental car.</li>
-            <li><strong>Quiet villa block</strong>, ~6–7 min to Hallgrímskirkja.</li>
+            <li><strong>Free on-site &amp; street parking</strong> — perfect with the rental car.</li>
           </ul>
-          <div class="watch">⚠ It's a guesthouse, not a full-service hotel; ~10 min walk to Messinn.</div>
-          <div class="loc">📍 Messinn ~10 min · Hallgrímskirkja ~6–7 min · the Pond ~4 min</div>
-          <div class="priceline"><div><span class="amt">$491</span><span class="per">apartment · 2 nights (non-refundable; $545 free-cancel)</span></div><div class="left">2 left</div></div>
+          <div class="watch">⚠ A guesthouse, not a full-service hotel; ~10 min walk to Messinn.</div>
+          <div class="loc">📍 Messinn ~10 min · Hallgrímskirkja ~6–7 min · free parking</div>
+          <div class="priceline"><div><span class="amt">$491</span><span class="per">apartment · 2 nights ($545 free-cancel)</span></div><div class="left">2 left</div></div>
           <div class="cta-row"><a class="bookbtn" href="https://www.booking.com/hotel/is/guesthouse-galtafell-reykjavik.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book — dates filled in</a><a class="altlink" href="https://guesthousegaltafell.is/" target="_blank" rel="noopener">Official</a><a class="altlink" href="hotel-proof/galtafell.png" target="_blank" rel="noopener">📸 proof</a></div>
         </div>
       </article>
 
       <article class="hotel">
-        <div class="hph"><span class="badge-av">✓ Available</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/796098875.jpg?k=21b6740f911bc8a6d2596a276fc35820c5e1d141b35b6fbdf5562688fe40c2f8&o=" alt="Hótel Óðinsvé"></div>
+        <div class="hph"><span class="badge-av">✓ Available</span><span class="badge-rs">★ Rick Steves pick</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/796098875.jpg?k=21b6740f911bc8a6d2596a276fc35820c5e1d141b35b6fbdf5562688fe40c2f8&o=" alt="Hótel Óðinsvé"></div>
         <div class="hbody">
           <h4>Hótel Óðinsvé <span style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--accent);">· CLOSEST TO THE CHURCH</span></h4>
-          <div class="hmeta"><span class="chip score">8.4 Booking</span><span class="chip">9.6 location</span><span class="chip rs">On your RS shortlist*</span></div>
-          <p class="why">Boutique 4-star on a quiet square just off the rainbow street — the most comfortable base near Hallgrímskirkja, with the well-loved SNAPS bistro downstairs.</p>
+          <div class="hmeta"><span class="chip score">8.4 Booking</span><span class="chip">9.6 location</span><span class="chip tier">Rick's tier: $$$$</span></div>
+          <p class="why">Rick's boutique pick on a quiet square just off the rainbow street — the most comfortable base near Hallgrímskirkja, with the SNAPS bistro downstairs.</p>
           <ul class="gems">
             <li><strong>Triple rooms + 2-bedroom apartments</strong> (sleep up to 4).</li>
-            <li><strong>~4–5 min walk to Hallgrímskirkja</strong> and the Skólavörðustígur shops.</li>
-            <li><strong>SNAPS bistro on-site</strong> — a Reykjavík favorite.</li>
+            <li><strong>~4–5 min to Hallgrímskirkja</strong> and the Skólavörðustígur shops.</li>
           </ul>
-          <div class="watch">⚠ Only 1 of the cheapest room left when I checked; no hotel parking (paid street zone).</div>
+          <div class="watch">⚠ Only 1 of the cheapest room left; no hotel parking (paid street).</div>
           <div class="loc">📍 Hallgrímskirkja ~4–5 min · Messinn ~9–10 min downhill</div>
           <div class="priceline"><div><span class="amt">$581</span><span class="per">double/twin · 2 nights (junior suite ~$769)</span></div><div class="left">1 left (cheapest)</div></div>
           <div class="cta-row"><a class="bookbtn" href="https://www.booking.com/hotel/is/odinsve.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book — dates filled in</a><a class="altlink" href="https://www.odinsve.is/" target="_blank" rel="noopener">Official</a><a class="altlink" href="hotel-proof/odinsve.png" target="_blank" rel="noopener">📸 proof</a></div>
@@ -499,33 +548,31 @@
       </article>
 
       <article class="hotel">
-        <div class="hph"><span class="badge-av">✓ Available</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/834430183.jpg?k=b794fcf3ba6f1bef8a36fe83f278797537ef70030d6964bc8743e2be92c6034d&o=" alt="Reykjavik Residence Apartment Hotel"></div>
+        <div class="hph"><span class="badge-av">✓ Available</span><span class="badge-rs">★ Rick Steves pick</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/834430183.jpg?k=b794fcf3ba6f1bef8a36fe83f278797537ef70030d6964bc8743e2be92c6034d&o=" alt="Reykjavik Residence Apartment Hotel"></div>
         <div class="hbody">
           <h4>Reykjavik Residence <span style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--accent);">· BEST-REVIEWED</span></h4>
-          <div class="hmeta"><span class="chip score">9.3 Booking</span><span class="chip">apartment hotel</span><span class="chip rs">My addition</span></div>
-          <p class="why">The purest family-of-three fit: an apartment hotel whose Superior Studio is literally <em>“recommended for 2 adults + 1 child,”</em> with a full kitchen and the best reviews in town.</p>
+          <div class="hmeta"><span class="chip score">9.3 Booking</span><span class="chip tier">Rick's pick · apt hotel</span></div>
+          <p class="why">In Rick's book <em>and</em> the purest family fit: an apartment hotel whose Superior Studio is literally “recommended for 2 adults + 1 child,” with a full kitchen and the best reviews in town.</p>
           <ul class="gems">
-            <li><strong>Superior Studio sized for exactly your party</strong> (king + sofa, full kitchen).</li>
-            <li><strong>Top-reviewed (9.3)</strong> of every option here.</li>
-            <li><strong>On Hverfisgata/Laugavegur</strong> — the heart of the action.</li>
+            <li><strong>Superior Studio sized for your party</strong> (king + sofa, full kitchen).</li>
+            <li><strong>Top-reviewed (9.3)</strong> on Hverfisgata/Laugavegur — heart of the action.</li>
           </ul>
           <div class="watch">⚠ No on-site parking (paid lot ~1 block, ~ISK 2,500/day).</div>
           <div class="loc">📍 Messinn ~8 min · Hallgrímskirkja ~11 min</div>
-          <div class="priceline"><div><span class="amt">$884</span><span class="per">Superior Studio · 2 nights (family studio ~$848)</span></div><div class="left">3 left</div></div>
+          <div class="priceline"><div><span class="amt">$884</span><span class="per">Superior Studio · 2 nights</span></div><div class="left">3 left</div></div>
           <div class="cta-row"><a class="bookbtn" href="https://www.booking.com/hotel/is/reykjavik-residence.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book — dates filled in</a><a class="altlink" href="https://reykjavikresidence.is/" target="_blank" rel="noopener">Official</a><a class="altlink" href="hotel-proof/residence.png" target="_blank" rel="noopener">📸 proof</a></div>
         </div>
       </article>
 
       <article class="hotel">
-        <div class="hph"><span class="badge-av">✓ Available</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/20143731.jpg?k=361f240919b8703c042dcb5527a4a1cd2144829bbd17cfda855f38f1985ec891&o=" alt="Hotel Reykjavík Centrum"></div>
+        <div class="hph"><span class="badge-av">✓ Available</span><span class="badge-rs">★ Rick Steves pick</span><img loading="lazy" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/20143731.jpg?k=361f240919b8703c042dcb5527a4a1cd2144829bbd17cfda855f38f1985ec891&o=" alt="Hotel Reykjavík Centrum"></div>
         <div class="hbody">
           <h4>Hotel Reykjavík Centrum <span style="font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--accent);">· 4-STAR + VIKINGS</span></h4>
-          <div class="hmeta"><span class="chip score">8.7 Booking</span><span class="chip">819 reviews</span><span class="chip rs">On your RS shortlist*</span></div>
-          <p class="why">A full-service 4-star on the city's oldest street — with a 9-year-old's bonus: a real Viking longhouse (the Settlement Exhibition) is in the hotel's own basement.</p>
+          <div class="hmeta"><span class="chip score">8.7 Booking</span><span class="chip tier">Rick's tier: $$$$</span></div>
+          <p class="why">Rick's full-service 4-star on the city's oldest street — with a 9-year-old's bonus: a real Viking longhouse (the Settlement Exhibition) in the hotel's own basement.</p>
           <ul class="gems">
             <li><strong>4-star comfort</strong>, triple / junior-suite rooms.</li>
             <li><strong>Viking Settlement ruins museum in the building</strong> — instant kid win.</li>
-            <li><strong>4–5 min to Messinn</strong>, ~5 min to the old harbour.</li>
           </ul>
           <div class="watch">⚠ Priciest of the four; no hotel parking (garages ~400 m).</div>
           <div class="loc">📍 Messinn ~4–5 min · Hallgrímskirkja ~15 min · harbour ~5 min</div>
@@ -536,8 +583,19 @@
 
     </div>
 
-    <div class="soldstrip reveal"><strong>Also checked — sold out for Jun 28–30:</strong> Kvosin Downtown Hotel — the 2-minutes-to-Messinn boutique splurge, gone for your dates.</div>
-    <p class="rs-foot reveal">* Rick Steves' guidebook does list specific Reykjavík hotels, but the book's exact picks aren't published online, so I can't certify the badge. The starred hotels are the ones from the list you supplied; I found nothing contradicting them — treat “Rick Steves pick” as your call, not a verified claim. Midgard and Rangá aren't on that list (they're my fit-based picks).</p>
+    <div class="morepicks reveal">
+      <div class="mp-h">★ More of Rick's Reykjavík picks — also available for Jun 28–30</div>
+      <ul>
+        <li><span class="mp-name"><b>Berjaya Reykjavík Marina</b> <span class="tg">$$$</span> <span class="av">✓ available</span> — design hotel at the Old Harbor (a king suite is “recommended for 2 adults + 1 child”)</span><a class="mp-book" href="https://www.booking.com/hotel/is/icelandair-reykjavik-marina.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+        <li><span class="mp-name"><b>Guesthouse Sunna</b> <span class="tg">$$$</span> <span class="av">✓ available</span> — hotel-like guesthouse right below Hallgrímskirkja</span><a class="mp-book" href="https://www.booking.com/hotel/is/guesthouse-sunna.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+        <li><span class="mp-name"><b>Freyja Guesthouse</b> <span class="tg">$$$</span> <span class="av">✓ available</span> — family-run, quiet street by Hallgrímskirkja</span><a class="mp-book" href="https://www.booking.com/hotel/is/freyja-reykjavik8.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+        <li><span class="mp-name"><b>Local 101</b> <span class="tg">$$</span> <span class="av">✓ available</span> — small hotel, quiet central street near the Old Harbor</span><a class="mp-book" href="https://www.booking.com/hotel/is/cityhoteliceland.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+        <li><span class="mp-name"><b>Castle House / Embassy Apartments</b> <span class="tg">$$</span> <span class="av">✓ available</span> — self-catering apartments, central &amp; quiet</span><a class="mp-book" href="https://www.booking.com/hotel/is/castle-house-luxury-apartments.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+        <li><span class="mp-name"><b>Nest Apartments</b> <span class="tg">$$</span> <span class="av">✓ available</span> — full-kitchen units near Laugavegur</span><a class="mp-book" href="https://www.booking.com/hotel/is/nest-apartments.html?checkin=2026-06-28&checkout=2026-06-30&group_adults=2&group_children=1&age=9&no_rooms=1&selected_currency=USD" target="_blank" rel="noopener">Book →</a></li>
+      </ul>
+    </div>
+
+    <div class="soldstrip reveal"><strong>Sold out for Jun 28–30:</strong> <strong>Kvosin Downtown Hotel</strong> — also one of Rick's picks (the boutique splurge 2 min from Messinn), gone for your dates.</div>
   </div>
 </section>
 
@@ -549,8 +607,8 @@
       <h2>How I <em>checked</em> these</h2>
     </div>
     <div class="ctx reveal">
-      <p>Every “✓ Available” above was loaded in a real, automated browser on <strong>Jun 11, 2026</strong> with your exact dates (South Coast Jun 26–28, Reykjavík Jun 28–30) and party (<strong>2 adults + 1 nine-year-old</strong>). I read the live room table, captured the lowest price, and saved the screenshot behind each <strong>📸 proof</strong> link. The sold-out ones genuinely showed “no availability for your dates.”</p>
-      <p>Three honest caveats: <strong>(1)</strong> it's a snapshot — rooms can sell between now and when you book, and several already showed <em>“only 1–2 left,”</em> so the safe move is to book soon (most have free-cancellation rates if plans wobble). <strong>(2)</strong> Prices are the lowest bookable rate for a 2-night stay and exclude small city/VAT taxes. <strong>(3)</strong> Every “Book” button opens Booking.com with your dates and party already filled in — so the only thing left is to choose the room and confirm.</p>
+      <p>Rick's picks were read from his book's text; then a real automated browser loaded each hotel's <em>own</em> page on <strong>Jun 12, 2026</strong> with your exact dates and party (<strong>2 adults + 1 nine-year-old</strong>), read the live room table, and saved the screenshot behind each <strong>📸 proof</strong> link. Sold-out ones genuinely showed “no availability for your dates.”</p>
+      <p>Caveats: <strong>(1)</strong> availability is a snapshot — several show “only 1–2 left,” so book soon (most have free-cancellation rates). <strong>(2)</strong> The big $-amounts are the cheapest bookable 2-night rate I saw; his $-tiers ($$/$$$/$$$$) come straight from the book. <strong>(3)</strong> Every “Book” button opens with your dates + party pre-filled — pick the room and confirm.</p>
     </div>
   </div>
 </section>
@@ -558,7 +616,7 @@
 <footer>
   <div class="wrap">
     <h4>The Senerth family · Summer 2026</h4>
-    <p style="max-width:60ch;color:#b3a282;">Iceland beds, live-checked Jun 11, 2026. Availability and prices change — tap through to confirm. Hotel photos © the properties via Booking.com. <a href="index.html" style="color:#b3a282;border-bottom:1px solid;">← back to the trip</a></p>
+    <p style="max-width:62ch;color:#b3a282;">Rick Steves' Iceland hotel picks, recovered from the book and availability live-checked Jun 12, 2026. Availability and prices change — tap through to confirm. Hotel photos © the properties via Booking.com. <a href="index.html" style="color:#b3a282;border-bottom:1px solid;">← back to the trip</a></p>
   </div>
 </footer>
 
