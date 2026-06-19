@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake Garda, in full · Five Nights on Italy's Inland Sea · July 2026</title>
+<meta name="description" content="A bespoke, long-form guide to five car-free nights on Lake Garda (July 5–10, 2026) for a family of three: where to base, what to see, the self-drive boat day, getting around without a car, browser-verified family hotels, and a day-by-day plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4ead6;--paper-2:#efe1c7;--paper-3:#e7d6b6;
+    --ink:#241d14;--ink-soft:#5c5040;
+    --terracotta:#bd4a26;--teal:#15605b;--gold:#bb8b2c;
+    --slate:#3f6781;--lake:#2c6f57;--moss:#1a6b2f;--rose:#a23a4a;--deeplake:#1d5a6b;
+    --accent:var(--lake);
+    --maxw:1180px;--ease:cubic-bezier(.2,.7,.2,1);
+    --display:"Fraunces",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Courier Prime","Courier New",monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(17px,1.15vw,20px);line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  ::selection{background:var(--lake);color:var(--paper);}
+  a{color:inherit;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;}
+  .eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;color:var(--accent);font-weight:700;}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--lake);z-index:10000;transition:width .08s linear;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;justify-content:space-between;align-items:center;padding:14px 28px;mix-blend-mode:difference;color:#fff;}
+  nav .brand{font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;}
+  nav .brand a{text-decoration:none;}
+  nav .links{display:flex;gap:18px;align-items:center;}
+  nav .links a{font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;font-size:.62rem;text-decoration:none;opacity:.85;}
+  nav .links a:hover{opacity:1;}
+  nav .links a.back{opacity:1;border:1px solid rgba(255,255,255,.5);padding:5px 9px;border-radius:100px;}
+  @media(max-width:1000px){nav .links a:not(.back){display:none;}}
+
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero .bg{position:absolute;inset:-8% 0 0 0;background-size:cover;background-position:center 55%;z-index:0;will-change:transform;}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,28,30,.42) 0%,rgba(12,28,30,.10) 30%,rgba(12,28,30,.32) 66%,rgba(20,32,28,.94) 100%);}
+  .hero .inner{position:relative;z-index:2;color:var(--paper);padding-bottom:8vh;width:100%;}
+  .hero h1{font-family:var(--display);font-weight:900;font-optical-sizing:144;font-size:clamp(3rem,9vw,8rem);line-height:.92;letter-spacing:-.015em;margin:.16em 0 .26em;text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.4);}
+  .hero h1 em{font-style:italic;color:#9ed8c4;font-weight:600;}
+  .hero .sub{font-size:clamp(1.05rem,1.7vw,1.4rem);max-width:46ch;color:#eef3e9;font-weight:400;}
+  .hero .eyebrow{color:#9ed8c4;}
+  .hero .stamp{display:inline-block;margin-top:18px;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--lake);padding:7px 12px;border-radius:100px;}
+  .hero .stamp.alt{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);margin-left:8px;}
+  .hero .scrollcue{position:absolute;right:28px;bottom:6vh;z-index:2;color:var(--paper);writing-mode:vertical-rl;font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.64rem;opacity:.8;}
+  .hero .scrollcue::after{content:"";display:block;width:1px;height:48px;background:currentColor;margin:12px auto 0;animation:cue 2.4s var(--ease) infinite;}
+  @keyframes cue{0%,100%{transform:scaleY(.4);opacity:.4;transform-origin:top;}50%{transform:scaleY(1);opacity:.9;}}
+  .rise{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease) forwards;}
+  .rise.d1{animation-delay:.15s;}.rise.d2{animation-delay:.35s;}.rise.d3{animation-delay:.55s;}.rise.d4{animation-delay:.75s;}.rise.d5{animation-delay:.9s;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+
+  .chapter{position:relative;padding:clamp(60px,7vw,100px) 0;}
+  .chapter.alt-band{background:var(--paper-2);}
+  .chapter .wrap{position:relative;z-index:1;}
+  .ch-head{max-width:66ch;margin-bottom:40px;}
+  .ch-head .eyebrow{margin-bottom:14px;display:block;}
+  .ch-head h2{font-family:var(--display);font-weight:600;font-optical-sizing:120;font-size:clamp(2rem,5vw,3.6rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 .35em;text-wrap:balance;}
+  .ch-head h2 em{font-style:italic;color:var(--accent);}
+  .ch-head .lede{font-size:clamp(1.1rem,1.5vw,1.3rem);color:var(--ink);}
+  .ch-head .lede .drop{float:left;font-family:var(--display);font-weight:900;font-size:3.6em;line-height:.72;padding:.06em .12em 0 0;color:var(--accent);}
+
+  .section-label{font-family:var(--mono);text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;color:var(--accent);font-weight:700;margin:54px 0 14px;display:block;}
+  .ctx{max-width:72ch;color:var(--ink);font-size:1.02rem;}
+  .ctx p{margin:0 0 14px;}
+
+  .split{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;}
+  .split.flip{grid-template-columns:.85fr 1.15fr;}
+  .split.flip .media{order:2;}
+  @media(max-width:860px){.split,.split.flip{grid-template-columns:1fr;gap:30px;}.split.flip .media{order:0;}}
+  .subhead{font-family:var(--display);font-weight:600;font-size:2rem;margin:0 0 .2em;}
+
+  figure{margin:0;}
+  .frame{position:relative;overflow:hidden;border-radius:2px;box-shadow:0 26px 60px -28px rgba(36,25,12,.6);background:var(--paper-3);}
+  .frame img{width:100%;height:100%;object-fit:cover;filter:saturate(1.04) contrast(1.03);transition:transform 1.1s var(--ease);}
+  .frame:hover img{transform:scale(1.05);}
+  figcaption{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:.62rem;color:var(--ink-soft);margin-top:10px;}
+
+  /* lay of the land grid */
+  .lay{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;}
+  .lay .l{background:var(--paper);border:1px solid rgba(92,80,64,.18);border-radius:5px;padding:0;overflow:hidden;display:flex;flex-direction:column;}
+  .alt-band .lay .l{background:var(--paper-2);}
+  .lay .l .ph{aspect-ratio:5/3;overflow:hidden;background:var(--paper-3);position:relative;}
+  .lay .l .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .lay .l:hover .ph img{transform:scale(1.06);}
+  .lay .l .badge{position:absolute;top:9px;left:9px;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;padding:4px 8px;border-radius:100px;background:rgba(28,40,36,.78);}
+  .lay .l .badge.star{background:var(--lake);}
+  .lay .l .pad{padding:13px 16px 16px;display:flex;flex-direction:column;flex:1;}
+  .lay .l .nm{font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.1;}
+  .lay .l .meta{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:5px 0 7px;font-weight:700;}
+  .lay .l .ch{font-size:.9rem;color:var(--ink-soft);line-height:1.5;}
+  @media(max-width:760px){.lay{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.lay{grid-template-columns:1fr;}}
+
+  /* practical panel */
+  .practical{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;}
+  .practical .p{background:var(--paper);border:1px solid rgba(92,80,64,.18);border-radius:5px;padding:16px 18px;}
+  .alt-band .practical .p{background:var(--paper-2);}
+  .practical .p .k{font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .practical .p h5{font-family:var(--display);font-weight:600;font-size:1.12rem;margin:5px 0 6px;}
+  .practical .p p{margin:0;font-size:.9rem;line-height:1.55;color:var(--ink);}
+  @media(max-width:760px){.practical{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.practical{grid-template-columns:1fr;}}
+
+  /* verdict callout */
+  .verdict{margin-top:30px;background:var(--ink);color:var(--paper);border-radius:8px;padding:30px 34px;position:relative;overflow:hidden;}
+  .verdict::before{content:"★";position:absolute;top:-14px;right:6px;font-size:7rem;color:var(--lake);opacity:.22;line-height:1;}
+  .verdict .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:#9ed8c4;font-weight:700;}
+  .verdict h3{font-family:var(--display);font-weight:600;font-size:1.7rem;margin:8px 0 8px;}
+  .verdict h3 em{font-style:italic;color:#9ed8c4;}
+  .verdict p{margin:0;color:#dfe7df;font-size:1rem;max-width:74ch;}
+  .verdict .why{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
+  .verdict .why span{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.1);border:1px solid rgba(158,216,196,.4);color:#eef3e9;padding:5px 10px;border-radius:100px;}
+
+  /* day cards */
+  .day-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:18px;}
+  @media(max-width:760px){.day-grid{grid-template-columns:1fr;}}
+  .day{background:var(--paper);border:1px solid rgba(92,80,64,.22);border-radius:5px;overflow:hidden;box-shadow:0 16px 36px -28px rgba(36,25,12,.6);display:flex;flex-direction:column;}
+  .alt-band .day{background:var(--paper-2);}
+  .day .ph{aspect-ratio:16/10;overflow:hidden;background:var(--paper-3);}
+  .day .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .day:hover .ph img{transform:scale(1.06);}
+  .day .pad{padding:18px 22px 22px;display:flex;flex-direction:column;flex:1;}
+  .day .dno{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .day h4{font-family:var(--display);font-weight:600;font-size:1.34rem;margin:4px 0 8px;line-height:1.15;}
+  .day p{margin:0 0 14px;font-size:.95rem;color:var(--ink);}
+  .day .meta{margin-top:auto;border-top:1px dashed rgba(92,80,64,.3);padding-top:11px;font-size:.84rem;color:var(--ink-soft);}
+  .day .meta .k{font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-right:6px;}
+
+  /* timeline */
+  .timeline{border-left:2px solid rgba(92,80,64,.25);margin:30px 0 0;padding-left:0;list-style:none;}
+  .timeline li{position:relative;padding:0 0 26px 30px;}
+  .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--lake);}
+  .timeline li.key::before{box-shadow:0 0 0 4px rgba(44,111,87,.25);}
+  .timeline .date{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .timeline .ev{font-family:var(--display);font-size:1.18rem;font-weight:600;margin-top:2px;}
+  .timeline .note{color:var(--ink-soft);font-size:.94rem;}
+
+  /* hotels */
+  .stay-intro{font-size:1.02rem;color:var(--ink);max-width:74ch;font-style:italic;line-height:1.7;margin:0 0 6px;}
+  .basegroup{font-family:var(--display);font-weight:600;font-size:1.45rem;margin:38px 0 4px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
+  .basegroup .tagline{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;}
+  .stays{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px;}
+  @media(max-width:760px){.stays{grid-template-columns:1fr;}}
+  .stay{background:var(--paper);border:1px solid rgba(92,80,64,.22);border-radius:6px;padding:18px 20px;display:flex;flex-direction:column;box-shadow:0 14px 32px -26px rgba(36,25,12,.6);}
+  .alt-band .stay{background:var(--paper-2);}
+  .stay.pick{border:1.5px solid var(--lake);box-shadow:0 0 0 1px var(--lake) inset,0 14px 32px -26px rgba(36,25,12,.6);}
+  .stay .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+  .stay .nm{font-family:var(--display);font-weight:600;font-size:1.12rem;line-height:1.12;}
+  .stay .score{flex:0 0 auto;font-family:var(--mono);font-weight:700;font-size:.74rem;color:#fff;background:var(--lake);border-radius:5px;padding:5px 7px;text-align:center;line-height:1.15;}
+  .stay .score small{display:block;font-size:.5rem;letter-spacing:.06em;opacity:.85;font-weight:400;}
+  .stay .tags{margin:9px 0 8px;display:flex;flex-wrap:wrap;gap:6px;}
+  .stay .tags span{font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;border:1px solid var(--accent);color:var(--accent);}
+  .stay .tags span.solid{background:var(--accent);color:var(--paper);}
+  .stay .de{font-size:.88rem;color:var(--ink-soft);line-height:1.5;flex:1;}
+  .stay .rate{margin-top:12px;border-top:1px dashed rgba(92,80,64,.3);padding-top:10px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+  .stay .rate .tot{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--ink);}
+  .stay .rate .per{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+  .stay .rate .room{font-family:var(--mono);font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-align:right;max-width:46%;}
+  .availnote{margin-top:18px;background:var(--paper);border:1px solid rgba(92,80,64,.2);border-radius:6px;padding:14px 18px;font-size:.86rem;color:var(--ink-soft);}
+  .alt-band .availnote{background:var(--paper-2);}
+  .availnote b{color:var(--accent);}
+
+  /* eats */
+  .eats{margin:14px 0 0;padding:0;list-style:none;}
+  .eats li{display:grid;grid-template-columns:1fr auto;gap:10px 18px;padding:12px 0;border-bottom:1px solid rgba(92,80,64,.18);align-items:baseline;}
+  .eats li:last-child{border-bottom:none;}
+  .eats .nm{font-family:var(--display);font-weight:600;font-size:1.04rem;}
+  .eats .de{grid-column:1 / -1;font-size:.9rem;color:var(--ink-soft);line-height:1.55;margin-top:-2px;}
+  .eats .px{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--accent);font-weight:700;white-space:nowrap;}
+  .cuisine-intro{font-size:1.02rem;color:var(--ink);max-width:74ch;margin:0;font-style:italic;line-height:1.7;}
+
+  /* gems */
+  .gems{list-style:none;padding:0;margin:14px 0 0;}
+  .gems li{position:relative;padding:12px 0 12px 30px;border-top:1px solid rgba(92,80,64,.18);font-size:.96rem;}
+  .gems li:last-child{border-bottom:1px solid rgba(92,80,64,.18);}
+  .gems li::before{content:"◆";position:absolute;left:0;top:14px;color:var(--accent);font-size:.75em;}
+  .gems strong{font-family:var(--display);font-weight:600;}
+
+  /* kidfact */
+  .kidfact{background:var(--paper);border:2px dashed var(--accent);border-radius:6px;padding:16px 20px;margin:28px 0;display:flex;gap:16px;align-items:flex-start;}
+  .alt-band .kidfact{background:var(--paper-2);}
+  .kidfact .ico{font-size:1.7rem;flex-shrink:0;line-height:1;}
+  .kidfact .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .kidfact p{margin:5px 0 0;font-size:.93rem;line-height:1.6;color:var(--ink);}
+
+  /* moment */
+  .moment{background:var(--paper);border-left:5px solid var(--accent);padding:30px 36px 30px 60px;margin-top:48px;border-radius:0 6px 6px 0;position:relative;}
+  .alt-band .moment{background:var(--paper-2);}
+  .moment::before{content:"\201C";position:absolute;top:0;left:12px;font-family:var(--display);font-weight:900;font-size:6rem;color:var(--accent);opacity:.28;line-height:1;}
+  .moment .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .moment p{font-family:var(--body);font-style:italic;font-size:1.08rem;line-height:1.7;color:var(--ink);margin:10px 0 0;}
+
+  /* journeys (transfer diagram) */
+  .journey{display:flex;align-items:stretch;gap:5px;overflow-x:auto;padding:6px 2px 12px;scrollbar-width:thin;margin-top:8px;}
+  .term{flex:0 0 auto;align-self:center;font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;background:var(--ink);color:var(--paper);padding:12px 9px;border-radius:6px;text-align:center;}
+  .seg{flex:1 1 0;min-width:120px;background:var(--paper);border-top:4px solid var(--accent);border-radius:3px 3px 6px 6px;padding:13px 11px;box-shadow:0 12px 26px -22px rgba(0,0,0,.55);display:flex;flex-direction:column;justify-content:center;}
+  .alt-band .seg{background:var(--paper-2);}
+  .seg .pl{font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.05;}
+  .seg .ni{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:5px;}
+  .hop{flex:0 0 auto;align-self:center;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ink-soft);min-width:52px;}
+  .hop .ic{font-size:1.05rem;line-height:1;}
+  .hop .du{font-family:var(--mono);font-size:.54rem;letter-spacing:.04em;white-space:nowrap;margin-top:3px;}
+
+  .pulls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+  .pulls .pull{background:var(--paper);border:1px solid rgba(92,80,64,.2);border-radius:6px;padding:16px 14px;text-align:center;}
+  .alt-band .pulls .pull{background:var(--paper-2);}
+  .pulls .pull .big{font-family:var(--display);font-weight:900;font-size:1.9rem;color:var(--accent);line-height:1;}
+  .pulls .pull .cap{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:7px;line-height:1.4;}
+  @media(max-width:680px){.pulls{grid-template-columns:repeat(2,1fr);}}
+
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.08s;}.reveal.d2{transition-delay:.18s;}.reveal.d3{transition-delay:.28s;}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+  footer{background:#14241f;color:#8fa89a;padding:60px 0 80px;font-size:.84rem;}
+  footer h4{font-family:var(--display);color:var(--paper);font-weight:600;font-size:1.3rem;margin:0 0 6px;}
+  footer a.bigback{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#9ed8c4;text-decoration:none;border:1px solid rgba(158,216,196,.5);padding:9px 16px;border-radius:100px;}
+  footer .credits{font-family:var(--mono);font-size:.54rem;letter-spacing:.05em;line-height:1.9;color:#5f7468;margin-top:26px;text-transform:uppercase;}
+
+  @media print{
+    body{background:#fff;color:#000;font-size:11pt;line-height:1.5;}
+    body::after,#progress,nav,.scrollcue{display:none!important;}
+    .hero{min-height:auto;padding:40px 28px;page-break-after:always;background:#fff;display:block;}
+    .hero::before,.hero .bg{display:none!important;}
+    .hero h1{color:#000!important;text-shadow:none;font-size:34pt;}
+    .hero h1 em,.ch-head h2 em{color:#444!important;}
+    .hero .sub,.hero .eyebrow{color:#333!important;}
+    .reveal{opacity:1!important;transform:none!important;}
+    .chapter{padding:24px 0;page-break-inside:avoid;}
+    figure,.frame,img,.day,.stay,.lay .l,.practical .p,.kidfact,.moment,.verdict,.timeline li{break-inside:avoid;page-break-inside:avoid;}
+    .day-grid,.stays,.practical,.lay,.pulls{display:block;}
+    .day-grid>*,.stays>*,.practical>*,.lay>*{margin-bottom:14px;}
+    .verdict{background:#f2f2f2!important;color:#000!important;}
+    .verdict .lbl,.verdict h3 em{color:#000!important;}.verdict p{color:#222!important;}
+    footer{background:#fff;color:#000;}
+    a{color:#000;text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+  <div class="brand"><a href="index.html">Senerth · MMXXVI</a></div>
+  <div class="links">
+    <a href="#base">Base</a><a href="#around">Around</a><a href="#days">Five Days</a><a href="#do">See &amp; Do</a><a href="#boat">The Boat</a><a href="#stay">Stay</a><a href="index.html" class="back">← Full guide</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="bg" id="heroBg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Panorama_of_Lake_Garda_from_Monte_Baldo.jpg/1920px-Panorama_of_Lake_Garda_from_Monte_Baldo.jpg');"></div>
+  <div class="inner wrap">
+    <div class="eyebrow rise d1">A bespoke chapter · Lake Garda · July 5–10, 2026</div>
+    <h1 class="rise d2">Lake Garda,<br><em>in full</em></h1>
+    <p class="sub rise d3">Five car-free nights on Italy's inland sea — the warm, gentle south where medieval towns sit a ferry-hop apart, a fairy-tale castle stands in the water, and one bright morning you captain your own boat across the biggest lake in the country.</p>
+    <div class="rise d4"><span class="stamp">5 nights · Jul 5–10</span><span class="stamp alt">2 adults + 1 nine-year-old · no car needed</span></div>
+  </div>
+  <div class="scrollcue rise d5">Scroll</div>
+</header>
+
+<!-- ===== ORIENTATION ===== -->
+<section class="chapter" id="intro">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Why the lake, and why the south</span>
+      <h2>Italy's <em>inland sea</em></h2>
+      <p class="lede"><span class="drop">L</span>eave the salt of the Ligurian coast behind and head north to a long blue funnel cupped between vineyards at the bottom and Dolomite cliffs at the top — fifty-two kilometres of water so big the Romans called it a sea. After two weeks of trains and stairs and packing, this is the half of the trip where you finally get the keys: a single base, shallow warm beaches, a theme park next door, walled towns a boat-ride apart, gelato on the ramparts, and absolutely nowhere you <em>have</em> to be. You're parking yourselves at the warm, gentle <strong>southern tip</strong>, where the lake is widest and calmest and everything a family wants is within a flat walk, a short ferry, or your own rented hull.</p>
+    </div>
+
+    <div class="pulls reveal">
+      <div class="pull"><div class="big">52 km</div><div class="cap">long — Italy's largest lake</div></div>
+      <div class="pull"><div class="big">346 m</div><div class="cap">deep — carved by a glacier</div></div>
+      <div class="pull"><div class="big">~32 °C</div><div class="cap">July afternoons — proper summer</div></div>
+      <div class="pull"><div class="big">5 nights</div><div class="cap">one base, no car, no packing up</div></div>
+    </div>
+
+    <span class="section-label">The shape of the water</span>
+    <div class="ctx reveal">
+      <p>Garda is shaped like a funnel because that's how the last Ice Age left it — a glacier ground a deep trough through the Alps, and the moraine hills bottled up the south end, leaving the lake wide and shallow and sun-warmed at the bottom, narrow and fjord-deep at the top. The Romans summered here: the poet <strong>Catullus</strong> kept a villa on the Sirmione headland in the 1st century BC, and the ruins of a grand Roman house still spread through an olive grove at the point. The medieval <strong>Scaligeri</strong> lords of Verona studded the shore with swallow-tailed castles; the Venetians fortified Peschiera into the great pentagonal stronghold whose walls — now UNESCO-listed — still ring its old town. For two centuries this has been northern Europe's favourite warm-water holiday, which is why a German family on bikes and a Veronese nonna buying peaches share the same gelato queue. The south is flat, sunny and easy; the north, an hour away, turns to sheer cliffs and windsurfers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHERE TO BASE ===== -->
+<section class="chapter alt-band" id="base">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Where to base yourself</span>
+      <h2>Six towns, <em>one clear winner</em></h2>
+      <p class="lede">Without a car, where you sleep decides what your week feels like. Two southern towns sit right on the fast Milan–Venice railway; the rest you reach by ferry or bus. Here's the whole south shore, weighed for a family with a nine-year-old — and the one we'd book.</p>
+    </div>
+
+    <div class="lay reveal">
+      <div class="l">
+        <div class="ph"><span class="badge star">★ Our base</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Peschiera_del_Garda_Canale_di_Mezzo_02.jpg/1280px-Peschiera_del_Garda_Canale_di_Mezzo_02.jpg" alt="Peschiera del Garda canals"></div>
+        <div class="pad"><div class="nm">Peschiera del Garda</div><div class="meta">Direct train · Gardaland shuttle · boat hub</div><div class="ch">A canal-laced Venetian fortress town and the only place that's <em>both</em> on the fast railway <em>and</em> a flat five-minute walk from platform to lakefront. The free Gardaland shuttle, the boat-rental docks, beaches and a ferry pier are all here. Car-free heaven.</div></div>
+      </div>
+      <div class="l">
+        <div class="ph"><span class="badge">Direct train</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Port_and_castle_in_the_background%2C_Desenzano_del_Garda%2C_Italy.jpg/1280px-Port_and_castle_in_the_background%2C_Desenzano_del_Garda%2C_Italy.jpg" alt="Desenzano del Garda port"></div>
+        <div class="pad"><div class="nm">Desenzano del Garda</div><div class="meta">Direct train · lively · ferries</div><div class="ch">The lake's "real city" — the busiest, most year-round town, with a buzzy harbour, an old castle, the most restaurants and nightlife, and the main fast-rail stop. The strong runner-up base, and the ferry hub for Sirmione.</div></div>
+      </div>
+      <div class="l">
+        <div class="ph"><span class="badge">Bus / ferry</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sirmione_castle_from_Lake_Garda_2012.JPG/1280px-Sirmione_castle_from_Lake_Garda_2012.JPG" alt="Sirmione castle from the lake"></div>
+        <div class="pad"><div class="nm">Sirmione</div><div class="meta">No station · the showpiece</div><div class="ch">A pedestrian town on a thread-thin peninsula, ringed by water, entered over a drawbridge into a moated castle, with Roman ruins and thermal baths at its tip. The most beautiful — and most crowded. Magic to visit; a touch of a faff (and pricey) as a base.</div></div>
+      </div>
+      <div class="l">
+        <div class="ph"><span class="badge">Bus / bike</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Lazise_veduta.jpg/1280px-Lazise_veduta.jpg" alt="Lazise"></div>
+        <div class="pad"><div class="nm">Lazise</div><div class="meta">Walled · near the parks</div><div class="ch">The closest walled lake town to Peschiera — a little harbour, medieval gates, a calm gelato-and-stroll lakefront, and the flat bike path linking the two. Quiet-pretty, and minutes from Gardaland and the water parks.</div></div>
+      </div>
+      <div class="l">
+        <div class="ph"><span class="badge">Bus / ferry</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bardolino_Porta_San_Giovanni.JPG/1280px-Bardolino_Porta_San_Giovanni.JPG" alt="Bardolino"></div>
+        <div class="pad"><div class="nm">Bardolino</div><div class="meta">Lakefront · wine town</div><div class="ch">A lively lakefront resort and the name behind the light, easy-drinking red. A long promenade, plenty of family hotels with pools, and the separated cycle path running right through it.</div></div>
+      </div>
+      <div class="l">
+        <div class="ph"><span class="badge">Ferry · scenic</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Garda_Punta_San_Vigilio.jpg/1280px-Garda_Punta_San_Vigilio.jpg" alt="Punta San Vigilio, Garda"></div>
+        <div class="pad"><div class="nm">Garda &amp; Punta San Vigilio</div><div class="meta">Cheerful · the prettiest cove</div><div class="ch">A cheerful lakefront town and, just past it, the "Portofino of Garda" headland — a cypress-lined point with the sheltered, playground-backed <strong>Baia delle Sirene</strong> swimming cove. The pretty end of the east shore.</div></div>
+      </div>
+    </div>
+
+    <div class="verdict reveal">
+      <span class="lbl">The verdict · cross-checked against an adversarially-verified research pass</span>
+      <h3>Base in <em>Peschiera del Garda</em></h3>
+      <p>It's the only southern town that's both on the fast Milan–Venice line and a flat five-minute walk from the station to the lakefront — and it's the launch point for your boat day, the free Gardaland shuttle, the ferry pier and the bike paths. Everything on this page is reachable from here without ever renting a car. (A research pass weighing every base reached the same call, and explicitly knocked back Desenzano-as-best — it's the lively runner-up, not the winner for a family with a theme-park-bound nine-year-old.)</p>
+      <div class="why"><span>Direct trains</span><span>5-min walk to the lake</span><span>Free Gardaland shuttle</span><span>Boat docks in town</span><span>Ferry pier + bike paths</span><span>Closest to MXP</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GETTING AROUND ===== -->
+<section class="chapter" id="around">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Getting around · no car required</span>
+      <h2>Trains, <em>ferries &amp; buses</em></h2>
+      <p class="lede">The whole south lake is a connected, car-free web — a fast railway across the bottom, public ferries to every town, buses along both shores, flat bike paths from the door, and a free park shuttle. Here's how the pieces fit.</p>
+    </div>
+
+    <div class="practical reveal">
+      <div class="p"><div class="k">Rail</div><h5>The Milan–Venice line</h5><p>Peschiera &amp; Desenzano sit on the fast line. From Peschiera: Verona ~13–20 min, Milan ~57 min, Venice direct. Station to old town is a five-minute flat walk.</p></div>
+      <div class="p"><div class="k">Ferries</div><h5>Navigarda</h5><p>The government boat operator links Peschiera, Desenzano, Sirmione, Lazise, Bardolino, Garda &amp; the north lake. The 2026 summer timetable runs <strong>May 16 – Oct 4</strong> — you're fully covered.</p></div>
+      <div class="p"><div class="k">Buses</div><h5>ATV &amp; Arriva</h5><p>ATV routes 483 &amp; 164 run the east shore hourly in high season; Arriva LN026 links Desenzano–Sirmione–Peschiera–Verona. In peak season the bus stops at Colombare with a shuttle into Sirmione's old town.</p></div>
+      <div class="p"><div class="k">Theme park</div><h5>The Gardaland shuttle</h5><p>A <strong>free</strong> shuttle runs from Peschiera station to Gardaland (~2 km) every ~30 min. No car, no taxi, no parking — just hop on.</p></div>
+      <div class="p"><div class="k">Two wheels</div><h5>Flat bike paths</h5><p>Separated, traffic-free paths run Peschiera–Lazise–Bardolino along the shore, and out the back along the Mincio to the watermill village of Borghetto (~17 km). Rentals deliver to your hotel.</p></div>
+      <div class="p"><div class="k">On the water</div><h5>Your own boat</h5><p>The most fun "transport" of all: a self-drive motorboat from Peschiera's port — Sirmione in ~15 minutes, beaches with no road to them, swims with no one else around. <a href="#boat" style="color:var(--accent);font-weight:600;">See the boat day ↓</a></p></div>
+    </div>
+
+    <span class="section-label">The one catch · getting to the airport on Jul 10</span>
+    <div class="ctx reveal">
+      <p>There's no direct train from the lake to Milan Malpensa — the fastest route changes once at <strong>Milano Centrale</strong> onto the Malpensa Express, about <strong>2 h 10 m</strong> door-to-airport. For the 4 PM flight, take a last lake swim, then leave Peschiera around <strong>10 AM</strong> and you'll reach MXP with a comfortable buffer. (A verified research pass refuted the "cheaper-but-slower" routings floating around online — the via-Milano-Centrale path is the right one.)</p>
+    </div>
+    <div class="journey reveal">
+      <div class="term">Peschiera<br>~10:00</div>
+      <div class="hop"><span class="ic">🚆</span><span class="du">~1h05</span></div>
+      <div class="seg"><span class="pl">Milano Centrale</span><span class="ni">one change</span></div>
+      <div class="hop"><span class="ic">🚆</span><span class="du">~52 min</span></div>
+      <div class="seg"><span class="pl">Malpensa T1/T2</span><span class="ni">Malpensa Express</span></div>
+      <div class="hop"><span class="ic">✈</span><span class="du">4:00 PM</span></div>
+      <div class="term">MXP → EWR</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIVE DAYS ===== -->
+<section class="chapter alt-band" id="days">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">A suggested rhythm</span>
+      <h2>Five days <em>on the lake</em></h2>
+      <p class="lede">Big-ticket mornings, pool-and-gelato afternoons, lakefront evenings — built around the two fixed facts of the week: Sirmione's castle is shut on Monday Jul 6, and the boat wants a calm morning before the midday wind. Everything here is flexible; the weather and the nine-year-old get a vote.</p>
+    </div>
+    <ul class="timeline reveal">
+      <li class="key"><div class="date">Sun · Jul 5 · arrive</div><div class="ev">In from Monterosso, settle into Peschiera</div><div class="note">The ~5 h ride via Milano Centrale (book the direct Intercity to Milan, then ~1h20 on). Drop the bags, walk the star-fort walls and canal bridges, first gelato in the old town, dinner by the water. No agenda.</div></li>
+      <li><div class="date">Mon · Jul 6 · the big one</div><div class="ev">Gardaland (with a SEA LIFE heat-break)</div><div class="note">Free shuttle from the station; Italy's #1 theme park is open till 23:00 in July. Ride at opening, escape the afternoon heat in the air-conditioned SEA LIFE aquarium, then ride again at dusk with the lights coming on. (Sirmione's castle is closed today — perfect day to skip it.)</div></li>
+      <li class="key"><div class="date">Tue · Jul 7 · the magic one</div><div class="ev">Captain your own boat to Sirmione</div><div class="note">Rent a motorboat in Peschiera (no licence needed under 40 hp), launch in the calm morning, and motor across to the fairy-tale peninsula. Anchor off Jamaica Beach for a swim straight off the bow, then walk into the castle and the Roman Grotte di Catullo. Home before the afternoon wind builds.</div></li>
+      <li><div class="date">Wed · Jul 8 · a day in the city</div><div class="ev">Verona day-trip (15 minutes by train)</div><div class="note">A direct ~15-min hop east: the Roman Arena older than the Colosseum is famous, Juliet's balcony and the love-note wall, gelato on Piazza delle Erbe, the fortified Ponte Scaligero over the river. Back to the lake by evening for a swim and supper — you keep your hotel and your pool.</div></li>
+      <li><div class="date">Thu · Jul 9 · the lazy / wild card</div><div class="ev">A pure lake day — your pick</div><div class="note">Earn the down-day: beach-and-pool at Peschiera or Lazise, Caneva Aquapark for the hottest afternoon, a ferry town-hop to Bardolino and the Baia delle Sirene cove, or the one big northern adventure — Malcesine and the rotating Monte Baldo cable car. Borghetto's watermills by bike if legs are willing.</div></li>
+      <li class="key"><div class="date">Fri · Jul 10 · home</div><div class="ev">Last swim, then the run to Malpensa</div><div class="note">One final lake morning, then leave Peschiera ~10 AM: train to Milano Centrale, change to the Malpensa Express, and into the 4 PM nonstop for Newark. Door-to-airport about 2¼ hours with a buffer.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SEE & DO ===== -->
+<section class="chapter" id="do">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">The best of the lake</span>
+      <h2>What to <em>see &amp; do</em></h2>
+      <p class="lede">A theme-park capital, a castle in the water, a rotating cable car, Roman ruins you swim beneath, and a safari park up the road — the south lake is improbably loaded for a nine-year-old, and good for the grown-ups too.</p>
+    </div>
+    <div class="day-grid">
+      <div class="day reveal">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Raptor_Gardaland_2011.jpg/1280px-Raptor_Gardaland_2011.jpg" alt="The Raptor coaster at Gardaland"></div>
+        <div class="pad">
+          <div class="dno">The headliner</div>
+          <h4>Gardaland · + SEA LIFE &amp; the water park</h4>
+          <p>Italy's #1 theme park, essentially next door — big coasters, a brilliant kids' zone, lots of shade and theming, and a nine-year-old clears most of the family rides. The complex also holds the indoor, air-conditioned <strong>SEA LIFE aquarium</strong> (the perfect midday heat-break) and the <strong>Legoland Water Park</strong>.</p>
+          <div class="meta"><span class="k">Do it</span>Free shuttle from Peschiera station. July hours 10:00–23:00 — rest the afternoon, ride at dusk. Buy timed tickets online (cheaper); the Park + SEA LIFE combo beats two separates.</div>
+        </div>
+      </div>
+      <div class="day reveal d1">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Grotte_di_Catullo_H_Sirmione.jpg/1280px-Grotte_di_Catullo_H_Sirmione.jpg" alt="Jamaica Beach below the Grotte di Catullo, Sirmione"></div>
+        <div class="pad">
+          <div class="dno">The highlight</div>
+          <h4>Captain your own boat</h4>
+          <p>The very best version of a Sirmione day: rent a small motorboat right in Peschiera, captain it across yourselves, and arrive past the moated castle. Anchor off <strong>Jamaica Beach</strong> — a flat limestone shelf below the Roman ruins where the water runs turquoise and shallow — and swim straight off the boat.</p>
+          <div class="meta"><span class="k">No licence</span>Under 40 hp needs no licence — and Dad has a real boating licence besides. Launch in the morning; the thermal "Ora" wind chops up the south basin after noon. <a href="#boat" style="color:var(--accent);font-weight:600;">Full boat brief ↓</a></div>
+        </div>
+      </div>
+      <div class="day reveal">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Scaligero_Castle_of_Sirmione%2C_town_centre.jpg/1280px-Scaligero_Castle_of_Sirmione%2C_town_centre.jpg" alt="Sirmione's Scaliger Castle"></div>
+        <div class="pad">
+          <div class="dno">The showpiece town</div>
+          <h4>Sirmione · castle, Romans &amp; thermal baths</h4>
+          <p>A 13th-century castle rising straight out of the lake — drawbridge, ramparts to climb, water on every side (~€8, free under 18). Beyond it the <strong>Grotte di Catullo</strong> spread a vast Roman villa ruin through an olive grove. And the <strong>Aquaria</strong> thermal spa lets the nine-year-old in on a family "Junior" session (from ~€28).</p>
+          <div class="meta"><span class="k">Plan it</span>Castle &amp; Grotte are <strong>closed Mondays</strong> (Jul 6) — that's why the boat day is Tuesday. Go early; the pedestrian town is mobbed by midday in July.</div>
+        </div>
+      </div>
+      <div class="day reveal d1">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Monte_Baldo_-_Altissimo.jpg/1280px-Monte_Baldo_-_Altissimo.jpg" alt="Monte Baldo above Malcesine"></div>
+        <div class="pad">
+          <div class="dno">The northern wow</div>
+          <h4>Malcesine &amp; the rotating cable car</h4>
+          <p>From the castle-topped town of Malcesine, the <strong>Funivia</strong>'s upper cabins <em>rotate 360°</em> as they climb to 1,760 m on Monte Baldo — the whole lake and the Alps wheeling below, cool air, easy trails, paragliders launching off the top. The north's genuine kid "wow."</p>
+          <div class="meta"><span class="k">The catch</span>Malcesine is far north — a long ferry or a bus up the eastern shore. Worth one full day if you want the mountains; book the cable car online (~€27 adult / ~€17 junior).</div>
+        </div>
+      </div>
+      <div class="day reveal">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/La_Rocca_di_Manerba_del_Garda_con_l%27isola_dei_Conigli.jpg/1280px-La_Rocca_di_Manerba_del_Garda_con_l%27isola_dei_Conigli.jpg" alt="A Lake Garda beach"></div>
+        <div class="pad">
+          <div class="dno">Down-time</div>
+          <h4>Beaches, bikes &amp; water parks</h4>
+          <p>The glue between the big days: Peschiera's <strong>Cappuccini / Pioppi</strong> beaches (playground, pedal-boats, calm water) and Lazise's shallow shore; the flat, traffic-free <strong>Mincio cycle path</strong> to the storybook watermill village of Borghetto; and <strong>Caneva Aquapark</strong> near Lazise for the hottest afternoon.</p>
+          <div class="meta"><span class="k">Tip</span>Most beaches are pebble — pack water shoes. The lake has no tides and no real waves; mornings are glass.</div>
+        </div>
+      </div>
+      <div class="day reveal d1">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Garda%2C_tramonto_sulla_baia_delle_sirene.jpg/1280px-Garda%2C_tramonto_sulla_baia_delle_sirene.jpg" alt="Sunset over the Baia delle Sirene, Garda"></div>
+        <div class="pad">
+          <div class="dno">Ferry-hopping</div>
+          <h4>The eastern-shore towns</h4>
+          <p>Ferry- or bike-hop the calm walled towns of the east shore: <strong>Lazise</strong>'s harbour and gates, <strong>Bardolino</strong>'s wine-and-promenade buzz, and <strong>Garda</strong> town with the sheltered <strong>Baia delle Sirene</strong> cove at Punta San Vigilio — an olive-grove park with a playground, shade and protected water.</p>
+          <div class="meta"><span class="k">Ferry deal</span>The Navigarda "Happy Family" fare lets 2 adults bring up to 2 kids (4–11) free — a town-hopping boat day for about the price of two tickets.</div>
+        </div>
+      </div>
+    </div>
+
+    <span class="section-label">Hidden gems &amp; rainy-day cards</span>
+    <ul class="gems reveal">
+      <li><strong>Parco Natura Viva (Bussolengo)</strong> — a drive-through-style safari (lions, giraffes, rhinos) plus a walking zoo, ~20 min inland; the shadier, cooler pivot for a hot or cloudy day.</li>
+      <li><strong>The Peschiera ramparts at dusk</strong> — walk the star-fort walls and canal bridges when the day-trippers thin and the swifts come out; a gelato from <em>La Romana</em> (try the "Crema 1948") seals it.</li>
+      <li><strong>Borghetto sul Mincio</strong> — the end of the easy bike path: a tiny medieval village of working watermills straddling the river, with riverside lunch terraces. Pure storybook.</li>
+      <li><strong>Movieland &amp; Caneva Aquapark (Canevaworld)</strong> — a movie-themed park and a big water park near Lazise; the obvious second theme-park day if Gardaland leaves them wanting more.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== THE BOAT ===== -->
+<section class="chapter" id="boat">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">The day the trip is built around</span>
+      <h2>Captain <em>your own boat</em></h2>
+      <p class="lede">Dad holds a boating licence and knows his way around a powerboat — so this isn't a chartered tour with a skipper. It's your own little hull, your own throttle, and a morning where the family becomes its own crew on the biggest lake in Italy.</p>
+    </div>
+
+    <div class="split reveal">
+      <figure class="media">
+        <div class="frame" style="aspect-ratio:3/2;"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Boat_jetty._Lake_Garda%2C_Italy.jpg/1280px-Boat_jetty._Lake_Garda%2C_Italy.jpg" alt="A jetty of small boats on Lake Garda"></div>
+        <figcaption>Self-drive boats wait at the Peschiera waterfront</figcaption>
+      </figure>
+      <div class="content">
+        <h3 class="subhead">How it works</h3>
+        <p>Under Italian rules a rental boat <strong>up to 40 hp (30 kW) needs no licence at all</strong> — just ID and a deposit. That's plenty of power to potter the south basin, and it neatly sidesteps any question about an American licence being accepted. Two operators sit right at <strong>Peschiera's central port</strong>, beside the Navigarda pier:</p>
+        <ul class="gems" style="margin-top:6px;">
+          <li><strong>Rent Booking</strong> (Lepanto Marine) — self-drive open motorboats, half- or full-day.</li>
+          <li><strong>Peschiera Boat Rent</strong> — self-drive "open" boats, same waterfront.</li>
+        </ul>
+        <p style="margin-top:14px;">Reckon roughly <strong>€100 half-day / €160 full-day</strong> on a 40 hp boat (confirm 2026 rates, fuel and deposit when you book). Ask for a child life jacket and confirm the size for a nine-year-old.</p>
+      </div>
+    </div>
+
+    <span class="section-label">The plan of the morning</span>
+    <div class="practical reveal">
+      <div class="p"><div class="k">Timing</div><h5>Go early</h5><p>Garda's thermal <strong>"Ora"</strong> wind builds from the south around midday and chops up the open south basin. Launch soon after the rental opens for glassy water; be back before it freshens.</p></div>
+      <div class="p"><div class="k">The run</div><h5>Peschiera → Sirmione</h5><p>About 15 minutes across to the peninsula. Idle in past the castle, then anchor off <strong>Jamaica Beach</strong> — turquoise shallows below the Roman ruins — and swim straight off the bow.</p></div>
+      <div class="p"><div class="k">Safety</div><h5>Simple rules</h5><p>Keep ~300 m off the shoreline, slow right down near swimmers and beaches, life jackets on the small crew, and watch the wind line on the water to your north.</p></div>
+    </div>
+
+    <div class="kidfact reveal">
+      <span class="ico">⛵</span>
+      <div><span class="lbl">For the small first mate</span><p>On Lake Garda you can rent a boat and drive it yourself <em>with no licence at all</em>, as long as the engine is under 40 horsepower — and your dad has a real boating licence <em>and</em> knows how to drive a powerboat. So one morning your family can become its own little crew: cast off from a 16th-century fortress, steer your own boat across an Italian lake, drop anchor below a castle that's been standing in the water for 700 years, and jump straight off the bow into the clear, shallow water. Not many nine-year-olds can say their dad captained them to a castle.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHERE TO STAY ===== -->
+<section class="chapter alt-band" id="stay">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Where to stay · browser-verified availability</span>
+      <h2>Family rooms <em>with a pool</em></h2>
+      <p class="lede">Every option below was <strong>checked live on Booking</strong> for our exact window — <strong>Jul 5–10, five nights, 2 adults + 1 child age 9</strong> — filtered to an on-site <strong>pool</strong> and confirmed to have a room that genuinely sleeps three. Prices are the true five-night total (and the per-night). Peak July: several were down to "1 left," so these are book-soon, not book-someday.</p>
+    </div>
+
+    <p class="stay-intro reveal">Rick Steves writes up no Lake Garda hotels, so these are ranked on guest score and a real room-for-three fit, not a guidebook badge — leading with our best matches to the brief: <em>pool · lake or lakefront · walkable to a town centre · kid-friendly.</em></p>
+
+    <div class="basegroup reveal">In Peschiera <span class="tagline">— our recommended base, on the railway &amp; the boat docks</span></div>
+    <div class="stays reveal">
+      <div class="stay pick">
+        <div class="top"><div class="nm">Green Park Hotel</div><div class="score">8.5<small>844 rev</small></div></div>
+        <div class="tags"><span class="solid">★ Best value</span><span>Pool</span><span>Walkable</span></div>
+        <div class="de">A genuine family hotel with a garden pool, ~10-minute walk to the old town — the cheapest proper hotel room that fits all three of you for the week.</div>
+        <div class="rate"><div><div class="tot">€857</div><div class="per">~€171 / night</div></div><div class="room">Family Room<br>(2 adults + 1 child)</div></div>
+      </div>
+      <div class="stay">
+        <div class="top"><div class="nm">Camping Village Butterfly</div><div class="score">8.6<small>926 rev</small></div></div>
+        <div class="tags"><span>Multiple pools</span><span>Near lake</span><span class="solid">Kid-fun</span></div>
+        <div class="de">A family camping village with pools, slides and bungalows near the water — pure nine-year-old heaven, and excellent value for the space.</div>
+        <div class="rate"><div><div class="tot">€1,045</div><div class="per">~€209 / night</div></div><div class="room">Bungalow<br>(sleeps the family)</div></div>
+      </div>
+      <div class="stay">
+        <div class="top"><div class="nm">Ile Hotel</div><div class="score">8.9<small>720 rev</small></div></div>
+        <div class="tags"><span>Pool</span><span>Design boutique</span></div>
+        <div class="de">A stylish design hotel with a pool and roomy suites that sleep three — the upscale-boutique pick in town, a short stroll from the centre.</div>
+        <div class="rate"><div><div class="tot">€1,865</div><div class="per">~€373 / night</div></div><div class="room">Suite / Jr Suite<br>w/ terrace</div></div>
+      </div>
+      <div class="stay">
+        <div class="top"><div class="nm">Vision Hotel</div><div class="score">—<small>research pick</small></div></div>
+        <div class="tags"><span>Kids' pool</span><span>4-star</span></div>
+        <div class="de">A modern 4-star family hotel with a children's pool, flagged by the research pass — worth pricing live alongside the Green Park for the same in-town convenience.</div>
+        <div class="rate"><div><div class="tot">check live</div><div class="per">verify dates</div></div><div class="room">Family rooms</div></div>
+      </div>
+    </div>
+
+    <div class="basegroup reveal">A short hop away <span class="tagline">— still car-free by train, bus, ferry or bike</span></div>
+    <div class="stays reveal">
+      <div class="stay pick">
+        <div class="top"><div class="nm">Hotel Villa Maria <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Desenzano</span></div><div class="score">8.6<small>891 rev</small></div></div>
+        <div class="tags"><span class="solid">★ Lake view</span><span>Pool</span><span>Direct train</span></div>
+        <div class="de">A pool hotel with an actual <strong>Family Room with Lake View</strong>, in the lake's liveliest town and right on the fast railway. The best "pool + lake view + walkable" all-rounder.</div>
+        <div class="rate"><div><div class="tot">€1,400</div><div class="per">~€280 / night</div></div><div class="room">Family Room<br>w/ Lake View</div></div>
+      </div>
+      <div class="stay">
+        <div class="top"><div class="nm">Parc Hotel Germano Suites <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Bardolino</span></div><div class="score">8.6<small>3,138 rev</small></div></div>
+        <div class="tags"><span class="solid">★ Kid resort</span><span>Pools + spa</span></div>
+        <div class="de">A big, well-loved family resort with pools and a spa and a dedicated triple suite — the most to do on-site, if a resort day is the goal.</div>
+        <div class="rate"><div><div class="tot">€1,936</div><div class="per">~€387 / night</div></div><div class="room">Economy<br>Triple Suite</div></div>
+      </div>
+      <div class="stay">
+        <div class="top"><div class="nm">Hotel Al Pescador <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Lazise</span></div><div class="score">8.8<small>79 rev</small></div></div>
+        <div class="tags"><span class="solid">Value</span><span>Pool</span><span>Walled town</span></div>
+        <div class="de">A friendly pool hotel in pretty walled Lazise, with a garden-view room that takes three — the value pick on the east shore.</div>
+        <div class="rate"><div><div class="tot">€986</div><div class="per">~€197 / night</div></div><div class="room">Double-for-3<br>(family rm €1,127)</div></div>
+      </div>
+      <div class="stay">
+        <div class="top"><div class="nm">Hotel Bella Lazise <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Lazise</span></div><div class="score">8.5<small>446 rev</small></div></div>
+        <div class="tags"><span>Pool</span><span>Garden</span></div>
+        <div class="de">A larger pool hotel just outside Lazise's walls, with balcony rooms for three and a family room opening onto a private garden.</div>
+        <div class="rate"><div><div class="tot">€1,336</div><div class="per">~€267 / night</div></div><div class="room">Double-for-3<br>(family w/ garden €1,373)</div></div>
+      </div>
+    </div>
+
+    <div class="basegroup reveal">The splurge <span class="tagline">— if you'd trade the train hub for the postcard</span></div>
+    <div class="stays reveal">
+      <div class="stay">
+        <div class="top"><div class="nm">Grand Hotel Terme <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Sirmione</span></div><div class="score">9.1<small>1,356 rev</small></div></div>
+        <div class="tags"><span class="solid">★ Lakefront</span><span>Thermal pools</span><span>In old town</span></div>
+        <div class="de">Lakefront in Sirmione's old town, with thermal pools and a room for three — the top splurge, trading Peschiera's rail convenience for sheer postcard.</div>
+        <div class="rate"><div><div class="tot">€4,288</div><div class="per">~€858 / night</div></div><div class="room">Room for 3<br>from</div></div>
+      </div>
+      <div class="stay">
+        <div class="top"><div class="nm">Color Hotel <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Bardolino</span></div><div class="score">9.2<small>301 rev</small></div></div>
+        <div class="tags"><span>Design</span><span>Multiple pools</span></div>
+        <div class="de">A vivid design hotel with a cluster of pools and a tropical garden — adults will love the styling; a glamorous (and pricey) family suite.</div>
+        <div class="rate"><div><div class="tot">€3,430</div><div class="per">~€686 / night</div></div><div class="room">Glamor Suite</div></div>
+      </div>
+    </div>
+
+    <div class="availnote reveal">
+      <b>Checked but ruled out for our dates</b> (so you don't chase them): <b>Hotel Bella Italia</b> (Peschiera) and <b>Hotel Caesius Thermae</b> (Bardolino) showed <b>no family room</b> for the five-night window — sold out; <b>Hotel Piccola Vela</b> (Desenzano, 9.4) and <b>Parc Hotel</b> (Colombare) had only 2-adult rooms left, so they'd need two rooms. &nbsp;·&nbsp; All prices: live Booking.com, checked Jun 19 2026, 5 nts, 2A + 1C(9). Garda hotels aren't guidebook-rated, so verify the exact room and cancellation terms on the property's own site before you commit.
+    </div>
+  </div>
+</section>
+
+<!-- ===== À TABLE ===== -->
+<section class="chapter" id="eat">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">À table · around the lake</span>
+      <h2>Lake fish &amp; <em>Verona wine</em></h2>
+      <p class="lede">Where the Veneto meets the water: freshwater fish (lavarello, trout, lake sardines), pumpkin tortelli and risotto, olive oil pressed on the shore, and the light reds of the Bardolino hills a ferry-hop away. Reserve dinner in July.</p>
+    </div>
+    <ul class="eats reveal">
+      <li><div class="nm">Sosta e Gusta · Peschiera</div><span class="px">$$</span><div class="de">Relaxed pizzeria-trattoria with great dough and pasta — an easy crowd-pleaser with a kid, indoors or out.</div></li>
+      <li><div class="nm">Amici Miei · Peschiera</div><span class="px">$$</span><div class="de">Friendly Italian minutes from the lake; try the pasta with lake sardines. Family-welcoming.</div></li>
+      <li><div class="nm">Vecchio Mulino Beach Bar · Peschiera</div><span class="px">$$</span><div class="de">Atmospheric lakeside seafood for a sunset dinner — order the lake fish or a seafood pasta.</div></li>
+      <li><div class="nm">Inchiostro · Peschiera</div><span class="px">$$$</span><div class="de">A step up for one nicer evening — risotto, octopus, sea bass on a small tasting menu.</div></li>
+      <li><div class="nm">Gelateria La Romana · Peschiera</div><span class="px">$</span><div class="de">The town's best gelato (Piazza San Marco); the custard-rich "Crema 1948" is the one to get.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== JULY TIPS + MOMENT ===== -->
+<section class="chapter alt-band" id="tips">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Practical · high summer</span>
+      <h2>July, <em>handled</em></h2>
+    </div>
+    <div class="practical reveal">
+      <div class="p"><div class="k">Heat</div><h5>Front-load the day</h5><p>July tops ~32 °C. Hit Sirmione and Gardaland at opening, keep an air-conditioned/animal day (SEA LIFE, Natura Viva) in your back pocket, and let the pool carry the afternoons.</p></div>
+      <div class="p"><div class="k">Crowds</div><h5>Book the big-ticket bits</h5><p>It's peak season. Reserve the hotel now, buy Gardaland tickets online to skip the line, book the boat ahead, and pre-book the Aquaria session if you want it.</p></div>
+      <div class="p"><div class="k">Beaches</div><h5>Pack water shoes</h5><p>Most shoreline is pebble, not sand. The lake has no tides and no real waves — calm and warm by July, and glassy in the mornings.</p></div>
+      <div class="p"><div class="k">The water day</div><h5>Wind before noon</h5><p>Whatever you do on the lake, the calm is in the morning; the "Ora" wind comes up after midday. Plan boats and long swims early.</p></div>
+      <div class="p"><div class="k">Tickets</div><h5>Ferries &amp; passes</h5><p>For a town-hopping day, the Navigarda lower-lake day pass plus the "Happy Family" fare (kids free) is the deal. Buses take cash or contactless on board.</p></div>
+      <div class="p"><div class="k">Airport</div><h5>Leave by ~10 AM Jul 10</h5><p>No direct train to Malpensa — one change at Milano Centrale, ~2¼ h door-to-airport. A relaxed morning still makes the 4 PM flight comfortably.</p></div>
+    </div>
+
+    <div class="moment reveal">
+      <span class="lbl">A moment to seek</span>
+      <p>Mid-morning on a flat, glassy lake. You've cut the engine a hundred metres off the Sirmione headland; the castle and the old Roman columns shimmer on the point, and the water under the boat is the impossible green of a swimming pool. Your daughter is perched on the bow in her life jacket, working up the nerve — and then she's in: a shriek, a splash, hair slicked back, grinning up at you from water so clear you can count the pebbles four metres down. You are the captain of a small boat on the biggest lake in Italy, anchored below a 700-year-old castle, and absolutely nobody is in a hurry.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h4>Lake Garda · the long version</h4>
+    <p style="max-width:62ch;color:#a9c0b4;">Part of the Senerth family's Iceland &amp; Italy, summer 2026. Researched with an adversarially-verified web pass and a live, browser-checked hotel sweep — then written down so a nine-year-old can read it on the train.</p>
+    <a class="bigback" href="index.html">← Back to the full trip guide</a>
+    <div class="credits">
+      Photography · Wikimedia Commons, used under their licenses — Lake Garda panorama from Monte Baldo, Peschiera canals, Desenzano port, Sirmione castle (from the lake &amp; town centre), Punta San Vigilio &amp; Baia delle Sirene, Lazise, Bardolino, Malcesine / Monte Baldo, Gardaland (Raptor), Grotte di Catullo / Jamaica Beach, Manerba beach, boats at Peschiera. Availability &amp; prices · live Booking.com check, 19 Jun 2026. Transit, ferry, boat-rental &amp; airport facts · Navigarda, Trenord / Rome2Rio, Rent Booking &amp; Peschiera Boat Rent, Terme di Sirmione, verified Jun 2026.
+    </div>
+  </div>
+</footer>
+
+<script>
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;
+    var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;prog.style.width=(p*100)+'%';
+    var bg=document.getElementById('heroBg');
+    if(bg){var y=(h.scrollTop||document.body.scrollTop);if(y<window.innerHeight)bg.style.transform='translateY('+(y*0.28)+'px)';}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:0.08,rootMargin:'0px 0px -4% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
