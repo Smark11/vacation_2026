@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choosing Your Italy · Where to Go After Cinque Terre · July 2026</title>
+<meta name="description" content="A family decision guide to the Italian leg (Jul 5–9, 2026): Lake Garda vs Como, Maggiore, the Genoa Riviera, Venice, Bologna, Florence, Rome and the Dolomites — compared for a car-free family with a 9-year-old, arriving from Cinque Terre and flying home from Milan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<style>
+  :root{
+    --paper:#f4ead6;--paper-2:#efe1c7;--paper-3:#e7d6b6;
+    --ink:#241d14;--ink-soft:#5c5040;
+    --terracotta:#bd4a26;--teal:#15605b;--gold:#bb8b2c;--slate:#3f6781;--lake:#2c6f57;--moss:#1a6b2f;--rose:#a23a4a;
+    --accent:var(--terracotta);
+    --maxw:1180px;--ease:cubic-bezier(.2,.7,.2,1);
+    --display:"Fraunces",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Courier Prime","Courier New",monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(17px,1.15vw,20px);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  ::selection{background:var(--terracotta);color:var(--paper);}
+  a{color:inherit;} img{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;color:var(--accent);font-weight:700;}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--terracotta);z-index:10000;transition:width .08s linear;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;justify-content:space-between;align-items:center;padding:13px 28px;mix-blend-mode:difference;color:#fff;}
+  nav .brand{font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;}
+  nav .brand a{text-decoration:none;}
+  nav .links{display:flex;gap:16px;align-items:center;}
+  nav .links a{font-family:var(--mono);letter-spacing:.13em;text-transform:uppercase;font-size:.6rem;text-decoration:none;opacity:.85;}
+  nav .links a:hover{opacity:1;}
+  nav .links a.back{opacity:1;border:1px solid rgba(255,255,255,.5);padding:5px 9px;border-radius:100px;}
+  @media(max-width:1080px){nav .links a:not(.back){display:none;}}
+
+  .hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero .bg{position:absolute;inset:-8% 0 0 0;background-size:cover;background-position:center 45%;z-index:0;will-change:transform;}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(28,16,10,.46) 0%,rgba(28,16,10,.10) 32%,rgba(28,16,10,.34) 66%,rgba(30,20,12,.94) 100%);}
+  .hero .inner{position:relative;z-index:2;color:var(--paper);padding-bottom:7vh;width:100%;}
+  .hero h1{font-family:var(--display);font-weight:900;font-optical-sizing:144;font-size:clamp(2.8rem,8vw,7rem);line-height:.93;letter-spacing:-.015em;margin:.16em 0 .26em;text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.4);}
+  .hero h1 em{font-style:italic;color:#f3cf8e;font-weight:600;}
+  .hero .sub{font-size:clamp(1.05rem,1.7vw,1.4rem);max-width:52ch;color:#f1e6d2;}
+  .hero .eyebrow{color:#f3cf8e;}
+  .hero .scrollcue{position:absolute;right:28px;bottom:6vh;z-index:2;color:var(--paper);writing-mode:vertical-rl;font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.64rem;opacity:.8;}
+  .hero .scrollcue::after{content:"";display:block;width:1px;height:48px;background:currentColor;margin:12px auto 0;animation:cue 2.4s var(--ease) infinite;}
+  @keyframes cue{0%,100%{transform:scaleY(.4);opacity:.4;transform-origin:top;}50%{transform:scaleY(1);opacity:.9;}}
+  .rise{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease) forwards;}
+  .rise.d1{animation-delay:.15s;}.rise.d2{animation-delay:.35s;}.rise.d3{animation-delay:.55s;}.rise.d4{animation-delay:.75s;}.rise.d5{animation-delay:.9s;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+
+  .chapter{position:relative;padding:clamp(54px,7vw,92px) 0;}
+  .chapter.alt-band{background:var(--paper-2);}
+  .ch-head{max-width:68ch;margin-bottom:34px;}
+  .ch-head .eyebrow{margin-bottom:14px;display:block;}
+  .ch-head h2{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 .35em;text-wrap:balance;}
+  .ch-head h2 em{font-style:italic;color:var(--accent);}
+  .ch-head .lede{font-size:clamp(1.1rem,1.5vw,1.3rem);color:var(--ink);}
+  .ch-head .lede .drop{float:left;font-family:var(--display);font-weight:900;font-size:3.6em;line-height:.72;padding:.06em .12em 0 0;color:var(--accent);}
+  .section-label{font-family:var(--mono);text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;color:var(--accent);font-weight:700;margin:30px 0 8px;display:block;}
+  .grouplabel{font-family:var(--display);font-weight:600;font-size:1.7rem;margin:46px 0 2px;}
+  .grouplabel .em{margin-right:10px;}
+
+  /* know-how panel */
+  .kbyg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px;}
+  @media(max-width:760px){.kbyg{grid-template-columns:1fr;}}
+  .kbyg .k{background:var(--paper);border:1px solid rgba(92,80,64,.2);border-left:4px solid var(--accent);border-radius:0 6px 6px 0;padding:15px 19px;}
+  .alt-band .kbyg .k{background:var(--paper-2);}
+  .kbyg .k h5{font-family:var(--display);font-weight:600;font-size:1.1rem;margin:0 0 4px;}
+  .kbyg .k p{margin:0;font-size:.9rem;line-height:1.5;color:var(--ink);}
+
+  /* comparison table */
+  .cmpwrap{overflow-x:auto;margin-top:20px;border:1px solid rgba(92,80,64,.2);border-radius:8px;}
+  table.cmp{border-collapse:collapse;width:100%;min-width:720px;background:var(--paper);font-size:.9rem;}
+  table.cmp th,table.cmp td{padding:11px 13px;text-align:left;border-bottom:1px solid rgba(92,80,64,.16);vertical-align:top;}
+  table.cmp thead th{font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;background:var(--paper-2);position:sticky;top:0;}
+  table.cmp tbody tr:hover{background:var(--paper-2);}
+  table.cmp .dest{font-family:var(--display);font-weight:600;font-size:1.02rem;white-space:nowrap;}
+  table.cmp .dest .em{margin-right:6px;}
+  table.cmp .star{color:var(--gold);letter-spacing:1px;}
+  table.cmp .pill{font-family:var(--mono);font-size:.5rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:100px;font-weight:700;}
+  table.cmp .yes{background:rgba(26,107,47,.16);color:#1a6b2f;}
+  table.cmp .warn{background:rgba(189,74,38,.14);color:var(--terracotta);}
+  table.cmp tr.cur{background:rgba(187,139,44,.12);}
+  table.cmp tr.cur .dest::after{content:" ★ current";font-family:var(--mono);font-size:.5rem;letter-spacing:.08em;color:var(--gold);}
+
+  /* map */
+  #italymap{height:72vh;min-height:500px;width:100%;z-index:1;background:var(--paper-3);}
+  .leaflet-container{font-family:var(--body);}
+  .leaflet-popup-content{margin:13px 15px;}
+  .mpop .mn{font-family:var(--display);font-weight:600;font-size:1.05rem;}
+  .mpop .mmeta{font-family:var(--mono);font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:3px 0 6px;}
+  .mpop .mdesc{font-size:.85rem;line-height:1.45;margin:0 0 6px;}
+  .mpop a{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--terracotta);text-decoration:none;}
+  .pin{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.4);}
+  .pin span{transform:rotate(45deg);font-size:14px;line-height:1;}
+  .maplegend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;}
+  .maplegend .lg{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+  .maplegend .lg i{width:14px;height:14px;border-radius:50%;display:inline-block;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.3);}
+  .mapnote{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px;}
+
+  /* option profiles */
+  .opt{display:grid;grid-template-columns:1.02fr 1.18fr;gap:0;background:var(--paper);border:1px solid rgba(92,80,64,.2);border-radius:9px;overflow:hidden;box-shadow:0 18px 40px -32px rgba(36,25,12,.6);margin-top:16px;}
+  .alt-band .opt{background:var(--paper-2);}
+  .opt:nth-of-type(even){grid-template-columns:1.18fr 1.02fr;}
+  .opt:nth-of-type(even) .ophoto{order:2;}
+  .opt.cur{border:1.5px solid var(--gold);box-shadow:0 0 0 1px var(--gold) inset,0 18px 40px -32px rgba(36,25,12,.6);}
+  .ophoto{overflow:hidden;background:var(--paper-3);min-height:230px;position:relative;}
+  .ophoto img{width:100%;height:100%;object-fit:cover;min-height:230px;transition:transform 1.1s var(--ease);}
+  .opt:hover .ophoto img{transform:scale(1.05);}
+  .ophoto .badge{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:rgba(28,18,10,.8);padding:5px 10px;border-radius:100px;}
+  .ophoto .badge.cur{background:var(--gold);color:var(--ink);}
+  .opad{padding:24px 28px;display:flex;flex-direction:column;}
+  .opad h3{font-family:var(--display);font-weight:600;font-size:1.7rem;margin:0;line-height:1.05;}
+  .opad h3 .em{margin-right:8px;}
+  .opad .vibe{font-size:1rem;color:var(--ink);margin:8px 0 12px;line-height:1.55;}
+  .opad .vibe em{font-style:italic;}
+  .khl{list-style:none;padding:0;margin:0 0 12px;}
+  .khl li{position:relative;padding:5px 0 5px 24px;font-size:.92rem;line-height:1.45;}
+  .khl li::before{content:"▸";position:absolute;left:4px;top:5px;color:var(--accent);font-size:.85em;}
+  .khl strong{font-family:var(--display);font-weight:600;}
+  .ometa{margin-top:auto;border-top:1px dashed rgba(92,80,64,.3);padding-top:11px;display:grid;grid-template-columns:1fr;gap:5px;}
+  .ometa .row{font-size:.85rem;color:var(--ink);line-height:1.45;}
+  .ometa .row .k{font-family:var(--mono);font-size:.54rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-right:6px;}
+  .otags{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px;}
+  .otags span{font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;border:1px solid var(--accent);color:var(--accent);}
+  .otags span.solid{background:var(--accent);color:var(--paper);}
+  .otags a.go{text-decoration:none;background:var(--lake);color:var(--paper);border:1px solid var(--lake);padding:3px 9px;}
+  @media(max-width:780px){.opt,.opt:nth-of-type(even){grid-template-columns:1fr;}.opt:nth-of-type(even) .ophoto{order:0;}.ophoto,.ophoto img{min-height:200px;}}
+
+  .verdict{margin-top:26px;background:var(--ink);color:var(--paper);border-radius:8px;padding:30px 34px;position:relative;overflow:hidden;}
+  .verdict::before{content:"\2605";position:absolute;top:-14px;right:6px;font-size:7rem;color:var(--terracotta);opacity:.22;line-height:1;}
+  .verdict .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:#f3cf8e;font-weight:700;}
+  .verdict h3{font-family:var(--display);font-weight:600;font-size:1.6rem;margin:8px 0 8px;}
+  .verdict h3 em{font-style:italic;color:#f3cf8e;}
+  .verdict p{margin:0 0 8px;color:#e7ddcf;font-size:1rem;max-width:76ch;}
+  .verdict p b{color:#fff;}
+
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+  footer{background:#1c130c;color:#a08967;padding:56px 0 76px;font-size:.84rem;}
+  footer h4{font-family:var(--display);color:var(--paper);font-weight:600;font-size:1.3rem;margin:0 0 6px;}
+  footer a.bigback{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#f3cf8e;text-decoration:none;border:1px solid rgba(243,207,142,.5);padding:9px 16px;border-radius:100px;}
+  footer .credits{font-family:var(--mono);font-size:.54rem;letter-spacing:.05em;line-height:1.9;color:#6f5c41;margin-top:24px;text-transform:uppercase;}
+  @media print{body::after,#progress,nav,.scrollcue,#italymap{display:none!important;}.hero{min-height:auto;}.reveal{opacity:1!important;transform:none!important;}.opt,.kbyg .k,.verdict{break-inside:avoid;}a{color:#000;text-decoration:none;}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+  <div class="brand"><a href="index.html">Senerth · MMXXVI</a></div>
+  <div class="links">
+    <a href="#how">How to choose</a><a href="#table">Compare</a><a href="#map">Map</a><a href="#lakes">Lakes</a><a href="#coast">Coast</a><a href="#cities">Cities</a><a href="#mountains">Mountains</a><a href="index.html" class="back">← Full guide</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="bg" id="heroBg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Manarola_NW_Cinque_Terre_Sep23_A7C_07233.jpg/1920px-Manarola_NW_Cinque_Terre_Sep23_A7C_07233.jpg');"></div>
+  <div class="inner wrap">
+    <div class="eyebrow rise d1">A family decision guide · the Italian leg · Jul 5–9, 2026</div>
+    <h1 class="rise d2">Choosing<br>your <em>Italy</em></h1>
+    <p class="sub rise d3">You'll be standing on the Ligurian coast with four nights to fill before the flight home from Milan. Lake Garda is the front-runner — but here's the whole field, weighed for a car-free family with a nine-year-old in the July heat. Nine options, side by side.</p>
+    <div class="rise d4"><span class="eyebrow" style="color:#f3cf8e;">Cinque Terre → ? → Milan (fly home Jul 10)</span></div>
+  </div>
+  <div class="scrollcue rise d5">Scroll</div>
+</header>
+
+<!-- ===== HOW TO CHOOSE ===== -->
+<section class="chapter" id="how">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">How to choose</span>
+      <h2>Five things <em>that decide it</em></h2>
+      <p class="lede"><span class="drop">F</span>our open nights (Jul 5–9), then a flight home from Milan on the 10th. Every option below is judged against the same five realities of <em>your</em> trip — so the comparison is apples to apples, not generic "best of Italy" listicles.</p>
+    </div>
+    <div class="kbyg reveal">
+      <div class="k"><h5>① Where you start &amp; end</h5><p>You begin on the Ligurian coast (Cinque Terre) and must be at <strong>Milan Malpensa by ~2 PM on Jul 10</strong>. The closer and easier the route back, the more relaxed the finish.</p></div>
+      <div class="k"><h5>② No car (so far)</h5><p>The trip has been car-free — trains, ferries, a boat. Options that work without a rental (the lakes, the coast, the cities) score higher; the mountains are the one place a car really helps.</p></div>
+      <div class="k"><h5>③ A nine-year-old</h5><p>The single biggest filter. Theme parks, boats, aquariums, castles, glass-blowing and cable cars beat museum marathons in July.</p></div>
+      <div class="k"><h5>④ July heat</h5><p>Inland cities (Florence, Rome, Bologna) bake; the lakes and coast stay breezy; the Dolomites are downright cool. Heat shapes how pleasant four days actually feel.</p></div>
+      <div class="k"><h5>⑤ A boat for the captain</h5><p>Mark has a boating licence and wants to self-drive. The lakes (and the Riviera) deliver this; the cities give boats you ride, not steer.</p></div>
+      <div class="k"><h5>⑥ How long it really needs</h5><p>Some places sing for four nights (the lakes, the coast); others are a punchy 2–3 night hit (Venice) or a different trip entirely (Rome).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON TABLE ===== -->
+<section class="chapter alt-band" id="table">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">At a glance</span>
+      <h2>The whole field, <em>compared</em></h2>
+      <p class="lede">Sortable in your head: kid-appeal, whether it works car-free, how far back to your Milan flight, and how it handles July. Scroll the table sideways on a phone.</p>
+    </div>
+    <div class="cmpwrap reveal">
+      <table class="cmp">
+        <thead><tr><th>Destination</th><th>Best for</th><th>Kid-o-meter</th><th>Car-free?</th><th>→ Milan/MXP</th><th>July</th></tr></thead>
+        <tbody>
+          <tr class="cur"><td class="dest"><span class="em">🏖️</span>Lake Garda</td><td>Max kid-fun + water</td><td class="star">★★★★★</td><td><span class="pill yes">Easy</span></td><td>~2 h</td><td>Warm, lake-cooled</td></tr>
+          <tr><td class="dest"><span class="em">⛵</span>Lake Como</td><td>Scenery &amp; ferries</td><td class="star">★★★☆☆</td><td><span class="pill yes">Ferries</span></td><td>~1–1.5 h</td><td>Cool, breezy</td></tr>
+          <tr><td class="dest"><span class="em">🛥️</span>Lake Maggiore</td><td>Islands + closest airport</td><td class="star">★★★☆☆</td><td><span class="pill yes">Ferries</span></td><td><strong>~1 h</strong></td><td>Cool</td></tr>
+          <tr><td class="dest"><span class="em">🐟</span>Genoa &amp; Riviera</td><td>Aquarium + least hassle</td><td class="star">★★★★☆</td><td><span class="pill yes">Trains</span></td><td>~1.5–2 h</td><td>Sea-cooled</td></tr>
+          <tr><td class="dest"><span class="em">🚤</span>Venice</td><td>Pure magic (2–3 nts)</td><td class="star">★★★★☆</td><td><span class="pill yes">Boats</span></td><td>~2.5 h</td><td class="star"><span class="pill warn">Hot · crowded</span></td></tr>
+          <tr><td class="dest"><span class="em">⛰️</span>Dolomites</td><td>Cool-mountain escape</td><td class="star">★★★★☆</td><td><span class="pill warn">Wants car</span></td><td>~3 h</td><td><span class="pill yes">Cool ★</span></td></tr>
+          <tr><td class="dest"><span class="em">🍝</span>Bologna</td><td>Food + fewer crowds</td><td class="star">★★★☆☆</td><td><span class="pill yes">Trains</span></td><td>~1 h</td><td>Hot/humid</td></tr>
+          <tr><td class="dest"><span class="em">🎨</span>Florence</td><td>Renaissance art</td><td class="star">★★☆☆☆</td><td><span class="pill yes">City</span></td><td>~2 h</td><td><span class="pill warn">Very hot</span></td></tr>
+          <tr><td class="dest"><span class="em">🏛️</span>Rome</td><td>Bucket-list city</td><td class="star">★★★★☆</td><td><span class="pill yes">Trains</span></td><td>~3 h</td><td><span class="pill warn">Hot · far</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mapnote reveal">Times are typical fast-train / ferry connections from each base to Malpensa, one change in Milan where needed.</p>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section class="chapter" id="map">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">The geography</span>
+      <h2>From the coast, <em>where next?</em></h2>
+      <p class="lede">Every option pinned between your start (Cinque Terre) and your finish (Milan Malpensa). It makes the trade-off visual — the lakes and Riviera hug the route home; Venice, Florence and Rome are detours of increasing size.</p>
+    </div>
+    <div class="maplegend reveal">
+      <span class="lg"><i style="background:#2c6f57;"></i> Lakes</span>
+      <span class="lg"><i style="background:#15605b;"></i> Coast</span>
+      <span class="lg"><i style="background:#bd4a26;"></i> Cities</span>
+      <span class="lg"><i style="background:#3f6781;"></i> Mountains</span>
+      <span class="lg"><i style="background:#241d14;"></i> Start / finish</span>
+    </div>
+  </div>
+  <div id="italymap" style="margin-top:22px;"></div>
+  <div class="wrap"><p class="mapnote reveal">Map © OpenStreetMap contributors, © CARTO. Tap a pin for the quick pitch.</p></div>
+</section>
+
+<!-- ===== THE LAKES ===== -->
+<section class="chapter alt-band" id="lakes">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Option group 1</span>
+      <h2>The <em>lakes</em></h2>
+      <p class="lede">Cool water, boats, gelato on a promenade, and an easy run back to Milan. The natural fit for this family — and the reason Garda rose to the top.</p>
+    </div>
+
+    <div class="opt cur reveal">
+      <div class="ophoto"><span class="badge cur">★ Current pick</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Panorama_of_Lake_Garda_from_Monte_Baldo.jpg/1280px-Panorama_of_Lake_Garda_from_Monte_Baldo.jpg" alt="Lake Garda"></div>
+      <div class="opad">
+        <h3><span class="em">🏖️</span>Lake Garda</h3>
+        <p class="vibe">The all-rounder — Italy's biggest lake, warm and shallow at the south, with a theme-park capital next door. The most <em>loaded</em> option for a nine-year-old, and entirely doable without a car.</p>
+        <ul class="khl">
+          <li><strong>Gardaland</strong> — Italy's #1 theme park + SEA LIFE aquarium + a Legoland water park.</li>
+          <li><strong>Captain your own boat</strong> to Sirmione's castle (no licence under 40 hp).</li>
+          <li>Warm-water beaches, ferry-hopping walled towns, and <strong>Verona</strong> 15 min by train.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~4–5 h from Cinque Terre via Milan</div>
+          <div class="row"><span class="k">Base</span>Peschiera del Garda (train hub, no car)</div>
+        </div>
+        <div class="otags"><span class="solid">Best for kids</span><span>Self-drive boat ✓</span><a class="go" href="lake-garda.html">Full guide →</a></div>
+      </div>
+    </div>
+
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Bellagio_panorama_from_Lake_Como_ferry.jpg/1280px-Bellagio_panorama_from_Lake_Como_ferry.jpg" alt="Bellagio, Lake Como"></div>
+      <div class="opad">
+        <h3><span class="em">⛵</span>Lake Como</h3>
+        <p class="vibe">The scenic stunner — steep green mountains plunging to deep blue water, grand villas, and the most photogenic of all the lakes. Trades theme-park thrills for sheer beauty.</p>
+        <ul class="khl">
+          <li>Endless <strong>ferry-hopping</strong> — Varenna ↔ Bellagio ↔ Menaggio, a different town each afternoon.</li>
+          <li><strong>Villa del Balbianello</strong> (Star Wars &amp; Bond filming spot) and Villa Carlotta's gardens.</li>
+          <li>The Brunate funicular, lakeside lidos for a swim, and small self-drive boats to rent.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~4 h from Cinque Terre via Milan</div>
+          <div class="row"><span class="k">Base</span>Varenna (train-served, walkable, ferry hub)</div>
+        </div>
+        <div class="otags"><span class="solid">Most scenic</span><span>Self-drive boat ✓</span><span>~1–1.5 h to MXP</span></div>
+      </div>
+    </div>
+
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Isola_Bella_%285%29.JPG/1280px-Isola_Bella_%285%29.JPG" alt="Isola Bella, Lake Maggiore"></div>
+      <div class="opad">
+        <h3><span class="em">🛥️</span>Lake Maggiore · Stresa</h3>
+        <p class="vibe">Belle-époque elegance and island palaces — and the <em>closest base of all to your airport</em>. Gentler and quieter than Garda, with a fairy-tale set of islands offshore.</p>
+        <ul class="khl">
+          <li>The <strong>Borromean Islands</strong> — Isola Bella's baroque palace &amp; terraced gardens (with white peacocks), and the Isola dei Pescatori fishing village.</li>
+          <li>The <strong>Mottarone cable car</strong> for Alpine views, plus a lakeside promenade made for gelato.</li>
+          <li>Short boat trips island-to-island all day.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~3.5 h from Cinque Terre</div>
+          <div class="row"><span class="k">Base</span>Stresa (lakefront, train-served)</div>
+        </div>
+        <div class="otags"><span class="solid">Easiest airport finish</span><span>~1 h to MXP ★</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE COAST ===== -->
+<section class="chapter" id="coast">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Option group 2</span>
+      <h2>The <em>coast</em></h2>
+      <p class="lede">Barely move. Stay by the sea you're already on — and play an aquarium ace.</p>
+    </div>
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Genova_Porto_Antico_Biosfera_e_Acquario.jpg/1280px-Genova_Porto_Antico_Biosfera_e_Acquario.jpg" alt="Genoa Porto Antico aquarium"></div>
+      <div class="opad">
+        <h3><span class="em">🐟</span>Genoa &amp; the Riviera</h3>
+        <p class="vibe">The lowest-hassle option — barely an hour from Cinque Terre, so almost no transit. A grand old port city paired with glamorous fishing villages, and a guaranteed crowd-pleaser up its sleeve.</p>
+        <ul class="khl">
+          <li><strong>Italy's biggest aquarium</strong> (plus the rainforest Biosphere) — a sure 9-year-old win on a hot day.</li>
+          <li>Boat to <strong>Portofino</strong> &amp; the San Fruttuoso abbey; swim at <strong>Boccadasse</strong>'s pebble cove.</li>
+          <li>Camogli and Santa Margherita for resort beaches; trains link everything.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~1 h from Cinque Terre (almost nothing!)</div>
+          <div class="row"><span class="k">Base</span>Genoa (aquarium + trains) or Santa Margherita / Camogli</div>
+        </div>
+        <div class="otags"><span class="solid">Least hassle</span><span>Aquarium ✓</span><span>Boat tours ✓</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE CITIES ===== -->
+<section class="chapter alt-band" id="cities">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Option group 3</span>
+      <h2>The <em>cities</em></h2>
+      <p class="lede">Culture, history and food — magical in their way, but hotter and (mostly) better as shorter hits than four full July days.</p>
+    </div>
+
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg/1280px-Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg" alt="Venice Grand Canal"></div>
+      <div class="opad">
+        <h3><span class="em">🚤</span>Venice</h3>
+        <p class="vibe">Nowhere on earth is like it — a city of canals with <em>no cars at all</em>, where every trip is a boat ride. Unforgettable for a kid; just intense in July's heat and crowds.</p>
+        <ul class="khl">
+          <li>Vaporetto down the <strong>Grand Canal</strong>, gondolas, and the boat out to the lagoon islands.</li>
+          <li><strong>Murano glass-blowing</strong> demos and <strong>Burano</strong>'s rainbow-painted houses.</li>
+          <li>Pigeons and the bell-tower lift in St Mark's; <em>cicchetti</em> (Venetian tapas) by the canal.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~5–6 h from Cinque Terre · ~2.5 h to MXP</div>
+          <div class="row"><span class="k">Base</span>Venice (Cannaregio/Dorsoduro) — pricey; or Mestre, train in</div>
+        </div>
+        <div class="otags"><span class="solid">Pure magic</span><span>Best as 2–3 nights</span><span>Hot &amp; busy in July</span></div>
+      </div>
+    </div>
+
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Torri_Garisenda_%26_Asinelli%2C_Bologna_%2826408615160%29.jpg/1280px-Torri_Garisenda_%26_Asinelli%2C_Bologna_%2826408615160%29.jpg" alt="Bologna's two towers"></div>
+      <div class="opad">
+        <h3><span class="em">🍝</span>Bologna &amp; Emilia-Romagna</h3>
+        <p class="vibe">Italy's food capital and an under-touristed, gloriously walkable city of warm-stone porticoes — central, easy, and far less crowded than Florence or Venice.</p>
+        <ul class="khl">
+          <li>Climb the leaning <strong>Asinelli Tower</strong>; wander 40 km of UNESCO porticoes (shade!).</li>
+          <li><strong>FICO Eataly World</strong> — a vast food theme park — plus the best gelato of the trip.</li>
+          <li>Day-trips: Ferrara by bike, Ravenna's gold mosaics, the Ferrari &amp; Ducati museums near Modena.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~3 h from Cinque Terre · ~1 h to MXP</div>
+          <div class="row"><span class="k">Base</span>Bologna centro storico</div>
+        </div>
+        <div class="otags"><span class="solid">Food &amp; fewer crowds</span><span>Very central</span></div>
+      </div>
+    </div>
+
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Duomo_Brunelleschi_Florence_terrace_Uffizi.jpg/1280px-Duomo_Brunelleschi_Florence_terrace_Uffizi.jpg" alt="Florence Duomo"></div>
+      <div class="opad">
+        <h3><span class="em">🎨</span>Florence &amp; Tuscany</h3>
+        <p class="vibe">The Renaissance in one walkable city. Spectacular for grown-ups; for a nine-year-old it's about climbing things and gelato more than galleries — and it's the hottest option in July.</p>
+        <ul class="khl">
+          <li>Climb the <strong>Duomo dome</strong> &amp; the Campanile; the <strong>Leonardo</strong> &amp; <strong>Galileo</strong> science museums are kid gold.</li>
+          <li>Boboli gardens, the Ponte Vecchio, and a day-trip to climb <strong>Pisa</strong>'s leaning tower.</li>
+          <li>Gelato pilgrimages (it was invented in Tuscany) between the sights.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~2.5 h from Cinque Terre (via Pisa) · ~2 h to MXP</div>
+          <div class="row"><span class="k">Base</span>Florence centro</div>
+        </div>
+        <div class="otags"><span class="solid">Art &amp; history</span><span>Hottest in July</span></div>
+      </div>
+    </div>
+
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1280px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg" alt="The Colosseum, Rome"></div>
+      <div class="opad">
+        <h3><span class="em">🏛️</span>Rome</h3>
+        <p class="vibe">The eternal blockbuster, and a thrill for a nine-year-old who's ready for it. The catch for <em>this</em> trip: it's far south and hot, and a big detour from your Milan flight.</p>
+        <ul class="khl">
+          <li>The <strong>Colosseum</strong> &amp; gladiators, the Pantheon, a coin in the Trevi Fountain.</li>
+          <li>Climb <strong>St Peter's dome</strong>; rent a family bike in the Borghese gardens; endless gelato.</li>
+          <li>Ancient ruins a kid can actually walk through — history made real.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~4 h+ from Cinque Terre · ~3 h back to MXP</div>
+          <div class="row"><span class="k">Base</span>Rome centro</div>
+        </div>
+        <div class="otags"><span class="solid">Bucket-list</span><span>Far &amp; hot</span><span>Better as its own trip</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE MOUNTAINS ===== -->
+<section class="chapter" id="mountains">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Option group 4</span>
+      <h2>The <em>mountains</em></h2>
+      <p class="lede">The wild card — and the only way to actually beat the July heat.</p>
+    </div>
+    <div class="opt reveal">
+      <div class="ophoto"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Lago_di_Braies_South_Tyrol_3.jpg/1280px-Lago_di_Braies_South_Tyrol_3.jpg" alt="Lago di Braies, Dolomites"></div>
+      <div class="opad">
+        <h3><span class="em">⛰️</span>The Dolomites</h3>
+        <p class="vibe">Turquoise lakes under pink limestone spires — cool, crisp Alpine air while the rest of Italy bakes. Heart-stopping scenery and brilliant for kids, with one catch: it really wants a rental car.</p>
+        <ul class="khl">
+          <li>Cable cars to high meadow playgrounds; row a wooden boat on <strong>Lago di Braies</strong>.</li>
+          <li><strong>Ötzi</strong>, the 5,000-year-old iceman, in Bolzano's museum; cows with bells and easy trails.</li>
+          <li>Cool nights and zero crowds compared with the cities.</li>
+        </ul>
+        <div class="ometa">
+          <div class="row"><span class="k">Getting there</span>~5–6 h from Cinque Terre via Verona · ~3 h to MXP</div>
+          <div class="row"><span class="k">Base</span>Ortisei (Val Gardena) or Bolzano (train-served)</div>
+          <div class="row"><span class="k">Heads-up</span>A rental car helps a lot — it'd break the car-free run</div>
+        </div>
+        <div class="otags"><span class="solid">Coolest in July ★</span><span>Wants a car</span></div>
+      </div>
+    </div>
+
+    <div class="verdict reveal">
+      <span class="lbl">The bottom line</span>
+      <h3>For <em>this</em> family, <em>this</em> July</h3>
+      <p><b>Lake Garda</b> remains the strongest all-round fit — most for a nine-year-old, fully car-free, warm swimming, and an easy run to the airport. It earned the top spot.</p>
+      <p>If you'd swap thrills for beauty, <b>Lake Como</b> is the scenic upgrade; if you want the <em>simplest</em> finish, <b>Lake Maggiore</b> is an hour from your gate. Want to barely move and still wow the kid? <b>Genoa + the Riviera</b> (that aquarium). Crave a once-in-a-lifetime city? <b>Venice</b>, kept to 2–3 nights. And if beating the heat matters most and a car is on the table, the <b>Dolomites</b> are unmatched.</p>
+      <p style="color:#f3cf8e;">Tell me which one (or two) to commit to, and I'll build it out in full — verified family hotels, an interactive map, things to do — exactly like the Lake Garda guide.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h4>Choosing your Italy</h4>
+    <p style="max-width:62ch;color:#bfa884;">Part of the Senerth family's Iceland &amp; Italy, summer 2026 — a decision guide for the leg between Cinque Terre and the flight home from Milan.</p>
+    <a class="bigback" href="index.html">← Back to the full trip guide</a>
+    <div class="credits">
+      Photography · Wikimedia Commons, used under their licenses — Cinque Terre/Manarola (hero), Lake Garda panorama, Bellagio (Lake Como), Isola Bella (Lake Maggiore), Genoa Porto Antico &amp; aquarium, Venice Grand Canal, Bologna's two towers, Florence Duomo, the Colosseum, Lago di Braies (Dolomites). Map © OpenStreetMap contributors, © CARTO via Leaflet. Transit times are typical fast-train / ferry connections, Jun 2026.
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+  var prog=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;prog.style.width=(p*100)+'%';
+    var bg=document.getElementById('heroBg');if(bg){var y=(h.scrollTop||document.body.scrollTop);if(y<window.innerHeight)bg.style.transform='translateY('+(y*0.28)+'px)';}}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.06,rootMargin:'0px 0px -3% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var anchors=[
+    {n:'Start · Cinque Terre',c:[44.1456,9.6545],col:'#241d14',e:'🚉',d:'Where the Italian leg begins (Monterosso).'},
+    {n:'Finish · Milan Malpensa',c:[45.6306,8.7281],col:'#241d14',e:'✈️',d:'Fly home Jul 10, 4 PM. Everything routes back here.'}
+  ];
+  var opts=[
+    {n:'Lake Garda',c:[45.44,10.69],col:'#2c6f57',e:'🏖️',d:'Theme parks, beaches & a self-drive boat. The current pick.',u:'lake-garda.html',ul:'Full guide →'},
+    {n:'Lake Como (Varenna)',c:[45.986,9.262],col:'#2c6f57',e:'⛵',d:'The scenic stunner — villas & ferry-hopping. ~1–1.5 h to MXP.'},
+    {n:'Lake Maggiore (Stresa)',c:[45.884,8.530],col:'#2c6f57',e:'🛥️',d:'Island palaces & the closest base to the airport (~1 h).'},
+    {n:'Genoa & the Riviera',c:[44.411,8.929],col:'#15605b',e:'🐟',d:'Italy’s biggest aquarium + Portofino. ~1 h from Cinque Terre.'},
+    {n:'Venice',c:[45.438,12.336],col:'#bd4a26',e:'🚤',d:'A city of canals — magic for a kid, best as 2–3 nights.'},
+    {n:'Bologna',c:[44.494,11.343],col:'#bd4a26',e:'🍝',d:'Food capital, towers & porticoes; ~1 h to MXP.'},
+    {n:'Florence',c:[43.770,11.256],col:'#bd4a26',e:'🎨',d:'Renaissance art — spectacular but the hottest in July.'},
+    {n:'Rome',c:[41.890,12.492],col:'#bd4a26',e:'🏛️',d:'The blockbuster — far south & hot, a big detour.'},
+    {n:'The Dolomites',c:[46.694,12.086],col:'#3f6781',e:'⛰️',d:'Cool mountains & turquoise lakes — wants a rental car.'}
+  ];
+  function pin(color,emoji){return L.divIcon({className:'',iconSize:[30,30],iconAnchor:[15,28],popupAnchor:[0,-28],html:'<div class="pin" style="background:'+color+';"><span>'+emoji+'</span></div>'});}
+  try{
+    var map=L.map('italymap',{scrollWheelZoom:false}).setView([44.7,10.6],6);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>',subdomains:'abcd',maxZoom:18}).addTo(map);
+    var b=[];
+    opts.forEach(function(o){
+      L.marker(o.c,{icon:pin(o.col,o.e)}).addTo(map).bindPopup('<div class="mpop"><div class="mn">'+o.n+'</div><div class="mdesc">'+o.d+'</div>'+(o.u?'<a href="'+o.u+'">'+o.ul+'</a>':'')+'</div>');
+      b.push(o.c);
+    });
+    anchors.forEach(function(a){
+      L.marker(a.c,{icon:pin(a.col,a.e)}).addTo(map).bindPopup('<div class="mpop"><div class="mn">'+a.n+'</div><div class="mdesc">'+a.d+'</div></div>');
+      b.push(a.c);
+    });
+    map.fitBounds(b,{padding:[50,50]});
+    map.on('click',function(){ if(!map.scrollWheelZoom.enabled()) map.scrollWheelZoom.enable(); });
+  }catch(e){var el=document.getElementById('italymap');if(el){el.style.height='auto';el.innerHTML='<p style="padding:24px;font-family:var(--mono);font-size:.7rem;">Map could not load — check your connection.</p>';}}
+</script>
+</body>
+</html>
