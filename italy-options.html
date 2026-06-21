@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
 <style>
   :root{
     --paper:#f4ead6;--paper-2:#efe1c7;--paper-3:#e7d6b6;
@@ -488,8 +489,14 @@
   function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;prog.style.width=(p*100)+'%';
     var bg=document.getElementById('heroBg');if(bg){var y=(h.scrollTop||document.body.scrollTop);if(y<window.innerHeight)bg.style.transform='translateY('+(y*0.28)+'px)';}}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.06,rootMargin:'0px 0px -3% 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.06,rootMargin:'0px 0px -3% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+  // safety net: never leave content stuck hidden
+  window.addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('in');});},800);});
 
   var anchors=[
     {n:'Start · Cinque Terre',c:[44.1456,9.6545],col:'#241d14',e:'🚉',d:'Where the Italian leg begins (Monterosso).'},
