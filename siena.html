@@ -226,6 +226,45 @@
   .dish .em{font-size:1.8rem;}
   .dish .nm{font-family:var(--display);font-weight:600;font-size:1.06rem;}
   .dish .de{font-size:.86rem;color:var(--ink-soft);line-height:1.5;margin-top:2px;}
+  .pdishes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.pdishes{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.pdishes{grid-template-columns:1fr;}}
+  .pdish{background:var(--paper);border:1px solid rgba(92,80,64,.22);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px -28px rgba(36,25,12,.6);}
+  .alt-band .pdish{background:var(--paper-2);}
+  .pdish .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper-3);}
+  .pdish .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .pdish:hover .ph img{transform:scale(1.05);}
+  .pdish .pad{padding:13px 16px 16px;}
+  .pdish .nm{font-family:var(--display);font-weight:600;font-size:1.04rem;line-height:1.15;}
+  .pdish .de{font-size:.84rem;color:var(--ink-soft);line-height:1.5;margin-top:5px;}
+  .eatgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.eatgrid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.eatgrid{grid-template-columns:1fr;}}
+  .eatcard{background:var(--paper);border:1px solid rgba(92,80,64,.22);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px -28px rgba(36,25,12,.6);}
+  .alt-band .eatcard{background:var(--paper-2);}
+  .eatcard .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper-3);position:relative;}
+  .eatcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .eatcard:hover .ph img{transform:scale(1.06);}
+  .eatcard .ph .px{position:absolute;top:9px;right:9px;background:rgba(36,25,12,.85);color:#fff;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;padding:3px 8px;border-radius:100px;font-weight:700;}
+  .eatcard .pad{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1;}
+  .eatcard .nm{font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.12;}
+  .eatcard .cz{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:5px 0 7px;font-weight:700;}
+  .eatcard .de{font-size:.85rem;color:var(--ink-soft);line-height:1.5;flex:1;}
+  .eatcard .order{margin-top:9px;font-size:.82rem;color:var(--ink);}
+  .eatcard .order b{font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);}
+  .eatcard .maps{margin-top:11px;display:inline-block;text-decoration:none;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--sienna);border:1px solid var(--sienna);padding:7px 11px;border-radius:100px;align-self:flex-start;transition:background .2s,color .2s;}
+  .eatcard .maps:hover{background:var(--sienna);color:var(--paper);}
+  .eatcard .maps::after{content:" \2197";}
+  .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.acts{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.acts{grid-template-columns:1fr;}}
+  .act{background:var(--paper);border:1px solid rgba(92,80,64,.2);border-top:4px solid var(--accent);border-radius:5px 5px 7px 7px;padding:18px 20px;display:flex;flex-direction:column;}
+  .alt-band .act{background:var(--paper-2);}
+  .act .ico{font-size:1.6rem;line-height:1;}
+  .act h4{font-family:var(--display);font-weight:600;font-size:1.16rem;margin:9px 0 6px;line-height:1.15;}
+  .act p{margin:0;font-size:.9rem;line-height:1.5;color:var(--ink);}
+  .act .tag{margin-top:10px;font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  .act .tag b{color:var(--accent);}
 
   .gems{list-style:none;padding:0;margin:14px 0 0;}
   .gems li{position:relative;padding:12px 0 12px 30px;border-top:1px solid rgba(92,80,64,.18);font-size:.96rem;}
@@ -261,7 +300,7 @@
 <nav>
   <div class="brand"><a href="index.html">Senerth · MMXXVI</a></div>
   <div class="links">
-    <a href="#plan">Plan</a><a href="#getting">Getting there</a><a href="#car">The car question</a><a href="#siena">Siena</a><a href="#towns">Hill towns</a><a href="#days">Itinerary</a><a href="#map">Map</a><a href="#stay">Stay</a><a href="index.html" class="back">← Full guide</a>
+    <a href="#plan">Plan</a><a href="#getting">Getting there</a><a href="#car">The car question</a><a href="#siena">Siena</a><a href="#towns">Hill towns</a><a href="#together">Family</a><a href="#days">Itinerary</a><a href="#map">Map</a><a href="#stay">Stay</a><a href="index.html" class="back">← Full guide</a>
   </div>
 </nav>
 
@@ -489,6 +528,55 @@
   </div>
 </section>
 
+<!-- ===== TOGETHER AS A FAMILY ===== -->
+<section class="chapter" id="together">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Together · hands-on with a 9-year-old</span>
+      <h2>Things to do <em>as a crew</em></h2>
+      <p class="lede">Siena's magic is partly just <em>being</em> there — but here are the hands-on, do-it-together things that turn a medieval city into a kid's adventure, no rides required.</p>
+    </div>
+    <div class="acts reveal">
+      <div class="act">
+        <span class="ico">🍝</span>
+        <h4>Make pici together · a cooking class</h4>
+        <p>The Tuscan classic to do as a family: a <strong>hands-on pici class</strong>, rolling the fat local pasta by hand (no machine — all thumbs and palms, which kids love), often with a pumpkin <em>tortello</em> and <strong>tiramisù</strong> too, then eating the lot. Siena schools like <strong>Fonte Giusta Academy</strong> and home-cook hosts via <strong>Cesarine</strong> run short, family-welcoming sessions.</p>
+        <div class="tag"><b>Book it</b> · ~2–3 h · from ~€40–70 pp · kids welcome · reserve ahead</div>
+      </div>
+      <div class="act">
+        <span class="ico">🗼</span>
+        <h4>Climb the Torre del Mangia</h4>
+        <p>~300 steps up one of Italy's tallest medieval towers — a real "we did it" for a 9-year-old, with the whole brick city and the hills unrolling below at the top. Timed and capped, so go early.</p>
+        <div class="tag"><b>Plan</b> · book a morning slot; not for the very claustrophobic</div>
+      </div>
+      <div class="act">
+        <span class="ico">🐌</span>
+        <h4>The contrada treasure-hunt</h4>
+        <p>Arm the kid with the list of 17 <strong>contrada animals</strong> — snail, dragon, panther, she-wolf, caterpillar — and hunt the flags, fountains and street-plaques across the city. The best free game in Tuscany, and it teaches the whole map.</p>
+        <div class="tag"><b>Free</b> · all week, everywhere you walk</div>
+      </div>
+      <div class="act">
+        <span class="ico">🧀</span>
+        <h4>A pecorino taste-test</h4>
+        <p>In Pienza (or a Siena cheese shop), line up <strong>fresh vs. aged vs. truffle pecorino</strong> and let the 9-year-old be the judge — a low-stakes, giggly way into Italy's food culture, with honey and pears alongside.</p>
+        <div class="tag"><b>Pair</b> · with the Val d'Orcia day</div>
+      </div>
+      <div class="act">
+        <span class="ico">♨️</span>
+        <h4>Wade in a wild hot spring</h4>
+        <p>At <strong>Bagni San Filippo</strong>, white travertine cascades and warm woodland pools you can actually bathe in — a free, slightly secret, properly magical soak in the forest. (Car or tour to reach it; bring water shoes.)</p>
+        <div class="tag"><b>Where</b> · Fosso Bianco, Val d'Orcia · free</div>
+      </div>
+      <div class="act">
+        <span class="ico">🏰</span>
+        <h4>Run a castle wall</h4>
+        <p>Let off steam on real ramparts — the <strong>Fortezza Medicea</strong> in Siena (free, with an evening <em>enoteca</em> for the grown-ups), the tiny circuit at <strong>Monteriggioni</strong>, or Montalcino's fortress on the Val d'Orcia day.</p>
+        <div class="tag"><b>Best at</b> · the Fortezza at sunset</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== ITINERARY ===== -->
 <section class="chapter alt-band" id="days">
   <div class="wrap">
@@ -624,12 +712,25 @@
       <h2>Pici, pecorino <em>&amp; Brunello</em></h2>
       <p class="lede">Hearty, simple, peasant-rooted and superb — bread, beans, pork, sheep's cheese, fat hand-rolled pasta, and some of the planet's great red wine. Kids eat well here.</p>
     </div>
-    <div class="dishes reveal">
-      <div class="dish"><div class="em">🍝</div><div><div class="nm">Pici</div><div class="de">Fat, hand-rolled spaghetti — the local pasta. Try it <em>all'aglione</em> (garlic-tomato), <em>cacio e pepe</em>, or with a wild-boar ragù. A guaranteed kid-pleaser.</div></div></div>
-      <div class="dish"><div class="em">🧀</div><div><div class="nm">Pecorino di Pienza</div><div class="de">Sheep's-milk cheese from the Val d'Orcia — fresh and mild to aged and sharp, sometimes wrapped in walnut leaves or rubbed with ash. A fun taste-test.</div></div></div>
-      <div class="dish"><div class="em">🥩</div><div><div class="nm">Bistecca &amp; ribollita</div><div class="de">The towering <em>bistecca alla fiorentina</em> steak for a feast; <em>ribollita</em> (twice-boiled bread-and-bean soup) and <em>pappa al pomodoro</em> for cosy nights.</div></div></div>
-      <div class="dish"><div class="em">🍷</div><div><div class="nm">Brunello · Vino Nobile · Chianti</div><div class="de">Three legends within an hour of Siena: <strong>Brunello di Montalcino</strong>, <strong>Vino Nobile di Montepulciano</strong>, and the <strong>Chianti</strong> hills to the north. Cantucci dipped in Vin Santo to finish.</div></div></div>
+    <div class="pdishes reveal">
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/pici.jpg" alt="Pici pasta"></div><div class="pad"><div class="nm">Pici</div><div class="de">Fat, hand-rolled spaghetti — <em>the</em> Siena pasta. Try it <em>all'aglione</em> (garlic-tomato), <em>cacio e pepe</em>, or with a wild-boar ragù. A guaranteed kid-pleaser.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/pecorino.jpg" alt="Pecorino di Pienza"></div><div class="pad"><div class="nm">Pecorino di Pienza</div><div class="de">Sheep's-milk cheese from the Val d'Orcia — fresh and mild to aged and sharp, sometimes in walnut leaves or rubbed with ash. A fun taste-test for the kid.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/bistecca.jpg" alt="Bistecca alla fiorentina"></div><div class="pad"><div class="nm">Bistecca alla fiorentina</div><div class="de">The towering, rare-grilled T-bone steak — a proper Tuscan feast for the table to share, usually sold by weight.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/ribollita.jpg" alt="Ribollita"></div><div class="pad"><div class="nm">Ribollita &amp; pappa al pomodoro</div><div class="de">Peasant comfort food: <em>ribollita</em> (twice-boiled bread-and-bean soup) and <em>pappa al pomodoro</em> (bread-and-tomato) — cosy, mild and cheap.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/cantucci.jpg" alt="Cantucci & Vin Santo"></div><div class="pad"><div class="nm">Cantucci &amp; the great reds</div><div class="de">Almond <em>cantucci</em> dipped in sweet Vin Santo to finish — alongside three legends within an hour: <strong>Brunello</strong>, <strong>Vino Nobile</strong> and <strong>Chianti</strong>.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/gelato.jpg" alt="Gelato"></div><div class="pad"><div class="nm">Gelato</div><div class="de">Tuscany takes gelato seriously — Siena has world-class <em>gelaterie</em>. The daily ritual after a tower climb, eaten on the warm slope of the Campo.</div></div></div>
     </div>
+
+    <span class="section-label">Where to eat · inside the walls</span>
+    <p class="cuisine-intro reveal" style="font-style:italic;max-width:74ch;">Well-loved, family-friendly Siena tables, mostly a short walk from the Campo — pici trattorias, a garden pizzeria the kids will love, and the city's best gelato. Tap a card for Google Maps; reserve dinner in July.</p>
+    <div class="eatgrid reveal">
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/pici.jpg" alt="Pici"><span class="px">$</span></div><div class="pad"><div class="nm">Osteria Il Grattacielo</div><div class="cz">Tuscan osteria · pici &amp; cured meats</div><div class="de">A tiny, characterful, cash-friendly osteria — a real Siena institution for a cheap, generous, authentic lunch.</div><div class="order"><b>Order</b> pici (cacio e pepe or ragù) + a shared antipasto board of Tuscan salumi &amp; cheeses.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Osteria%20Il%20Grattacielo%20Siena" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/seafoodpasta.jpg" alt="Handmade pici"><span class="px">$$</span></div><div class="pad"><div class="nm">Trattoria La Tellina</div><div class="cz">Family-run · handmade pici</div><div class="de">A warm family-run trattoria turning out hand-rolled pici and the classics — a reliable, relaxed dinner with a kid.</div><div class="order"><b>Order</b> pici cacio e pepe + pici al ragù di salsiccia, the polpette (meatballs), tiramisù.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Trattoria%20La%20Tellina%20Siena" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/pizza.jpg" alt="Garden pizzeria"><span class="px">$</span></div><div class="pad"><div class="nm">All'Orto de' Pecci</div><div class="cz">Garden pizzeria · trattoria ★ kids</div><div class="de">A green city-farm valley just below the Campo — pizzas &amp; pasta at outdoor tables, with <strong>peacocks, donkeys and goats</strong> the kids can visit between courses. The family pick.</div><div class="order"><b>Order</b> wood-style pizzas &amp; fresh pastas; let the 9-year-old run to see the animals.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=All'Orto%20de'%20Pecci%20Siena" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/bistecca.jpg" alt="Tuscan dining"><span class="px">$$$</span></div><div class="pad"><div class="nm">Osteria Le Logge</div><div class="cz">Classic Siena · refined</div><div class="de">A beautiful old wood-and-marble dining room a step off the Campo — the city's special-occasion table, modern Tuscan and superb.</div><div class="order"><b>Order</b> the seasonal pici or pasta + a Tuscan main; one nicer evening out.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Osteria%20Le%20Logge%20Siena" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/gelato.jpg" alt="Gelato"><span class="px">$</span></div><div class="pad"><div class="nm">Gelateria La Vecchia Latteria</div><div class="cz">Artisan gelato</div><div class="de">A favourite for proper artisan gelato — fresh, creamy, generous; the daily after-dinner (or after-tower) treat.</div><div class="order"><b>Order</b> a three-flavour cup — the pistachio is the standout (+ dark chocolate, nocciola).</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=La%20Vecchia%20Latteria%20Siena" target="_blank" rel="noopener">Open in Maps</a></div></div>
+    </div>
+
     <div class="moment reveal">
       <span class="lbl">A moment to seek</span>
       <p>Late afternoon, the heat finally breaking. You've climbed down off the cathedral roof and the Campo has filled with that low gold light that makes the whole city look lit from inside the bricks. Your daughter is lying back on the warm slope of the square with a gelato — <em>fragola</em>, naturally — counting contrada flags out loud and getting them wrong, and a swift is screaming somewhere up around the tower you climbed this morning. Nobody is going anywhere. Tomorrow there are cypress roads and a hot spring in the woods, but right now there is just brick and shadow and strawberry, and seven hundred years of someone else's history holding perfectly still around your kid.</p>

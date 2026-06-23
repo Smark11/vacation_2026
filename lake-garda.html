@@ -242,6 +242,27 @@
   .dish .em{font-size:1.8rem;}
   .dish .nm{font-family:var(--display);font-weight:600;font-size:1.06rem;}
   .dish .de{font-size:.86rem;color:var(--ink-soft);line-height:1.5;margin-top:2px;}
+  .pdishes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.pdishes{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.pdishes{grid-template-columns:1fr;}}
+  .pdish{background:var(--paper);border:1px solid rgba(92,80,64,.22);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px -28px rgba(36,25,12,.6);}
+  .alt-band .pdish{background:var(--paper-2);}
+  .pdish .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper-3);}
+  .pdish .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .pdish:hover .ph img{transform:scale(1.05);}
+  .pdish .pad{padding:13px 16px 16px;}
+  .pdish .nm{font-family:var(--display);font-weight:600;font-size:1.04rem;line-height:1.15;}
+  .pdish .de{font-size:.84rem;color:var(--ink-soft);line-height:1.5;margin-top:5px;}
+  .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.acts{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.acts{grid-template-columns:1fr;}}
+  .act{background:var(--paper);border:1px solid rgba(92,80,64,.2);border-top:4px solid var(--accent);border-radius:5px 5px 7px 7px;padding:18px 20px;display:flex;flex-direction:column;}
+  .alt-band .act{background:var(--paper-2);}
+  .act .ico{font-size:1.6rem;line-height:1;}
+  .act h4{font-family:var(--display);font-weight:600;font-size:1.16rem;margin:9px 0 6px;line-height:1.15;}
+  .act p{margin:0;font-size:.9rem;line-height:1.5;color:var(--ink);}
+  .act .tag{margin-top:10px;font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  .act .tag b{color:var(--accent);}
 
   .gems{list-style:none;padding:0;margin:14px 0 0;}
   .gems li{position:relative;padding:12px 0 12px 30px;border-top:1px solid rgba(92,80,64,.18);font-size:.96rem;}
@@ -303,7 +324,7 @@
 <nav>
   <div class="brand"><a href="index.html">Senerth · MMXXVI</a></div>
   <div class="links">
-    <a href="#plan">Plan</a><a href="#towns">Towns</a><a href="#map">Map</a><a href="#do">See &amp; Do</a><a href="#days">Itinerary</a><a href="#stay">Stay</a><a href="#eat">Eat</a><a href="#final">Final night</a><a href="index.html" class="back">← Full guide</a>
+    <a href="#plan">Plan</a><a href="#towns">Towns</a><a href="#map">Map</a><a href="#do">See &amp; Do</a><a href="#days">Itinerary</a><a href="#stay">Stay</a><a href="#eat">Eat</a><a href="#together">Family</a><a href="#final">Final night</a><a href="index.html" class="back">← Full guide</a>
   </div>
 </nav>
 
@@ -796,33 +817,84 @@
     </div>
     <div class="eatgrid reveal">
       <div class="eatcard">
-        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Margherita_pizza_on_plate.jpg/1280px-Margherita_pizza_on_plate.jpg" alt="Pizza"><span class="px">$$</span></div>
+        <div class="ph"><img loading="lazy" src="food-img/pizza.jpg" alt="Pizza"><span class="px">$$</span></div>
         <div class="pad"><div class="nm">Sosta e Gusta</div><div class="cz">Pizzeria · Trattoria</div><div class="de">Relaxed spot with great dough and pasta — an easy crowd-pleaser with a kid, indoors or out.</div><div class="order"><b>Order</b> a bubbling Margherita + a plate of pasta to share.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Sosta%20e%20Gusta%20Peschiera%20del%20Garda" target="_blank" rel="noopener">Open in Maps</a></div>
       </div>
       <div class="eatcard">
-        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Seafood_pasta_clams_food.jpg" alt="Seafood pasta"><span class="px">$$</span></div>
+        <div class="ph"><img loading="lazy" src="food-img/seafoodpasta.jpg" alt="Seafood pasta"><span class="px">$$</span></div>
         <div class="pad"><div class="nm">Ristorante Amici Miei</div><div class="cz">Italian · Lake fish</div><div class="de">Friendly Italian minutes from the lake; family-welcoming, with the local catch on the menu.</div><div class="order"><b>Order</b> the pasta with lake sardines (<em>bigoli con le sarde</em>).</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Amici%20Miei%20Peschiera%20del%20Garda" target="_blank" rel="noopener">Open in Maps</a></div>
       </div>
       <div class="eatcard">
-        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sea_bass_as_food.jpg/1280px-Sea_bass_as_food.jpg" alt="Grilled fish"><span class="px">$$</span></div>
+        <div class="ph"><img loading="lazy" src="food-img/grilledfish.jpg" alt="Grilled fish"><span class="px">$$</span></div>
         <div class="pad"><div class="nm">Vecchio Mulino Beach Bar</div><div class="cz">Lakeside · Seafood</div><div class="de">Atmospheric lakeside seafood for a sunset dinner with your feet near the water.</div><div class="order"><b>Order</b> the grilled lake fish or a seafood pasta at golden hour.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Vecchio%20Mulino%20Beach%20Bar%20Peschiera%20del%20Garda" target="_blank" rel="noopener">Open in Maps</a></div>
       </div>
       <div class="eatcard">
-        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Risotto_de_gambas%2C_restaurant_Danieli_%28Vienne%2C_Autriche%29.jpg/1280px-Risotto_de_gambas%2C_restaurant_Danieli_%28Vienne%2C_Autriche%29.jpg" alt="Risotto"><span class="px">$$$</span></div>
+        <div class="ph"><img loading="lazy" src="food-img/risotto.jpg" alt="Risotto"><span class="px">$$$</span></div>
         <div class="pad"><div class="nm">Inchiostro</div><div class="cz">Contemporary · Tasting</div><div class="de">A step up for one nicer evening — small, modern, beautifully plated.</div><div class="order"><b>Order</b> the risotto, octopus, or sea bass tasting menu.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Inchiostro%20Peschiera%20del%20Garda" target="_blank" rel="noopener">Open in Maps</a></div>
       </div>
       <div class="eatcard">
-        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Gelato_in_Milan_-_big_cone_2019.jpg/1280px-Gelato_in_Milan_-_big_cone_2019.jpg" alt="Gelato"><span class="px">$</span></div>
+        <div class="ph"><img loading="lazy" src="food-img/gelato.jpg" alt="Gelato"><span class="px">$</span></div>
         <div class="pad"><div class="nm">Gelateria La Romana</div><div class="cz">Gelato · The classic</div><div class="de">Peschiera's best gelato, on Piazza San Marco — the daily ritual after the passeggiata.</div><div class="order"><b>Order</b> the custard-rich "Crema 1948."</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Gelateria%20La%20Romana%20Peschiera%20del%20Garda" target="_blank" rel="noopener">Open in Maps</a></div>
       </div>
     </div>
 
     <span class="section-label">Food &amp; wine of the lake</span>
-    <div class="dishes reveal">
-      <div class="dish"><div class="em">🐟</div><div><div class="nm">Lake fish</div><div class="de"><em>Lavarello</em> (whitefish), trout and lake sardines — grilled, or in <em>bigoli</em> pasta. The signature of every Garda menu.</div></div></div>
-      <div class="dish"><div class="em">🍝</div><div><div class="nm">Tortellini di Valeggio</div><div class="de">Feather-thin "love-knot" pasta from Borghetto, in butter and sage. A local pilgrimage dish.</div></div></div>
-      <div class="dish"><div class="em">🍷</div><div><div class="nm">Bardolino &amp; Lugana</div><div class="de">The hills give a light, cherry-bright red (Bardolino) and a crisp white (Lugana) from the south shore — both made for a warm evening.</div></div></div>
-      <div class="dish"><div class="em">🫒</div><div><div class="nm">Garda olive oil &amp; lemons</div><div class="de">One of Europe's northernmost olive-oil regions; delicate and grassy. The north shore's lemon terraces once supplied half of Austria.</div></div></div>
+    <div class="pdishes reveal">
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/grilledfish.jpg" alt="Grilled lake fish"></div><div class="pad"><div class="nm">Lake fish</div><div class="de"><em>Lavarello</em> (whitefish), trout and lake sardines — grilled, or in <em>bigoli</em> pasta. The signature of every Garda menu.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/seafoodpasta.jpg" alt="Tortellini di Valeggio"></div><div class="pad"><div class="nm">Tortellini di Valeggio</div><div class="de">Feather-thin "love-knot" pasta from nearby Borghetto, in butter and sage. A local pilgrimage dish — and a guaranteed kid-pleaser.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/risotto.jpg" alt="Risotto"></div><div class="pad"><div class="nm">Risotto all'Amarone</div><div class="de">The Veneto's great rice dish, here often cooked in the local red wine — rich and ruby. Lighter perch and lake-fish risottos turn up too.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/pizza.jpg" alt="Pizza"></div><div class="pad"><div class="nm">Wood-fired pizza</div><div class="de">The reliable family dinner when the 9-year-old has had enough fish — every town has a good wood-oven pizzeria, best eaten by the water.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/gelato.jpg" alt="Gelato"></div><div class="pad"><div class="nm">Gelato</div><div class="de">The daily ritual on the ramparts at dusk — Peschiera's La Romana and its custard-rich "Crema 1948" lead the field.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/polenta.jpg" alt="Polenta"></div><div class="pad"><div class="nm">Polenta &amp; the lake's larder</div><div class="de">Soft Veneto polenta with fish or stews; plus <strong>Bardolino</strong> (light red) &amp; <strong>Lugana</strong> (crisp white) wines, and the grassy olive oil &amp; lemons of the lake's mild shores.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOGETHER AS A FAMILY ===== -->
+<section class="chapter" id="together">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Together · hands-on with a 9-year-old</span>
+      <h2>Things to do <em>as a crew</em></h2>
+      <p class="lede">Beyond the sights — the hands-on, do-it-together things that make Garda a kid's holiday: a day at the helm, a day in the water, and an afternoon making your own dinner.</p>
+    </div>
+    <div class="acts reveal">
+      <div class="act">
+        <span class="ico">🍝</span>
+        <h4>Make pasta together · a cooking class</h4>
+        <p>A brilliant rainy-day or rest-day plan: a <strong>hands-on pasta class</strong> where the three of you roll and fill fresh pasta (often Valeggio's "love-knot" tortellini) and a dessert, then eat the lot. Family classes run in Peschiera, Lazise and the Valeggio/Borghetto area — many on farms with a garden for the kids.</p>
+        <div class="tag"><b>Book it</b> · ~2–3 h · from ~€50–80 pp · kids welcome · reserve ahead</div>
+      </div>
+      <div class="act">
+        <span class="ico">⛵</span>
+        <h4>Captain your own boat</h4>
+        <p>The week's centrepiece: Dad takes the helm of a small motorboat (no licence under 40 hp) and you run across to Sirmione's castle, anchoring off Jamaica Beach to swim straight off the bow.</p>
+        <div class="tag"><b>See</b> · <a href="#boat" style="color:var(--accent);font-weight:700;text-decoration:none;">the full boat brief ↑</a></div>
+      </div>
+      <div class="act">
+        <span class="ico">💦</span>
+        <h4>A water-park day</h4>
+        <p>Splash without the coasters: <strong>Caneva Aquapark</strong> near Lazise, or the <strong>Legoland Water Park</strong> at Gardaland — slides, lazy rivers and splash zones, the perfect hot-afternoon blowout.</p>
+        <div class="tag"><b>Best</b> · the hottest day of the week</div>
+      </div>
+      <div class="act">
+        <span class="ico">🦁</span>
+        <h4>Meet the animals</h4>
+        <p>A no-rides crowd-pleaser: the <strong>Parco Natura Viva safari</strong> (lions, giraffes, rhinos, a dinosaur trail) near Bussolengo, or the <strong>SEA LIFE aquarium</strong> at Gardaland — cool, shady and hands-near-the-glass.</p>
+        <div class="tag"><b>Reach</b> · bus/taxi from Peschiera</div>
+      </div>
+      <div class="act">
+        <span class="ico">🚲</span>
+        <h4>Bike the Mincio to a watermill village</h4>
+        <p>Rent bikes (they deliver to the hotel) and roll the flat, traffic-free <strong>Mincio cycle path</strong> from Peschiera to <strong>Borghetto</strong>, a storybook village of working watermills — picnic, paddle, pedal back.</p>
+        <div class="tag"><b>Distance</b> · ~17 km, all flat &amp; shaded</div>
+      </div>
+      <div class="act">
+        <span class="ico">🏰</span>
+        <h4>Climb a castle in the water</h4>
+        <p>Sirmione's <strong>Scaliger Castle</strong> rises straight out of the lake — a drawbridge, ramparts to run, water on every side — with the Roman <strong>Grotte di Catullo</strong> ruins and a swim at Jamaica Beach next door.</p>
+        <div class="tag"><b>Go</b> · Tuesday (it's shut Mondays) · early</div>
+      </div>
     </div>
   </div>
 </section>

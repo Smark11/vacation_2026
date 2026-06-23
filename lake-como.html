@@ -221,6 +221,49 @@
   .dish .em{font-size:1.8rem;}
   .dish .nm{font-family:var(--display);font-weight:600;font-size:1.06rem;}
   .dish .de{font-size:.86rem;color:var(--ink-soft);line-height:1.5;margin-top:2px;}
+  /* photo dish cards */
+  .pdishes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.pdishes{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.pdishes{grid-template-columns:1fr;}}
+  .pdish{background:var(--paper);border:1px solid rgba(77,85,96,.22);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px -28px rgba(20,30,40,.6);}
+  .alt-band .pdish{background:var(--paper-2);}
+  .pdish .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper-3);}
+  .pdish .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .pdish:hover .ph img{transform:scale(1.05);}
+  .pdish .pad{padding:13px 16px 16px;}
+  .pdish .nm{font-family:var(--display);font-weight:600;font-size:1.04rem;line-height:1.15;}
+  .pdish .de{font-size:.84rem;color:var(--ink-soft);line-height:1.5;margin-top:5px;}
+  /* restaurant cards */
+  .eatgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.eatgrid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.eatgrid{grid-template-columns:1fr;}}
+  .eatcard{background:var(--paper);border:1px solid rgba(77,85,96,.22);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px -28px rgba(20,30,40,.6);}
+  .alt-band .eatcard{background:var(--paper-2);}
+  .eatcard .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper-3);position:relative;}
+  .eatcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .eatcard:hover .ph img{transform:scale(1.06);}
+  .eatcard .ph .px{position:absolute;top:9px;right:9px;background:rgba(20,30,40,.85);color:#fff;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;padding:3px 8px;border-radius:100px;font-weight:700;}
+  .eatcard .ph .twn{position:absolute;bottom:9px;left:9px;background:rgba(52,91,120,.92);color:#fff;font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;font-weight:700;}
+  .eatcard .pad{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1;}
+  .eatcard .nm{font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.12;}
+  .eatcard .cz{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:5px 0 7px;font-weight:700;}
+  .eatcard .de{font-size:.85rem;color:var(--ink-soft);line-height:1.5;flex:1;}
+  .eatcard .order{margin-top:9px;font-size:.82rem;color:var(--ink);}
+  .eatcard .order b{font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);}
+  .eatcard .maps{margin-top:11px;display:inline-block;text-decoration:none;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--slate);border:1px solid var(--slate);padding:7px 11px;border-radius:100px;align-self:flex-start;transition:background .2s,color .2s;}
+  .eatcard .maps:hover{background:var(--slate);color:var(--paper);}
+  .eatcard .maps::after{content:" \2197";}
+  /* family activity cards */
+  .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:820px){.acts{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.acts{grid-template-columns:1fr;}}
+  .act{background:var(--paper);border:1px solid rgba(77,85,96,.2);border-top:4px solid var(--accent);border-radius:5px 5px 7px 7px;padding:18px 20px;display:flex;flex-direction:column;}
+  .alt-band .act{background:var(--paper-2);}
+  .act .ico{font-size:1.6rem;line-height:1;}
+  .act h4{font-family:var(--display);font-weight:600;font-size:1.16rem;margin:9px 0 6px;line-height:1.15;}
+  .act p{margin:0;font-size:.9rem;line-height:1.5;color:var(--ink);}
+  .act .tag{margin-top:10px;font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  .act .tag b{color:var(--accent);}
 
   .gems{list-style:none;padding:0;margin:14px 0 0;}
   .gems li{position:relative;padding:12px 0 12px 30px;border-top:1px solid rgba(77,85,96,.18);font-size:.96rem;}
@@ -256,7 +299,7 @@
 <nav>
   <div class="brand"><a href="index.html">Senerth · MMXXVI</a></div>
   <div class="links">
-    <a href="#plan">Plan</a><a href="#getting">Getting there</a><a href="#around">Ferries &amp; base</a><a href="#boat">The boat</a><a href="#do">See &amp; do</a><a href="#days">Itinerary</a><a href="#map">Map</a><a href="#stay">Stay</a><a href="index.html" class="back">← Full guide</a>
+    <a href="#plan">Plan</a><a href="#getting">Getting there</a><a href="#around">Ferries &amp; base</a><a href="#boat">The boat</a><a href="#do">See &amp; do</a><a href="#together">Family</a><a href="#days">Itinerary</a><a href="#map">Map</a><a href="#stay">Stay</a><a href="index.html" class="back">← Full guide</a>
   </div>
 </nav>
 
@@ -462,11 +505,63 @@
     </div>
     <span class="section-label">More, if you've the time</span>
     <ul class="gems reveal">
-      <li><strong>Wooden taxi-boat tour</strong> — the classic Como experience: a varnished Venetian-style launch idling past the villas at golden hour. From Bellagio or Varenna; the no-driving version of the boat day.</li>
-      <li><strong>Greenway del Lago di Como</strong> — an easy ~10 km walking path (Colonno→Griante) through old villages and villa gates; do a short, flat stretch with the kid and ferry back.</li>
+      <li><strong>Greenway del Lago di Como</strong> — an easy ~10 km walking path (Colonno→Griante) through old villages and villa gates; do a short, flat stretch with the kid, picnic, and ferry back.</li>
       <li><strong>Madonna del Ghisallo (above Bellagio)</strong> — the tiny chapel that's the patron shrine of cyclists, with a quirky bike museum and a huge view; a bus-and-walk for a clear morning.</li>
-      <li><strong>Kayak or SUP</strong> — calm-morning paddle rentals at several towns; another gentle way onto the water.</li>
+      <li><strong>Como silk museum &amp; Tempio Voltiano</strong> — Como invented modern silk; the museum shows how, and the Volta temple celebrates the local who gave us the battery (the "volt" is named for him). Two quietly brilliant rainy-day stops.</li>
     </ul>
+  </div>
+</section>
+
+<!-- ===== TOGETHER AS A FAMILY ===== -->
+<section class="chapter alt-band" id="together">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Together · hands-on with a 9-year-old</span>
+      <h2>Things to do <em>as a crew</em></h2>
+      <p class="lede">Not sights you look at — things you <em>do</em>, together. Como is full of gentle, hands-on, no-thrill ways for the three of you to spend a morning or an afternoon as a team.</p>
+    </div>
+    <div class="acts reveal">
+      <div class="act">
+        <span class="ico">🍝</span>
+        <h4>Make pasta together · a cooking class</h4>
+        <p>The family highlight in the kitchen: a <strong>hands-on pasta class</strong> where all three of you roll, fill and cook your own fresh pasta (plus a daily dessert) — then sit down and eat what you made. Classes around <strong>Bellagio, Tremezzina/Mezzegra and Cernobbio</strong> are explicitly kid-welcoming (little ones get their own dough to play with), often in a family home or a school with lake views.</p>
+        <div class="tag"><b>Book it</b> · ~½ day, from ~€140–160 pp · lunch or dinner sitting · reserve ahead</div>
+      </div>
+      <div class="act">
+        <span class="ico">⛵</span>
+        <h4>Captain your own boat</h4>
+        <p>The trip's centrepiece: Dad takes the helm of a small motorboat (no licence under 40 hp) and you nose past the Balbianello and into a swimming cove the ferries never reach. Let the 9-year-old "co-pilot" from the second seat.</p>
+        <div class="tag"><b>See</b> · <a href="#boat" style="color:var(--accent);font-weight:700;text-decoration:none;">the full boat brief ↑</a></div>
+      </div>
+      <div class="act">
+        <span class="ico">🛶</span>
+        <h4>Kayak or paddleboard</h4>
+        <p>For a calm morning, rent a <strong>kayak or SUP</strong> and potter the shoreline together under your own steam — close to the water, close to the villas, and a proper sense of achievement for a kid.</p>
+        <div class="tag"><b>Where</b> · rentals at Varenna, Bellagio &amp; the west-shore beaches</div>
+      </div>
+      <div class="act">
+        <span class="ico">🚟</span>
+        <h4>Ride the funicular to Brunate</h4>
+        <p>From Como, the steep little 1894 <strong>funicular</strong> hauls you up to Brunate for the lake laid out below — then a short, easy walk to the <strong>lighthouse</strong> you can climb for an even bigger view. A gelato at the top is mandatory.</p>
+        <div class="tag"><b>Combine</b> · with a Como-town day &amp; a lido swim</div>
+      </div>
+      <div class="act">
+        <span class="ico">🏊</span>
+        <h4>A lido swim afternoon</h4>
+        <p>Earn the down-time at a lakeside <strong>lido</strong> — Menaggio's has a pool, grass, ladders into the lake and a snack bar; Bellagio and Como (Villa Olmo) have their own. The easiest way to actually get in the water with a kid.</p>
+        <div class="tag"><b>Best</b> · Lido di Menaggio (pool + lake)</div>
+      </div>
+      <div class="act">
+        <span class="ico">🚤</span>
+        <h4>A wooden taxi-boat at sunset</h4>
+        <p>If you'd rather not drive, climb aboard a classic varnished <strong>taxi-boat</strong> for a golden-hour loop past the villas with a skipper at the wheel — the most romantic hour on the lake, and a thrill for a kid to ride low and fast over the water.</p>
+        <div class="tag"><b>From</b> · Bellagio or Varenna · ~1 h</div>
+      </div>
+    </div>
+    <div class="kidfact reveal" style="margin-top:26px;">
+      <span class="ico">🗺️</span>
+      <div><span class="lbl">A game for the week</span><p>Give the 9-year-old a notebook and two jobs. <strong>One:</strong> draw Lake Como's upside-down <em>Y</em> and mark, each day, which town you slept in, which villas you saw, and the route your boat took. <strong>Two:</strong> become the family's <em>ferry captain</em> — at every pier, they read the timetable board, pick which boat you catch, and tell you when to be back for the last one. By Thursday they'll know the lake better than you do.</p></div>
+    </div>
   </div>
 </section>
 
@@ -631,12 +726,29 @@
       <h2>Lake fish <em>&amp; risotto</em></h2>
       <p class="lede">Como cooks what it catches and grows on the slopes — freshwater fish, saffrony risottos, polenta, and gelato by the water. Gentle, savoury, kid-friendly.</p>
     </div>
-    <div class="dishes reveal">
-      <div class="dish"><div class="em">🐟</div><div><div class="nm">Risotto con pesce persico</div><div class="de">The lake's signature: creamy risotto topped with little pan-fried fillets of <em>perch</em>. Mild and buttery — a reliable kid win.</div></div></div>
-      <div class="dish"><div class="em">🍥</div><div><div class="nm">Missoltini &amp; lavarello</div><div class="de"><em>Missoltini</em> are sun-dried, salted <em>agone</em> (a lake shad), grilled and served with polenta — very local; <em>lavarello</em> (whitefish) is the gentler grilled option.</div></div></div>
-      <div class="dish"><div class="em">🌽</div><div><div class="nm">Polenta &amp; toc</div><div class="de">Mountain comfort food: <em>polenta uncia</em> (with butter and cheese) and <em>toc</em>, a soft cheesy polenta stirred at the table. Warming on a breezy lake evening.</div></div></div>
-      <div class="dish"><div class="em">🍨</div><div><div class="nm">Gelato &amp; the aperitivo</div><div class="de">Gelato on every quay, and the lakeside <em>aperitivo</em> at sunset — a spritz for the grown-ups, a view for everyone. Como's evening ritual.</div></div></div>
+    <div class="pdishes reveal">
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/risotto.jpg" alt="Risotto"></div><div class="pad"><div class="nm">Risotto con pesce persico</div><div class="de">The lake's signature: creamy butter-and-Parmigiano risotto topped with little pan-fried fillets of <em>perch</em>. Mild and buttery — a reliable kid win.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/grilledfish.jpg" alt="Grilled lake fish"></div><div class="pad"><div class="nm">Lavarello &amp; missoltini</div><div class="de"><em>Lavarello</em> (whitefish), simply grilled, is the gentle kid option; <em>missoltini</em> — sun-dried, salted <em>agone</em> grilled with polenta — is the very local, grown-up one.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/polenta.jpg" alt="Polenta"></div><div class="pad"><div class="nm">Polenta &amp; toc</div><div class="de">Mountain comfort food: <em>polenta uncia</em> with butter and cheese, and <em>toc</em>, a soft cheesy polenta stirred at the table. Warming on a breezy lake evening.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/pizza.jpg" alt="Pizza"></div><div class="pad"><div class="nm">Wood-fired pizza</div><div class="de">Every lake town has a good wood-oven pizzeria — the failsafe family dinner when the 9-year-old has had enough fish. A Margherita by the water never misses.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/seafoodpasta.jpg" alt="Fresh pasta"></div><div class="pad"><div class="nm">Fresh pasta &amp; pizzoccheri</div><div class="de">Hand-made pastas everywhere; up-valley, look for <em>pizzoccheri</em> — buckwheat ribbons with cabbage, potato and mountain cheese. Hearty Valtellina cooking.</div></div></div>
+      <div class="pdish"><div class="ph"><img loading="lazy" src="food-img/gelato.jpg" alt="Gelato"></div><div class="pad"><div class="nm">Gelato &amp; the aperitivo</div><div class="de">Gelato on every quay, and the lakeside <em>aperitivo</em> at sunset — a spritz for the grown-ups, a view for everyone. Como's evening ritual.</div></div></div>
     </div>
+
+    <span class="section-label">Where to eat · town by town</span>
+    <p class="stay-intro reveal">Well-regarded, family-friendly tables across the centro lago, mixing price and style — lake-fish trattorias, easy pizzerias, and the gelaterie locals point you to. Tap any card for Google Maps. Reserve dinner in July.</p>
+    <div class="eatgrid reveal">
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/grilledfish.jpg" alt="Lake fish"><span class="px">$$</span><span class="twn">Varenna</span></div><div class="pad"><div class="nm">Il Cavatappi</div><div class="cz">Lake fish · trattoria</div><div class="de">A tiny, characterful trattoria in the historic centre, corkscrews on the walls — cosy and well-loved (book ahead; seating's limited).</div><div class="order"><b>Order</b> the melt-in-the-mouth tomato gnocchi (a guaranteed kid-pleaser) + the daily lake-fish dish.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Il%20Cavatappi%20Varenna" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/pizza.jpg" alt="Pizza by the lake"><span class="px">$$</span><span class="twn">Varenna</span></div><div class="pad"><div class="nm">Nilus Bar</div><div class="cz">Pizzeria · lakefront</div><div class="de">Casual tables a few steps from the water with high chairs and kid plates — the easy, low-key lakefront lunch or relaxed pizza dinner.</div><div class="order"><b>Order</b> a wood-fired pizza + a ham-and-cheese crêpe off the kids' options.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Nilus%20Bar%20Varenna" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/grilledfish.jpg" alt="Terrace dining"><span class="px">$$$</span><span class="twn">Varenna</span></div><div class="pad"><div class="nm">Ristorante La Vista</div><div class="cz">Lake fish · terrace</div><div class="de">The Albergo Milano terrace over the village and lake — the romantic-but-relaxed sunset dinner, attentive and special.</div><div class="order"><b>Order</b> the lake-fish special (several preparations in one dish), or perch fillets.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Ristorante%20La%20Vista%20Varenna" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/seafoodpasta.jpg" alt="Fresh pasta"><span class="px">$$</span><span class="twn">Bellagio</span></div><div class="pad"><div class="nm">Ristorante Bilacus</div><div class="cz">Lake fish · trattoria</div><div class="de">On Bellagio's famous stepped lane with a leafy terrace — classic atmosphere, generous shareable plates, an easy lunch deal.</div><div class="order"><b>Order</b> fresh-daily pasta (cacio e pepe, meat ravioli) + the catch of the day to share.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Ristorante%20Bilacus%20Bellagio" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/pizza.jpg" alt="Pizza & pasta"><span class="px">$$</span><span class="twn">Bellagio</span></div><div class="pad"><div class="nm">Trattoria San Giacomo</div><div class="cz">Pizza · pasta · trattoria</div><div class="de">A 40-year family-run trattoria, wood-beamed and cosy, with a real pizza-and-pasta menu — the crowd-pleaser. No bookings, so arrive early.</div><div class="order"><b>Order</b> pizzas for the kids, fettuccine al ragù, or beef stew with polenta.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Trattoria%20San%20Giacomo%20Bellagio" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/gelato.jpg" alt="Gelato"><span class="px">$</span><span class="twn">Bellagio</span></div><div class="pad"><div class="nm">Gelateria del Borgo</div><div class="cz">Gelato</div><div class="de">Bellagio's top-ranked gelato on Via Garibaldi — real ingredients, friendly English-speaking counter; takeaway, so grab cones and stroll.</div><div class="order"><b>Order</b> the super-creamy pistachio (+ strawberry, lemon, mandarino for the kid).</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Gelateria%20del%20Borgo%20Bellagio" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/polenta.jpg" alt="Polenta & lake fish"><span class="px">$$</span><span class="twn">Tremezzina</span></div><div class="pad"><div class="nm">La Fagurida</div><div class="cz">Rustic trattoria · west shore</div><div class="de">A stone-farmhouse trattoria run by the same family since 1974 — unfussy and authentic, the perfect old-school west-shore lunch near the villas.</div><div class="order"><b>Order</b> polenta with lavarello (lake whitefish) + grilled meats + homemade pasta.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=La%20Fagurida%20Tremezzina" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/seafoodpasta.jpg" alt="Trattoria pasta"><span class="px">$$</span><span class="twn">Menaggio</span></div><div class="pad"><div class="nm">Osteria il Pozzo</div><div class="cz">Trattoria · regional</div><div class="de">A cosy brick-vaulted osteria right on Piazza Garibaldi with a small but excellent menu and easy crowd-pleasing pastas — relaxed family dinner.</div><div class="order"><b>Order</b> cavatelli in tomato sauce, the house ravioli, panna cotta to finish.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Osteria%20il%20Pozzo%20Menaggio" target="_blank" rel="noopener">Open in Maps</a></div></div>
+      <div class="eatcard"><div class="ph"><img loading="lazy" src="food-img/risotto.jpg" alt="Perch risotto"><span class="px">$$</span><span class="twn">Como town</span></div><div class="pad"><div class="nm">Osteria del Gallo</div><div class="cz">Lake fish · classic osteria</div><div class="de">A tiny, beloved old-world osteria on Via Vitani — the go-to for authentic <em>risotto con pesce persico</em>; warm and family-run, so book ahead.</div><div class="order"><b>Order</b> the perch risotto (mild, kid-friendly) + braised meat with polenta.</div><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Osteria%20del%20Gallo%20Como%20Italy" target="_blank" rel="noopener">Open in Maps</a></div></div>
+    </div>
+
     <div class="moment reveal">
       <span class="lbl">A moment to seek</span>
       <p>The last ferry of the evening, riding home to Varenna. The day-trippers are gone, the lake has turned to pewter and rose, and the mountains on the far shore are going blue-black against the sky. Your daughter is up at the rail in the warm wind, picking out the villages by their lights and asking which arm of the Y you're on, and somewhere behind a headland the Balbianello you sailed past this morning is lighting its lamps. The engine thrums, a church bell carries across the water, and the whole impossible blue postcard of it slides by at walking pace, just for you. Tomorrow there are gardens; tonight there is only this — the most beautiful lake in Italy, and a kid who got to drive a boat across it.</p>
