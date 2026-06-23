@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake Como · Four Scenic, Car-Free Days · July 2026</title>
+<meta name="description" content="A comprehensive family guide to 4 days on Lake Como (July 5–9, 2026): how to get there car-free from Monterosso, the ferry network and best base town, a self-drive boat day, the villa gardens and the funicular for a no-rides 9-year-old, verified family hotels, food, an interactive map, and the easy run to Milan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+<style>
+  :root{
+    --paper:#f4ead6;--paper-2:#efe1c7;--paper-3:#e7d6b6;
+    --ink:#1a1f24;--ink-soft:#4d5560;
+    --terracotta:#bd4a26;--teal:#15605b;--gold:#bb8b2c;--slate:#345b78;--lake:#2c6f57;--moss:#1a6b2f;--rose:#a23a4a;--deep:#234a63;
+    --accent:var(--slate);
+    --maxw:1180px;--ease:cubic-bezier(.2,.7,.2,1);
+    --display:"Fraunces",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Courier Prime","Courier New",monospace;
+  }
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(17px,1.15vw,20px);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  ::selection{background:var(--slate);color:var(--paper);}
+  a{color:inherit;} img{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;color:var(--accent);font-weight:700;}
+
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--slate);z-index:10000;transition:width .08s linear;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:9000;display:flex;justify-content:space-between;align-items:center;padding:13px 28px;mix-blend-mode:difference;color:#fff;}
+  nav .brand{font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;}
+  nav .brand a{text-decoration:none;}
+  nav .links{display:flex;gap:15px;align-items:center;}
+  nav .links a{font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;font-size:.6rem;text-decoration:none;opacity:.85;}
+  nav .links a:hover{opacity:1;}
+  nav .links a.back{opacity:1;border:1px solid rgba(255,255,255,.5);padding:5px 9px;border-radius:100px;}
+  @media(max-width:1100px){nav .links a:not(.back){display:none;}}
+
+  .hero{position:relative;min-height:96svh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero .bg{position:absolute;inset:-8% 0 0 0;background-size:cover;background-position:center 48%;z-index:0;will-change:transform;}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,22,30,.46) 0%,rgba(12,22,30,.10) 32%,rgba(12,22,30,.34) 66%,rgba(14,22,30,.94) 100%);}
+  .hero .inner{position:relative;z-index:2;color:var(--paper);padding-bottom:7vh;width:100%;}
+  .hero h1{font-family:var(--display);font-weight:900;font-optical-sizing:144;font-size:clamp(3rem,9vw,8rem);line-height:.92;letter-spacing:-.015em;margin:.16em 0 .26em;text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.4);}
+  .hero h1 em{font-style:italic;color:#9fc6dd;font-weight:600;}
+  .hero .sub{font-size:clamp(1.05rem,1.7vw,1.4rem);max-width:50ch;color:#e9f1f6;}
+  .hero .eyebrow{color:#9fc6dd;}
+  .hero .stamp{display:inline-block;margin-top:18px;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--slate);padding:7px 12px;border-radius:100px;}
+  .hero .stamp.alt{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);margin-left:8px;}
+  .hero .scrollcue{position:absolute;right:28px;bottom:6vh;z-index:2;color:var(--paper);writing-mode:vertical-rl;font-family:var(--mono);text-transform:uppercase;letter-spacing:.3em;font-size:.64rem;opacity:.8;}
+  .hero .scrollcue::after{content:"";display:block;width:1px;height:48px;background:currentColor;margin:12px auto 0;animation:cue 2.4s var(--ease) infinite;}
+  @keyframes cue{0%,100%{transform:scaleY(.4);opacity:.4;transform-origin:top;}50%{transform:scaleY(1);opacity:.9;}}
+  .rise{opacity:0;transform:translateY(26px);animation:rise 1s var(--ease) forwards;}
+  .rise.d1{animation-delay:.15s;}.rise.d2{animation-delay:.35s;}.rise.d3{animation-delay:.55s;}.rise.d4{animation-delay:.75s;}.rise.d5{animation-delay:.9s;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+
+  .chapter{position:relative;padding:clamp(54px,7vw,92px) 0;}
+  .chapter.alt-band{background:var(--paper-2);}
+  .ch-head{max-width:68ch;margin-bottom:34px;}
+  .ch-head .eyebrow{margin-bottom:14px;display:block;}
+  .ch-head h2{font-family:var(--display);font-weight:600;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 .35em;text-wrap:balance;}
+  .ch-head h2 em{font-style:italic;color:var(--accent);}
+  .ch-head .lede{font-size:clamp(1.1rem,1.5vw,1.3rem);color:var(--ink);}
+  .ch-head .lede .drop{float:left;font-family:var(--display);font-weight:900;font-size:3.6em;line-height:.72;padding:.06em .12em 0 0;color:var(--accent);}
+  .section-label{font-family:var(--mono);text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;color:var(--accent);font-weight:700;margin:46px 0 12px;display:block;}
+  .ctx{max-width:72ch;color:var(--ink);font-size:1.02rem;}
+  .ctx p{margin:0 0 14px;}
+
+  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;}
+  .split.flip{grid-template-columns:.95fr 1.05fr;}
+  .split.flip .media{order:2;}
+  @media(max-width:860px){.split,.split.flip{grid-template-columns:1fr;gap:28px;}.split.flip .media{order:0;}}
+  .subhead{font-family:var(--display);font-weight:600;font-size:2rem;margin:0 0 .2em;}
+  figure{margin:0;}
+  .frame{position:relative;overflow:hidden;border-radius:2px;box-shadow:0 26px 60px -28px rgba(20,30,40,.6);background:var(--paper-3);}
+  .frame img{width:100%;height:100%;object-fit:cover;filter:saturate(1.04) contrast(1.03);transition:transform 1.1s var(--ease);}
+  .frame:hover img{transform:scale(1.05);}
+  figcaption{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:.62rem;color:var(--ink-soft);margin-top:10px;}
+
+  .pulls{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+  .pulls .pull{background:var(--paper);border:1px solid rgba(77,85,96,.2);border-radius:6px;padding:16px 14px;text-align:center;}
+  .alt-band .pulls .pull{background:var(--paper-2);}
+  .pulls .pull .big{font-family:var(--display);font-weight:900;font-size:1.7rem;color:var(--accent);line-height:1;}
+  .pulls .pull .cap{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:7px;line-height:1.4;}
+  @media(max-width:680px){.pulls{grid-template-columns:repeat(2,1fr);}}
+
+  .kbyg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px;}
+  @media(max-width:760px){.kbyg{grid-template-columns:1fr;}}
+  .kbyg .k{background:var(--paper);border:1px solid rgba(77,85,96,.2);border-left:4px solid var(--accent);border-radius:0 6px 6px 0;padding:15px 19px;}
+  .alt-band .kbyg .k{background:var(--paper-2);}
+  .kbyg .k h5{font-family:var(--display);font-weight:600;font-size:1.1rem;margin:0 0 4px;display:flex;align-items:center;gap:8px;}
+  .kbyg .k p{margin:0;font-size:.9rem;line-height:1.5;color:var(--ink);}
+
+  .practical{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;}
+  .practical .p{background:var(--paper);border:1px solid rgba(77,85,96,.18);border-radius:5px;padding:16px 18px;}
+  .alt-band .practical .p{background:var(--paper-2);}
+  .practical .p .k{font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .practical .p h5{font-family:var(--display);font-weight:600;font-size:1.12rem;margin:5px 0 6px;}
+  .practical .p p{margin:0;font-size:.9rem;line-height:1.55;color:var(--ink);}
+  @media(max-width:760px){.practical{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.practical{grid-template-columns:1fr;}}
+
+  .verdict{margin-top:26px;background:var(--ink);color:var(--paper);border-radius:8px;padding:30px 34px;position:relative;overflow:hidden;}
+  .verdict::before{content:"\2693";position:absolute;top:-4px;right:16px;font-size:6rem;color:var(--slate);opacity:.28;line-height:1;}
+  .verdict .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:#9fc6dd;font-weight:700;}
+  .verdict h3{font-family:var(--display);font-weight:600;font-size:1.6rem;margin:8px 0 8px;}
+  .verdict h3 em{font-style:italic;color:#9fc6dd;}
+  .verdict p{margin:0 0 8px;color:#dfe8ef;font-size:1rem;max-width:78ch;}
+  .verdict p b{color:#fff;}
+  .verdict .why{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;}
+  .verdict .why span{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.1);border:1px solid rgba(159,198,221,.4);color:#eef4f8;padding:5px 10px;border-radius:100px;}
+
+  .journey{display:flex;align-items:stretch;gap:5px;overflow-x:auto;padding:6px 2px 12px;margin-top:8px;}
+  .term{flex:0 0 auto;align-self:center;font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;background:var(--ink);color:var(--paper);padding:12px 9px;border-radius:6px;text-align:center;}
+  .seg{flex:1 1 0;min-width:120px;background:var(--paper);border-top:4px solid var(--accent);border-radius:3px 3px 6px 6px;padding:13px 11px;box-shadow:0 12px 26px -22px rgba(0,0,0,.55);display:flex;flex-direction:column;justify-content:center;}
+  .alt-band .seg{background:var(--paper-2);}
+  .seg .pl{font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.05;}
+  .seg .ni{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:5px;}
+  .hop{flex:0 0 auto;align-self:center;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ink-soft);min-width:54px;}
+  .hop .ic{font-size:1.05rem;line-height:1;}
+  .hop .du{font-family:var(--mono);font-size:.54rem;letter-spacing:.04em;white-space:nowrap;margin-top:3px;}
+
+  .opt{display:grid;grid-template-columns:1.02fr 1.18fr;gap:0;background:var(--paper);border:1px solid rgba(77,85,96,.2);border-radius:9px;overflow:hidden;box-shadow:0 18px 40px -32px rgba(20,30,40,.6);margin-top:16px;}
+  .alt-band .opt{background:var(--paper-2);}
+  .opt:nth-of-type(even){grid-template-columns:1.18fr 1.02fr;}
+  .opt:nth-of-type(even) .ophoto{order:2;}
+  .opt.cur{border:1.5px solid var(--slate);box-shadow:0 0 0 1px var(--slate) inset,0 18px 40px -32px rgba(20,30,40,.6);}
+  .ophoto{overflow:hidden;background:var(--paper-3);min-height:225px;position:relative;}
+  .ophoto img{width:100%;height:100%;object-fit:cover;min-height:225px;transition:transform 1.1s var(--ease);}
+  .opt:hover .ophoto img{transform:scale(1.05);}
+  .ophoto .badge{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;padding:5px 10px;border-radius:100px;}
+  .ophoto .badge.train{background:var(--moss);}.ophoto .badge.ferry{background:var(--slate);}.ophoto .badge.cur{background:var(--gold);color:var(--ink);}
+  .opad{padding:24px 28px;display:flex;flex-direction:column;}
+  .opad h3{font-family:var(--display);font-weight:600;font-size:1.6rem;margin:0;line-height:1.05;}
+  .opad h3 .em{margin-right:8px;}
+  .opad .vibe{font-size:1rem;color:var(--ink);margin:8px 0 12px;line-height:1.55;}
+  .khl{list-style:none;padding:0;margin:0 0 12px;}
+  .khl li{position:relative;padding:5px 0 5px 24px;font-size:.92rem;line-height:1.45;}
+  .khl li::before{content:"▸";position:absolute;left:4px;top:5px;color:var(--accent);font-size:.85em;}
+  .khl strong{font-family:var(--display);font-weight:600;}
+  .ometa{margin-top:auto;border-top:1px dashed rgba(77,85,96,.3);padding-top:11px;display:grid;gap:5px;}
+  .ometa .row{font-size:.85rem;color:var(--ink);line-height:1.45;}
+  .ometa .row .k{font-family:var(--mono);font-size:.54rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-right:6px;}
+  @media(max-width:780px){.opt,.opt:nth-of-type(even){grid-template-columns:1fr;}.opt:nth-of-type(even) .ophoto{order:0;}.ophoto,.ophoto img{min-height:200px;}}
+
+  .day-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:18px;}
+  @media(max-width:760px){.day-grid{grid-template-columns:1fr;}}
+  .day{background:var(--paper);border:1px solid rgba(77,85,96,.22);border-radius:5px;overflow:hidden;box-shadow:0 16px 36px -28px rgba(20,30,40,.6);display:flex;flex-direction:column;}
+  .alt-band .day{background:var(--paper-2);}
+  .day .ph{aspect-ratio:16/10;overflow:hidden;background:var(--paper-3);}
+  .day .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .day:hover .ph img{transform:scale(1.06);}
+  .day .pad{padding:18px 22px 22px;display:flex;flex-direction:column;flex:1;}
+  .day .dno{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .day h4{font-family:var(--display);font-weight:600;font-size:1.34rem;margin:4px 0 8px;line-height:1.15;}
+  .day p{margin:0 0 14px;font-size:.95rem;color:var(--ink);}
+  .day .meta{margin-top:auto;border-top:1px dashed rgba(77,85,96,.3);padding-top:11px;font-size:.84rem;color:var(--ink-soft);}
+  .day .meta .k{font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-right:6px;}
+
+  .timeline{border-left:2px solid rgba(77,85,96,.25);margin:26px 0 0;padding-left:0;list-style:none;}
+  .timeline li{position:relative;padding:0 0 24px 30px;}
+  .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--slate);}
+  .timeline li.key::before{box-shadow:0 0 0 4px rgba(52,91,120,.25);}
+  .timeline .date{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .timeline .ev{font-family:var(--display);font-size:1.18rem;font-weight:600;margin-top:2px;}
+  .timeline .note{color:var(--ink-soft);font-size:.94rem;}
+
+  #comomap{height:74vh;min-height:520px;width:100%;z-index:1;background:var(--paper-3);}
+  .leaflet-container{font-family:var(--body);}
+  .leaflet-popup-content{margin:13px 15px;}
+  .mpop .mn{font-family:var(--display);font-weight:600;font-size:1.05rem;}
+  .mpop .mmeta{font-family:var(--mono);font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:3px 0 6px;}
+  .mpop .mdesc{font-size:.85rem;line-height:1.45;margin:0;}
+  .pin{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.4);}
+  .pin span{transform:rotate(45deg);font-size:14px;line-height:1;}
+  .maplegend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;}
+  .maplegend .lg{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+  .maplegend .lg i{width:14px;height:14px;border-radius:50%;display:inline-block;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.3);}
+  .mapnote{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px;}
+
+  .stay-intro{font-size:1.02rem;color:var(--ink);max-width:74ch;font-style:italic;line-height:1.7;margin:0 0 6px;}
+  .basegroup{font-family:var(--display);font-weight:600;font-size:1.45rem;margin:38px 0 4px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
+  .basegroup .tagline{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:400;}
+  .stays{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:16px;}
+  @media(max-width:760px){.stays{grid-template-columns:1fr;}}
+  .stay{background:var(--paper);border:1px solid rgba(77,85,96,.22);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px -26px rgba(20,30,40,.6);}
+  .alt-band .stay{background:var(--paper-2);}
+  .stay.pick{border:1.5px solid var(--slate);box-shadow:0 0 0 1px var(--slate) inset,0 16px 34px -26px rgba(20,30,40,.6);}
+  .stay .ph{display:block;aspect-ratio:608/300;overflow:hidden;background:var(--paper-3);position:relative;}
+  .stay .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease);}
+  .stay:hover .ph img{transform:scale(1.05);}
+  .stay .ph .flag{position:absolute;top:10px;left:10px;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--slate);padding:4px 9px;border-radius:100px;box-shadow:0 4px 12px rgba(0,0,0,.25);}
+  .stay .pad{padding:15px 18px 18px;display:flex;flex-direction:column;flex:1;}
+  .stay .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+  .stay .nm{font-family:var(--display);font-weight:600;font-size:1.14rem;line-height:1.12;}
+  .stay .nm a{text-decoration:none;background-image:linear-gradient(var(--accent),var(--accent));background-size:0% 1.5px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .3s;}
+  .stay .nm a:hover{background-size:100% 1.5px;}
+  .stay .score{flex:0 0 auto;font-family:var(--mono);font-weight:700;font-size:.74rem;color:#fff;background:var(--slate);border-radius:5px;padding:5px 7px;text-align:center;line-height:1.15;}
+  .stay .score small{display:block;font-size:.5rem;letter-spacing:.06em;opacity:.85;font-weight:400;}
+  .stay .loc{font-family:var(--mono);font-size:.55rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:7px 0 0;line-height:1.55;}
+  .stay .tags{margin:9px 0 7px;display:flex;flex-wrap:wrap;gap:6px;}
+  .stay .tags span{font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;border:1px solid var(--accent);color:var(--accent);}
+  .stay .tags span.solid{background:var(--accent);color:var(--paper);}
+  .stay .de{font-size:.88rem;color:var(--ink-soft);line-height:1.5;flex:1;}
+  .stay .rate{border-top:1px dashed rgba(77,85,96,.3);padding-top:11px;margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+  .stay .rate .tot{font-family:var(--display);font-weight:700;font-size:1.32rem;color:var(--ink);}
+  .stay .rate .per{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+  .stay .rate .room{font-family:var(--mono);font-size:.55rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-align:right;max-width:48%;}
+  .stay .book{margin-top:13px;display:block;text-align:center;text-decoration:none;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--paper);background:var(--accent);padding:11px;border-radius:6px;transition:filter .2s;}
+  .stay .book:hover{filter:brightness(1.13);}
+  .stay .book::after{content:" \2197";}
+  .availnote{margin-top:18px;background:var(--paper);border:1px solid rgba(77,85,96,.2);border-radius:6px;padding:14px 18px;font-size:.86rem;color:var(--ink-soft);}
+  .alt-band .availnote{background:var(--paper-2);}
+  .availnote b{color:var(--accent);}
+
+  .dishes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px;}
+  @media(max-width:620px){.dishes{grid-template-columns:1fr;}}
+  .dish{display:grid;grid-template-columns:auto 1fr;gap:14px;background:var(--paper);border:1px solid rgba(77,85,96,.2);border-radius:6px;padding:14px;align-items:center;}
+  .alt-band .dish{background:var(--paper-2);}
+  .dish .em{font-size:1.8rem;}
+  .dish .nm{font-family:var(--display);font-weight:600;font-size:1.06rem;}
+  .dish .de{font-size:.86rem;color:var(--ink-soft);line-height:1.5;margin-top:2px;}
+
+  .gems{list-style:none;padding:0;margin:14px 0 0;}
+  .gems li{position:relative;padding:12px 0 12px 30px;border-top:1px solid rgba(77,85,96,.18);font-size:.96rem;}
+  .gems li:last-child{border-bottom:1px solid rgba(77,85,96,.18);}
+  .gems li::before{content:"\25C6";position:absolute;left:0;top:14px;color:var(--accent);font-size:.75em;}
+  .gems strong{font-family:var(--display);font-weight:600;}
+
+  .kidfact{background:var(--paper);border:2px dashed var(--accent);border-radius:6px;padding:16px 20px;margin:28px 0;display:flex;gap:16px;align-items:flex-start;}
+  .alt-band .kidfact{background:var(--paper-2);}
+  .kidfact .ico{font-size:1.7rem;flex-shrink:0;line-height:1;}
+  .kidfact .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .kidfact p{margin:5px 0 0;font-size:.93rem;line-height:1.6;color:var(--ink);}
+
+  .moment{background:var(--paper);border-left:5px solid var(--accent);padding:30px 36px 30px 60px;margin-top:42px;border-radius:0 6px 6px 0;position:relative;}
+  .alt-band .moment{background:var(--paper-2);}
+  .moment::before{content:"\201C";position:absolute;top:0;left:12px;font-family:var(--display);font-weight:900;font-size:6rem;color:var(--accent);opacity:.28;line-height:1;}
+  .moment .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .moment p{font-family:var(--body);font-style:italic;font-size:1.08rem;line-height:1.7;color:var(--ink);margin:10px 0 0;}
+
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}html{scroll-behavior:auto;}}
+
+  footer{background:#13202a;color:#8aa3b3;padding:56px 0 76px;font-size:.84rem;}
+  footer h4{font-family:var(--display);color:var(--paper);font-weight:600;font-size:1.3rem;margin:0 0 6px;}
+  footer a.bigback{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#9fc6dd;text-decoration:none;border:1px solid rgba(159,198,221,.5);padding:9px 16px;border-radius:100px;}
+  footer .credits{font-family:var(--mono);font-size:.54rem;letter-spacing:.05em;line-height:1.9;color:#5a7282;margin-top:24px;text-transform:uppercase;}
+  @media print{body::after,#progress,nav,.scrollcue,#comomap{display:none!important;}.hero{min-height:auto;}.reveal{opacity:1!important;transform:none!important;}.opt,.kbyg .k,.verdict,.day,.stay{break-inside:avoid;}a{color:#000;text-decoration:none;}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+  <div class="brand"><a href="index.html">Senerth · MMXXVI</a></div>
+  <div class="links">
+    <a href="#plan">Plan</a><a href="#getting">Getting there</a><a href="#around">Ferries &amp; base</a><a href="#boat">The boat</a><a href="#do">See &amp; do</a><a href="#days">Itinerary</a><a href="#map">Map</a><a href="#stay">Stay</a><a href="index.html" class="back">← Full guide</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="bg" id="heroBg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Bellagio_panorama_from_Lake_Como_ferry.jpg/1280px-Bellagio_panorama_from_Lake_Como_ferry.jpg');"></div>
+  <div class="inner wrap">
+    <div class="eyebrow rise d1">A family guide · Lake Como · July 5–9, 2026</div>
+    <h1 class="rise d2">Lake <em>Como</em></h1>
+    <p class="sub rise d3">The most beautiful of the Italian lakes — steep green mountains plunging into deep blue water, grand villa gardens, and ferries criss-crossing all day. Cool, scenic and entirely car-free, with no thrill ride in sight: just boats, gardens, swimming and a funicular into the hills.</p>
+    <div class="rise d4"><span class="stamp">4 nights · Jul 5–9</span><span class="stamp alt">2 adults + 1 nine-year-old · no car needed</span></div>
+  </div>
+  <div class="scrollcue rise d5">Scroll</div>
+</header>
+
+<!-- ===== KNOW BEFORE YOU GO ===== -->
+<section class="chapter" id="plan">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Know before you go</span>
+      <h2>The scenic <em>one</em></h2>
+      <p class="lede"><span class="drop">L</span>ake Como is the upside-down-Y of deep blue water where the Alps meet the Lombardy plain — a place of wooded cliffs, pastel villages stacked at the waterline, and the great lakeside villas of two centuries of dukes, divas and (lately) film crews. Against Garda it trades theme-park thrills and warm shallow beaches for sheer beauty, cooler air, and the best car-free ferry network in Italy. For a kid who'd rather ride a boat than a roller-coaster, it's a gentle, gorgeous fit — and it's the closest of the lakes to your Milan flight.</p>
+    </div>
+    <div class="pulls reveal">
+      <div class="pull"><div class="big">~4½ h</div><div class="cap">by train from Monterosso</div></div>
+      <div class="pull"><div class="big">No rides</div><div class="cap">boats, gardens, swims &amp; a funicular</div></div>
+      <div class="pull"><div class="big">~28 °C</div><div class="cap">July — cooler &amp; breezier than the cities</div></div>
+      <div class="pull"><div class="big">~2–2½ h</div><div class="cap">by train to MXP · closest lake to the airport</div></div>
+    </div>
+    <div class="kbyg reveal">
+      <div class="k"><h5>📅 When &amp; how long</h5><p>Peak July — sunny, busy, but tempered by lake breeze and mountain air. Four nights is plenty: a base in the "centro lago," days spent ferry-hopping villas and towns, plus a boat day and a swim.</p></div>
+      <div class="k"><h5>🚆 Getting there</h5><p>~4½ h by train from Monterosso via Milano Centrale, then the regional line to <strong>Varenna</strong> — the one car-free centro-lago town with its own station. <a href="#getting" style="color:var(--accent);font-weight:600;">Full route ↓</a></p></div>
+      <div class="k"><h5>⛴️ Getting around</h5><p>No car needed — the <strong>Navigazione Laghi ferries</strong> run the Varenna–Bellagio–Menaggio triangle all day. Where you base matters; we make the call. <a href="#around" style="color:var(--accent);font-weight:600;">Ferries &amp; base ↓</a></p></div>
+      <div class="k"><h5>⛵ A boat for the captain</h5><p>Dad's licence comes good again — you can self-drive a small motorboat (≤40 hp needs none) around the prettiest reach of the lake. <a href="#boat" style="color:var(--accent);font-weight:600;">The boat day ↓</a></p></div>
+      <div class="k"><h5>☀️ Heat &amp; crowds</h5><p>Cooler than Florence or even Garda's south shore, but Bellagio and Varenna get tight with day-trippers midday — go early, linger late, and let the ferries spread you out.</p></div>
+      <div class="k"><h5>✈️ Getting home</h5><p>The closest lake to Malpensa — ~2–2½ h by train (a private transfer is ~1½ h). You'll still ease west on Jul 9 and overnight near Milan for the early margin on the Jul 10 flight. <a href="#getting" style="color:var(--accent);font-weight:600;">Details ↓</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GETTING THERE ===== -->
+<section class="chapter alt-band" id="getting">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Getting there &amp; back · car-free</span>
+      <h2>Coast to <em>the lake</em></h2>
+      <p class="lede">One easy spine: down the coast to Milan, then north up the Valtellina line to Varenna, right on the water. About four and a half hours, one or two changes — no car, no fuss.</p>
+    </div>
+    <span class="section-label">Jul 5 · Monterosso → Varenna (~4½ h)</span>
+    <div class="journey reveal">
+      <div class="term">Monterosso</div>
+      <div class="hop"><span class="ic">🚆</span><span class="du">~3 h</span></div>
+      <div class="seg"><span class="pl">Milano Centrale</span><span class="ni">regional + IC, 1 change</span></div>
+      <div class="hop"><span class="ic">🚆</span><span class="du">~1 h</span></div>
+      <div class="seg"><span class="pl">Varenna-Esino</span><span class="ni">Tirano line, hourly</span></div>
+      <div class="hop"><span class="ic">🚶</span><span class="du">~10 min</span></div>
+      <div class="term">Lakefront</div>
+    </div>
+    <div class="ctx reveal">
+      <p><strong>The routing:</strong> Monterosso down to <strong>Milano Centrale</strong> (~3 h, typically one change along the coast), then the <strong>Milan–Sondrio/Tirano regional</strong> (roughly hourly) to <strong>Varenna-Esino</strong> — a pretty run that hugs the east shore for the last stretch. From the station it's a ~10-minute downhill walk to the lakefront and the ferry pier. Total ~4½ h, ~€25–40 each.</p>
+      <p><strong>Why Varenna:</strong> it's the only "centro lago" village with its own train station, so you arrive in the heart of the beautiful middle lake without a transfer by bus or boat. (Como town also has stations — Como S. Giovanni / Como Nord Lago — but it's the busy city end, an hour's ferry from the prettiest reach.)</p>
+    </div>
+    <span class="section-label">Jul 9 · Lake Como → Milan / Malpensa for the Jul 10 flight</span>
+    <div class="journey reveal">
+      <div class="term">Varenna</div>
+      <div class="hop"><span class="ic">🚆</span><span class="du">~1 h</span></div>
+      <div class="seg"><span class="pl">Milano Centrale</span><span class="ni">direct regional</span></div>
+      <div class="hop"><span class="ic">🚆</span><span class="du">~52 min</span></div>
+      <div class="seg"><span class="pl">Malpensa</span><span class="ni">Express</span></div>
+      <div class="hop"><span class="ic">🛏️</span><span class="du">overnight</span></div>
+      <div class="term">Fly Jul 10</div>
+    </div>
+    <div class="ctx reveal"><p>Here's Como's quiet advantage: it's the <strong>closest of all the lakes to Malpensa</strong>. Varenna runs <strong>direct</strong> regional trains to Milano Centrale (~1 h, ~€7), then it's the Malpensa Express (~51 min, ~€15pp) — about <strong>2–2½ h</strong> all in (a private transfer is ~1½ h). You could almost do it on flight morning — but to keep the easy margin, ease <strong>west on Jul 9</strong> and sleep near Milan or the airport (options on the <a href="lake-garda.html#final" style="color:var(--accent);font-weight:600;">final-night list</a>).</p></div>
+  </div>
+</section>
+
+<!-- ===== FERRIES & BASE ===== -->
+<section class="chapter" id="around">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Getting around · the ferry lake</span>
+      <h2>Ferries &amp; <em>where to base</em></h2>
+      <p class="lede">Como is made for car-free travel — the whole "centro lago" runs on ferries, all day, every day. The only real decision is which town you sleep in. Here's how the network works, and our honest pick.</p>
+    </div>
+    <div class="practical reveal">
+      <div class="p"><div class="k">The hub</div><h5>The centro-lago triangle</h5><p><strong>Varenna ↔ Bellagio ↔ Menaggio</strong> sit a short hop apart where the lake's three arms meet. Frequent passenger ferries (Varenna–Bellagio ~15–20 min) plus a car-ferry connect them — the heart of any Como stay.</p></div>
+      <div class="p"><div class="k">Ferries</div><h5>Navigazione Laghi</h5><p>The state operator runs <strong>slow boats, fast hydrofoils &amp; car-ferries</strong>. A <strong>central-lake day pass (~€15)</strong> lets you hop Varenna/Bellagio/Menaggio/Cadenabbia all day; buy at the pier. Last boats are early evening — check the timetable before a late dinner across the water.</p></div>
+      <div class="p"><div class="k">Train vs ferry</div><h5>Who's on the rails</h5><p>Only <strong>Varenna, Como &amp; Lecco</strong> have train stations. Bellagio, Menaggio, Lenno &amp; Tremezzo are <strong>ferry- or bus-only</strong> — lovely to stay in, but you arrive (with bags) by boat.</p></div>
+    </div>
+    <span class="section-label">The base towns, honestly</span>
+    <div class="opt cur reveal">
+      <div class="ophoto"><span class="badge cur">★ Our pick</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/20160623_Varenna_05.jpg/1280px-20160623_Varenna_05.jpg" alt="Varenna"></div>
+      <div class="opad">
+        <h3><span class="em">🚉</span>Varenna</h3>
+        <p class="vibe">A cascade of ochre-and-rose houses down to a tiny harbour, a lakeside <em>passeggiata</em> on stilts over the water, and two garden villas in town. The smart car-free base: the only centro-lago village on the railway, walkable, calmer than Bellagio — and notably gentler on the wallet.</p>
+        <ul class="khl">
+          <li>Arrive and leave by train; ferry pier in the village for everywhere else.</li>
+          <li>Villa Monastero &amp; Villa Cipressi gardens right in town; the romantic "Lovers' Walk" promenade.</li>
+        </ul>
+        <div class="ometa"><div class="row"><span class="k">Reach</span>Direct train — the easiest car-free arrival</div><div class="row"><span class="k">Best for</span>Walkable, scenic &amp; sensible value — our base</div></div>
+      </div>
+    </div>
+    <div class="opt reveal">
+      <div class="ophoto"><span class="badge ferry">Ferry / bus</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Panorama_of_Bellagio_and_point_from_Lake_Como_ferry.jpg/1280px-Panorama_of_Bellagio_and_point_from_Lake_Como_ferry.jpg" alt="Bellagio"></div>
+      <div class="opad">
+        <h3><span class="em">⭐</span>Bellagio</h3>
+        <p class="vibe">"The pearl of the lake" — the famous one, on the point where the arms divide, with stepped cobbled lanes, silk shops and the Villa Melzi gardens. Ravishing, and it knows it: the busiest and priciest base, ferry/bus-only, mobbed midday but magical once the day-trippers leave.</p>
+        <ul class="khl">
+          <li>Villa Melzi's lakeside gardens; the famous stepped <em>salite</em> (stair-streets).</li>
+          <li>Best <em>as a place to visit</em>; stay here only if the icon (and the price) is the point.</li>
+        </ul>
+        <div class="ometa"><div class="row"><span class="k">Reach</span>Ferry or bus only — no train</div><div class="row"><span class="k">Best for</span>The postcard base, if budget's no object</div></div>
+      </div>
+    </div>
+    <div class="opt reveal">
+      <div class="ophoto"><span class="badge ferry">Ferry / bus</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Vista_de_Menaggio%2C_lago_de_Como%2C_Italia%2C_2016-06-25%2C_DD_07.jpg/1280px-Vista_de_Menaggio%2C_lago_de_Como%2C_Italia%2C_2016-06-25%2C_DD_07.jpg" alt="Menaggio"></div>
+      <div class="opad">
+        <h3><span class="em">🏖️</span>Menaggio &amp; Tremezzina</h3>
+        <p class="vibe">The west shore — a little roomier and better value, with a proper lido for swimming (Menaggio) and the great garden villas of <strong>Tremezzina</strong> (Carlotta) and <strong>Lenno</strong> (Balbianello) on the doorstep. Family-friendly, with the third corner of the ferry triangle at your feet.</p>
+        <ul class="khl">
+          <li>Menaggio's lakeside <strong>lido</strong> — a rare easy swim spot with a pool and grass.</li>
+          <li>Closest base to Villa Carlotta &amp; Villa del Balbianello.</li>
+        </ul>
+        <div class="ometa"><div class="row"><span class="k">Reach</span>Ferry/bus (Menaggio also a bus hub to Lugano)</div><div class="row"><span class="k">Best for</span>Value + swimming + the villa cluster</div></div>
+      </div>
+    </div>
+    <div class="opt reveal">
+      <div class="ophoto"><span class="badge train">Train</span><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Como_Piazza_del_Duomo_1.jpg/1280px-Como_Piazza_del_Duomo_1.jpg" alt="Como town"></div>
+      <div class="opad">
+        <h3><span class="em">🏙️</span>Como town</h3>
+        <p class="vibe">The lake's small city at the south tip — a marble cathedral, a lakefront, the funicular up to Brunate, and the pool hotels. Train-served and lively, but it's an hour's ferry from the beautiful middle lake; better for a day-visit than a base for this trip.</p>
+        <ul class="khl">
+          <li>The Como–Brunate funicular; the silk museum &amp; Tempio Voltiano (battery science!).</li>
+          <li>Where most of the lake's pool hotels are — if a pool trumps the scenery.</li>
+        </ul>
+        <div class="ometa"><div class="row"><span class="k">Reach</span>Direct trains; ~1 h ferry to the centro lago</div><div class="row"><span class="k">Best for</span>A funicular day-trip, or a pool-first stay</div></div>
+      </div>
+    </div>
+    <div class="verdict reveal">
+      <span class="lbl">The verdict</span>
+      <h3>Base in <em>Varenna</em>, ferry to everything</h3>
+      <p>It's the one centro-lago town you reach (and leave) <b>by train</b>, it's walkable and scenic, and it's the gateway to the Varenna–Bellagio–Menaggio ferry triangle — so every villa, garden and town is a short boat ride away. It's also calmer and better value than Bellagio. If a <b>pool</b> matters more than a walkable old town, look at <b>Menaggio/Tremezzina</b> (west-shore value, lido swimming, the villas next door) or a <b>Como-town</b> pool hotel; if money's no object and the icon is the point, <b>Bellagio</b>.</p>
+      <div class="why"><span>Varenna: train + ferry hub</span><span>Bellagio: icon, pricey</span><span>Menaggio: value + lido</span><span>Como: pools + funicular</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE BOAT ===== -->
+<section class="chapter alt-band" id="boat">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">The captain's day</span>
+      <h2>Your own <em>wooden lake</em></h2>
+      <p class="lede">Como's the lake of the classic varnished motorboat — and with Dad's licence, you don't need a tour. Take the helm of your own little boat and nose into coves the ferries never reach.</p>
+    </div>
+    <div class="split reveal">
+      <figure class="media">
+        <div class="frame" style="aspect-ratio:3/2;"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/The_Villa_del_Balbianello_in_Italy.jpg/1280px-The_Villa_del_Balbianello_in_Italy.jpg" alt="Villa del Balbianello from the water"></div>
+        <figcaption>Villa del Balbianello, best seen from the water</figcaption>
+      </figure>
+      <div class="content ctx">
+        <h3 class="subhead">How it works</h3>
+        <p>Same national rule as Garda: a rental boat <strong>up to ~40 hp (30 kW) needs no licence</strong> — just ID, a card deposit and a short safety briefing — which sidesteps any question about a US licence. Verified self-drive operators include <strong>Boat Hire Bellagio</strong> and the <strong>Water Experience Center</strong> (and a Varenna-pickup option); reckon roughly <strong>€280 for a 4-hour half-day</strong> (~€520 full day) plus fuel, on a boat that seats well over a family of three (confirm 2026 rates and ask for a child life jacket).</p>
+        <p>Idle past the <strong>Villa del Balbianello</strong> on its wooded point (you'll recognise it from the films), drop into a quiet swimming cove off the Comacina island, and wave at the grand hotels from the water. If you'd rather not drive, the classic <strong>wooden taxi-boat tours</strong> from Bellagio or Varenna do the same circuit with a skipper.</p>
+      </div>
+    </div>
+    <div class="practical reveal">
+      <div class="p"><div class="k">Timing</div><h5>Mind the Breva</h5><p>Como's afternoon south wind, the <strong>Breva</strong>, freshens the lower lake from midday; the morning <strong>Tivano</strong> blows gently north. Calmest water and best light are early — launch in the morning.</p></div>
+      <div class="p"><div class="k">The run</div><h5>The Balbianello reach</h5><p>From Lenno/Sala Comacina the loveliest water is right there — the Balbianello headland, the Comacina island, the Tremezzina villa shore. Short, sheltered, scenic.</p></div>
+      <div class="p"><div class="k">Safety</div><h5>Busy water</h5><p>Como gets ferry and speedboat traffic — keep clear of the ferry lanes and piers, slow near swimmers, life jackets on the crew, and keep an eye up-lake for the Breva line.</p></div>
+    </div>
+    <div class="kidfact reveal">
+      <span class="ico">🎬</span>
+      <div><span class="lbl">For the small film buff</span><p>That villa on the wooded point — <strong>Villa del Balbianello</strong> — is a movie star. It's the lakeside hospital where James Bond recovers in <em>Casino Royale</em>, and the secret house where Anakin and Padmé get married in <em>Star Wars: Attack of the Clones</em>. From your own boat you can float right past the terrace where they filmed, on the most beautiful corner of the most beautiful lake in Italy. Not a bad thing to tell the class in September.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEE & DO ===== -->
+<section class="chapter" id="do">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">The best of the lake</span>
+      <h2>What to <em>see &amp; do</em></h2>
+      <p class="lede">No theme park, and none needed — Como's draws are gardens you wander, a funicular you ride, water you swim in, and boats everywhere. Gentle, scenic, and good for a nine-year-old who likes a boat over a coaster.</p>
+    </div>
+    <div class="day-grid">
+      <div class="day reveal">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/The_Villa_del_Balbianello_in_Italy.jpg/1280px-The_Villa_del_Balbianello_in_Italy.jpg" alt="Villa del Balbianello"></div>
+        <div class="pad"><div class="dno">The icon</div><h4>Villa del Balbianello</h4><p>The most beautiful villa on the lake, on a wooded promontory at Lenno — terraced gardens, a loggia with a view down both arms, and a film-set pedigree (<em>Star Wars</em>, <em>Casino Royale</em>). Reach it by a short walk or a wooden taxi-boat from Lenno.</p><div class="meta"><span class="k">Plan it</span>Gardens (and the optional villa interior) are timed — book ahead; closed some days. The boat approach is half the magic.</div></div>
+      </div>
+      <div class="day reveal d1">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Villa_Carlotta_%28Tremezzo%29_-_DSC02467.JPG/1280px-Villa_Carlotta_%28Tremezzo%29_-_DSC02467.JPG" alt="Villa Carlotta gardens"></div>
+        <div class="pad"><div class="dno">Gardens</div><h4>Villa Carlotta &amp; Villa Melzi</h4><p>Two great garden villas a ferry-hop apart: <strong>Carlotta</strong> at Tremezzo — terraced botanical gardens, a fountain, citrus and a kid-pleasing grotto — and <strong>Melzi</strong> at Bellagio, a romantic lakeside park of statues and giant trees. Room to run, shade to flop in.</p><div class="meta"><span class="k">Tip</span>Both are right by their ferry piers — easy to chain in one relaxed day.</div></div>
+      </div>
+      <div class="day reveal">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Como%E2%80%93Brunate_funicular_October_2012_09.jpg/1280px-Como%E2%80%93Brunate_funicular_October_2012_09.jpg" alt="Como–Brunate funicular"></div>
+        <div class="pad"><div class="dno">Up high</div><h4>The Como–Brunate funicular</h4><p>From Como town, a steep little <strong>funicular railway</strong> (since 1894) climbs to the village of Brunate for a hawk's-eye view over the whole lake. A short, fun ride up, a gelato and a viewpoint at the top, an easy stroll to the lighthouse — a proper kid highlight with no white knuckles.</p><div class="meta"><span class="k">Pair it</span>With a Como-town day: the cathedral, the silk museum, and Tempio Voltiano.</div></div>
+      </div>
+      <div class="day reveal d1">
+        <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Varenna_Italy%2C_waterfront_at_sunset.jpg/1280px-Varenna_Italy%2C_waterfront_at_sunset.jpg" alt="Varenna waterfront"></div>
+        <div class="pad"><div class="dno">Swim &amp; stroll</div><h4>Lidos &amp; lakeside walks</h4><p>Cool off at a <strong>lido</strong> — Menaggio's pool-and-grass lakefront, Bellagio's little beach, or Villa Olmo's in Como. Then walk Varenna's stilted <strong>"Lovers' Walk,"</strong> or a stretch of the <strong>Greenway del Lago</strong>, the flat shoreline path through the Tremezzina villages.</p><div class="meta"><span class="k">Note</span>Como's water is cool and clean; lidos give you grass, shade, ladders and a snack bar — easiest with a kid.</div></div>
+      </div>
+    </div>
+    <span class="section-label">More, if you've the time</span>
+    <ul class="gems reveal">
+      <li><strong>Wooden taxi-boat tour</strong> — the classic Como experience: a varnished Venetian-style launch idling past the villas at golden hour. From Bellagio or Varenna; the no-driving version of the boat day.</li>
+      <li><strong>Greenway del Lago di Como</strong> — an easy ~10 km walking path (Colonno→Griante) through old villages and villa gates; do a short, flat stretch with the kid and ferry back.</li>
+      <li><strong>Madonna del Ghisallo (above Bellagio)</strong> — the tiny chapel that's the patron shrine of cyclists, with a quirky bike museum and a huge view; a bus-and-walk for a clear morning.</li>
+      <li><strong>Kayak or SUP</strong> — calm-morning paddle rentals at several towns; another gentle way onto the water.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== ITINERARY ===== -->
+<section class="chapter alt-band" id="days">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">A suggested rhythm</span>
+      <h2>Your <em>four days</em></h2>
+      <p class="lede">Base in Varenna and let the ferries set the pace — a villa day, a boat day, a funicular day, with swims and gelato in the gaps. Mornings on the water before the day-trippers and the Breva arrive; long golden evenings once they leave.</p>
+    </div>
+    <ul class="timeline reveal">
+      <li class="key"><div class="date">Sun · Jul 5 · arrive</div><div class="ev">In from Monterosso (~4½ h), settle into Varenna</div><div class="note">Train via Milan to Varenna-Esino, walk down to the harbour. Drop the bags, stroll the Lovers' Walk, first gelato by the water, dinner watching the ferries cross.</div></li>
+      <li><div class="date">Mon · Jul 6 · villas by ferry</div><div class="ev">Villa Carlotta + Bellagio &amp; Villa Melzi</div><div class="note">A classic centro-lago day: ferry to Tremezzo for Villa Carlotta's gardens, across to Bellagio for the stair-streets and Villa Melzi, gelato on the point, ferry home. Pure scenery, zero rides.</div></li>
+      <li class="key"><div class="date">Tue · Jul 7 · the boat day</div><div class="ev">Captain your own boat to the Balbianello reach</div><div class="note">Rent a small motorboat (no licence under 40 hp), launch in the calm morning, float past Villa del Balbianello and the Comacina island, and swim off the boat in a quiet cove. Back before the Breva builds.</div></li>
+      <li><div class="date">Wed · Jul 8 · the city &amp; the heights</div><div class="ev">Como town + the Brunate funicular</div><div class="note">Ferry or train down to Como: the funicular up to Brunate for the big view, the cathedral, the silk museum or Tempio Voltiano, a lido swim. Or swap in a Greenway walk and a lazy lido day if the kid's had enough sightseeing.</div></li>
+      <li class="key"><div class="date">Thu · Jul 9 · westward</div><div class="ev">A last lake morning, then on to Milan</div><div class="note">One more ferry or a swim, then the easy run to Milan (~1 h to Centrale) and on to your final-night base near the airport — Como's closeness to Malpensa makes this the easiest lake finish of all.</div></li>
+    </ul>
+    <div class="kidfact reveal">
+      <span class="ico">⛴️</span>
+      <div><span class="lbl">For the small navigator</span><p>Lake Como is shaped like an upside-down letter <strong>Y</strong> — two long legs of water and a pointed bit in the middle where the town of Bellagio sits. It's one of the <em>deepest</em> lakes in all of Europe: more than <strong>400 metres</strong> down in places — deep enough to sink the Eiffel Tower and still have water over the top. All week you'll cross from one arm to another on the ferries; see if you can draw the Y from memory by the time you leave, and mark where you went each day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section class="chapter" id="map">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">The lake, mapped</span>
+      <h2>Towns, villas <em>&amp; ferries</em></h2>
+      <p class="lede">Your base, the villa gardens, the swim spots and the ferry triangle — pinned, with the route to your Milan flight. It shows the geography at a glance: Varenna on the rail line, the centro-lago towns a short hop apart, Como town down at the city end.</p>
+    </div>
+    <div class="maplegend reveal">
+      <span class="lg"><i style="background:#345b78;"></i> Base towns</span>
+      <span class="lg"><i style="background:#bb8b2c;"></i> Villas &amp; sights</span>
+      <span class="lg"><i style="background:#15605b;"></i> Swimming &amp; the funicular</span>
+      <span class="lg"><i style="background:#1a1f24;"></i> Start / route to the flight</span>
+    </div>
+  </div>
+  <div id="comomap" style="margin-top:22px;"></div>
+  <div class="wrap"><p class="mapnote reveal">Map © OpenStreetMap contributors, © CARTO. Only Varenna &amp; Como have train stations; the rest of the lake is ferry/bus.</p></div>
+</section>
+
+<!-- ===== STAY ===== -->
+<section class="chapter alt-band" id="stay">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">Where to stay · browser-verified</span>
+      <h2>Lake views, <em>or a pool</em></h2>
+      <p class="lede">All checked live for <strong>Jul 5–9, 2 adults + 1 child</strong>; prices are the four-night total. Two honest truths about Como: it runs <strong>pricier than Garda or Siena</strong> (Bellagio especially), and the walkable old-town spots rarely have pools — the pools sit in Como town and the west-shore resorts. Leading with our recommended Varenna base.</p>
+    </div>
+
+    <div class="basegroup reveal">In Varenna <span class="tagline">— our pick: train-served, walkable, ferry hub</span></div>
+    <div class="stays reveal">
+      <div class="stay pick">
+        <a class="ph" href="https://www.booking.com/hotel/it/sisters-house-varenna.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-sisters.webp" alt="SISTERS' House, Varenna"><span class="flag">★ Value in the centre</span></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/sisters-house-varenna.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">SISTERS' House</a></div><div class="score">8.9<small>Varenna</small></div></div>
+          <div class="loc">Varenna · a short walk above the village &amp; ferry</div>
+          <div class="tags"><span class="solid">★ Best value here</span><span>Apartment</span><span>Walkable</span></div>
+          <div class="de">A well-rated self-catering apartment in Varenna — the sensible-value way to base in the train-served heart of the centro lago, a stroll from the harbour and pier.</div>
+          <div class="rate"><div><div class="tot">€1,014</div><div class="per">~€254 / night</div></div><div class="room">Apartment<br>(sleeps the family)</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/sisters-house-varenna.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+      <div class="stay">
+        <a class="ph" href="https://www.booking.com/hotel/it/maji-como-lake-varenna.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-maji-como-lake-var.webp" alt="Maji Como Lake Varenna"><span class="flag">Lake view</span></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/maji-como-lake-varenna.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">Maji Como Lake Varenna</a></div><div class="score">9.0<small>lake view</small></div></div>
+          <div class="loc">Varenna · lake-view rooms above the village</div>
+          <div class="tags"><span class="solid">★ Lake view</span><span>Highly rated</span></div>
+          <div class="de">For the view: smart lake-view rooms looking out over the water and the mountains opposite — the romantic Varenna splurge, still a walk to the ferry.</div>
+          <div class="rate"><div><div class="tot">€1,817</div><div class="per">~€454 / night</div></div><div class="room">Lake-view room</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/maji-como-lake-varenna.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="basegroup reveal">West shore · value + pools <span class="tagline">— Menaggio &amp; Tremezzina, by the villas</span></div>
+    <div class="stays reveal">
+      <div class="stay pick">
+        <a class="ph" href="https://www.booking.com/hotel/it/garni-le-grigne.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-garni-le-grigne.webp" alt="Garni Le Grigne, Tremezzina"><span class="flag">★ Pool · best value</span></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/garni-le-grigne.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">Garni Le Grigne</a> <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Tremezzina</span></div><div class="score">9.6<small>exceptional</small></div></div>
+          <div class="loc">Tremezzina · by Villa Carlotta &amp; the ferry; pool</div>
+          <div class="tags"><span class="solid">★ Pool</span><span>9.6 rated</span><span>Best value</span></div>
+          <div class="de">The standout value on the lake: a 9.6-rated small hotel <strong>with a pool</strong>, right on the west shore by Villa Carlotta and the Greenway — by far the cheapest pool-plus-location combo we found.</div>
+          <div class="rate"><div><div class="tot">€600</div><div class="per">~€150 / night</div></div><div class="room">Family room</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/garni-le-grigne.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+      <div class="stay">
+        <a class="ph" href="https://www.booking.com/hotel/it/corte-santa-libera.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-hotel-corte-santa-.webp" alt="Hotel Corte Santa Libera"><span class="flag">Pool · value</span></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/corte-santa-libera.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">Hotel Corte Santa Libera</a> <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· west shore</span></div><div class="score">8.8<small>pool</small></div></div>
+          <div class="loc">West shore · garden &amp; pool, near the ferries</div>
+          <div class="tags"><span class="solid">Pool</span><span>Garden</span><span>Family</span></div>
+          <div class="de">Another well-priced pool option on the west shore — a relaxed garden hotel for a family that wants a swim at the end of a ferry day, near the villa cluster.</div>
+          <div class="rate"><div><div class="tot">€600</div><div class="per">~€150 / night</div></div><div class="room">Family room</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/corte-santa-libera.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+      <div class="stay">
+        <a class="ph" href="https://www.booking.com/hotel/it/passer.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-passer-relais.webp" alt="Passer Relais Bistrot, Menaggio"></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/passer.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">Passer Relais Bistrot</a> <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Menaggio</span></div><div class="score">9.6<small>exceptional</small></div></div>
+          <div class="loc">Menaggio · walkable, near the lido &amp; ferry</div>
+          <div class="tags"><span class="solid">9.6 rated</span><span>Walkable</span><span>Lido nearby</span></div>
+          <div class="de">A 9.6-rated little relais in walkable Menaggio, steps from the lido and the ferry — the west-shore pick if you'd rather be in a lively lake town than out by a pool.</div>
+          <div class="rate"><div><div class="tot">€1,064</div><div class="per">~€266 / night</div></div><div class="room">Family room</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/passer.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+      <div class="stay">
+        <a class="ph" href="https://www.booking.com/hotel/it/haus-bethusy.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-haus-bethusy.webp" alt="Haus Bethusy, Bellagio"><span class="flag">Bellagio value</span></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/haus-bethusy.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">Haus Bethusy</a> <span style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--ink-soft);">· Bellagio</span></div><div class="score">9.1<small>Bellagio</small></div></div>
+          <div class="loc">Bellagio · a short climb above the centre</div>
+          <div class="tags"><span class="solid">In Bellagio</span><span>Value</span></div>
+          <div class="de">If you want to wake up in Bellagio without the four-figure apartment price, this well-rated guesthouse a little above the centre is the value way to do it.</div>
+          <div class="rate"><div><div class="tot">€943</div><div class="per">~€236 / night</div></div><div class="room">Family room</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/haus-bethusy.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="basegroup reveal">Como town · pools &amp; the funicular <span class="tagline">— train-served, but the city end</span></div>
+    <div class="stays reveal">
+      <div class="stay">
+        <a class="ph" href="https://www.booking.com/hotel/it/hotelcomocomo.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-hotel-como.webp" alt="Hotel Como"><span class="flag">Pool</span></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/hotelcomocomo.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">Hotel Como</a></div><div class="score">8.4<small>pool</small></div></div>
+          <div class="loc">Como town · pool, near the centre &amp; trains</div>
+          <div class="tags"><span class="solid">Pool</span><span>Train-served</span></div>
+          <div class="de">A pool hotel in Como town — handy for the funicular, the cathedral and direct trains, if a guaranteed swim and city convenience beat the centro-lago scenery.</div>
+          <div class="rate"><div><div class="tot">€1,279</div><div class="per">~€320 / night</div></div><div class="room">Family room</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/hotelcomocomo.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+      <div class="stay">
+        <a class="ph" href="https://www.booking.com/hotel/it/grandhoteldicomo.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener"><img loading="lazy" src="hotel-img/como-sheraton-lake-como.webp" alt="Sheraton Lake Como"><span class="flag">Pool resort</span></a>
+        <div class="pad">
+          <div class="top"><div class="nm"><a href="https://www.booking.com/hotel/it/grandhoteldicomo.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">Sheraton Lake Como</a></div><div class="score">8.4<small>resort</small></div></div>
+          <div class="loc">Como · full resort with pool &amp; gardens</div>
+          <div class="tags"><span class="solid">Pool resort</span><span>Family rooms</span></div>
+          <div class="de">The full resort option near Como town — pool, gardens, restaurants, room to spread out — for a family that wants on-site facilities over a walkable village.</div>
+          <div class="rate"><div><div class="tot">€1,884</div><div class="per">~€471 / night</div></div><div class="room">Family room</div></div>
+          <a class="book" href="https://www.booking.com/hotel/it/grandhoteldicomo.html?checkin=2026-07-05&amp;checkout=2026-07-09&amp;group_adults=2&amp;group_children=1&amp;age=9&amp;no_rooms=1" target="_blank" rel="noopener">View &amp; book on Booking</a>
+        </div>
+      </div>
+    </div>
+    <div class="availnote reveal"><b>The Como trade-off, plainly:</b> the walkable centro-lago villages (Varenna, Bellagio) are scenic but pool-less and pricey; the <b>pools and the best value sit on the west shore (Tremezzina/Menaggio) and in Como town</b>. Best blends: <b>SISTERS' House</b> (Varenna value) for the train-served base, or <b>Garni Le Grigne</b> (Tremezzina, 9.6, pool, €600) if a pool wins. Bellagio's whole-apartment rentals run €900–1,700+; the Grand Hotel Villa Serbelloni is ~€5,000. All prices: live Booking.com for Jul 5–9, 2A + 1C(9).</div>
+  </div>
+</section>
+
+<!-- ===== FOOD ===== -->
+<section class="chapter" id="eat">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="eyebrow">À table · the lake kitchen</span>
+      <h2>Lake fish <em>&amp; risotto</em></h2>
+      <p class="lede">Como cooks what it catches and grows on the slopes — freshwater fish, saffrony risottos, polenta, and gelato by the water. Gentle, savoury, kid-friendly.</p>
+    </div>
+    <div class="dishes reveal">
+      <div class="dish"><div class="em">🐟</div><div><div class="nm">Risotto con pesce persico</div><div class="de">The lake's signature: creamy risotto topped with little pan-fried fillets of <em>perch</em>. Mild and buttery — a reliable kid win.</div></div></div>
+      <div class="dish"><div class="em">🍥</div><div><div class="nm">Missoltini &amp; lavarello</div><div class="de"><em>Missoltini</em> are sun-dried, salted <em>agone</em> (a lake shad), grilled and served with polenta — very local; <em>lavarello</em> (whitefish) is the gentler grilled option.</div></div></div>
+      <div class="dish"><div class="em">🌽</div><div><div class="nm">Polenta &amp; toc</div><div class="de">Mountain comfort food: <em>polenta uncia</em> (with butter and cheese) and <em>toc</em>, a soft cheesy polenta stirred at the table. Warming on a breezy lake evening.</div></div></div>
+      <div class="dish"><div class="em">🍨</div><div><div class="nm">Gelato &amp; the aperitivo</div><div class="de">Gelato on every quay, and the lakeside <em>aperitivo</em> at sunset — a spritz for the grown-ups, a view for everyone. Como's evening ritual.</div></div></div>
+    </div>
+    <div class="moment reveal">
+      <span class="lbl">A moment to seek</span>
+      <p>The last ferry of the evening, riding home to Varenna. The day-trippers are gone, the lake has turned to pewter and rose, and the mountains on the far shore are going blue-black against the sky. Your daughter is up at the rail in the warm wind, picking out the villages by their lights and asking which arm of the Y you're on, and somewhere behind a headland the Balbianello you sailed past this morning is lighting its lamps. The engine thrums, a church bell carries across the water, and the whole impossible blue postcard of it slides by at walking pace, just for you. Tomorrow there are gardens; tonight there is only this — the most beautiful lake in Italy, and a kid who got to drive a boat across it.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h4>Lake Como · the complete guide</h4>
+    <p style="max-width:62ch;color:#a3bccc;">Part of the Senerth family's Iceland &amp; Italy, summer 2026 — the scenic, cooler, car-free alternative for the Jul 5–9 leg. Researched with an adversarially-verified web pass and a live, browser-checked hotel sweep.</p>
+    <a class="bigback" href="index.html">← Back to the full trip guide</a>
+    <div class="credits">
+      Photography · Wikimedia Commons, used under their licenses — Bellagio panorama, Varenna, Menaggio, Como Duomo, Villa del Balbianello, Villa Carlotta, the Como–Brunate funicular. Hotel photos · the respective properties via Booking.com. Map © OpenStreetMap contributors, © CARTO via Leaflet. Availability &amp; prices · live Booking.com check, Jun 2026. Transit &amp; ferry facts · Trenitalia regional rail &amp; Navigazione Laghi (Lake Como) — approximate, verify timetables when booking.
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+  var prog=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;prog.style.width=(p*100)+'%';
+    var bg=document.getElementById('heroBg');if(bg){var y=(h.scrollTop||document.body.scrollTop);if(y<window.innerHeight)bg.style.transform='translateY('+(y*0.28)+'px)';}}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.06,rootMargin:'0px 0px -3% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+  window.addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('in');});},800);});
+
+  var base=[
+    {n:'Varenna ★ base',c:[46.0106,9.2847],col:'#345b78',e:'🚉',d:'Our base — the only centro-lago town with a train station. Walkable, ferry hub.'},
+    {n:'Bellagio',c:[45.9869,9.2614],col:'#345b78',e:'⭐',d:'“The pearl” — the icon, on the point. Ferry/bus only, pricey, busy.'},
+    {n:'Menaggio',c:[46.0186,9.2381],col:'#345b78',e:'🏊',d:'West-shore value with a lido. Ferry/bus.'},
+    {n:'Tremezzina',c:[45.9847,9.2192],col:'#345b78',e:'🏡',d:'West shore by the villas — pools & value. Ferry/bus.'},
+    {n:'Como town',c:[45.8081,9.0852],col:'#345b78',e:'🏙️',d:'The city end — trains, funicular, pools; ~1 h ferry to the centro lago.'}
+  ];
+  var sights=[
+    {n:'Villa del Balbianello',c:[45.9700,9.2089],col:'#bb8b2c',e:'🎬',d:'The film-star villa on its point (Star Wars, Casino Royale). By boat from Lenno.'},
+    {n:'Villa Carlotta',c:[45.9847,9.2233],col:'#bb8b2c',e:'🌺',d:'Terraced botanical gardens at Tremezzo. Right by its ferry.'},
+    {n:'Villa Melzi (Bellagio)',c:[45.9817,9.2569],col:'#bb8b2c',e:'🗿',d:'Romantic lakeside garden park in Bellagio.'},
+    {n:'Villa Monastero (Varenna)',c:[46.0072,9.2872],col:'#bb8b2c',e:'🌿',d:'Garden villa in Varenna — a walk from your base.'},
+    {n:'Madonna del Ghisallo',c:[45.9258,9.2706],col:'#bb8b2c',e:'🚴',d:'Cyclists’ chapel & bike museum above Bellagio, big views.'},
+    {n:'Como Cathedral & Tempio Voltiano',c:[45.8103,9.0839],col:'#bb8b2c',e:'⛪',d:'Marble cathedral + the Volta battery science museum.'}
+  ];
+  var water=[
+    {n:'Como–Brunate funicular',c:[45.8136,9.0894],col:'#15605b',e:'🚟',d:'Steep little railway to Brunate for the big lake view.'},
+    {n:'Lido di Menaggio',c:[46.0228,9.2364],col:'#15605b',e:'🏊',d:'Lakeside lido — pool, grass & a swim.'},
+    {n:'Greenway del Lago',c:[45.9694,9.1797],col:'#15605b',e:'🚶',d:'Flat ~10 km shoreline walking path through the Tremezzina.'}
+  ];
+  var route=[
+    {n:'Start · Monterosso',c:[44.1456,9.6545],col:'#1a1f24',e:'🚉',d:'Where the Como leg begins — ~4½ h by train via Milan.'},
+    {n:'Milan · Malpensa',c:[45.6306,8.7281],col:'#1a1f24',e:'✈️',d:'Fly home Jul 10 — only ~1–1½ h from the lake; overnight near here on the 9th.'}
+  ];
+  function pin(color,emoji){return L.divIcon({className:'',iconSize:[30,30],iconAnchor:[15,28],popupAnchor:[0,-28],html:'<div class="pin" style="background:'+color+';"><span>'+emoji+'</span></div>'});}
+  try{
+    var map=L.map('comomap',{scrollWheelZoom:false}).setView([45.97,9.22],11);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>',subdomains:'abcd',maxZoom:18}).addTo(map);
+    var b=[];
+    function add(arr){arr.forEach(function(o){L.marker(o.c,{icon:pin(o.col,o.e)}).addTo(map).bindPopup('<div class="mpop"><div class="mn">'+o.n+'</div><div class="mdesc">'+o.d+'</div></div>');b.push(o.c);});}
+    add(base);add(sights);add(water);add(route);
+    map.fitBounds(base.concat(sights).concat(water).map(function(o){return o.c;}),{padding:[55,55]});
+    map.on('click',function(){ if(!map.scrollWheelZoom.enabled()) map.scrollWheelZoom.enable(); });
+  }catch(e){var el=document.getElementById('comomap');if(el){el.style.height='auto';el.innerHTML='<p style="padding:24px;font-family:var(--mono);font-size:.7rem;">Map could not load — check your connection.</p>';}}
+</script>
+</body>
+</html>
