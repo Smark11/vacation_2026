@@ -281,6 +281,15 @@
   .gems li:last-child{border-bottom:1px solid rgba(77,85,96,.18);}
   .gems li::before{content:"\25C6";position:absolute;left:0;top:14px;color:var(--accent);font-size:.75em;}
   .gems strong{font-family:var(--display);font-weight:600;}
+  .gems .twn{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);font-weight:700;margin-left:5px;}
+  .gems .tkt{display:block;margin-top:5px;font-size:.78rem;color:var(--ink-soft);line-height:1.5;}
+  .gems .tkt b{font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-right:3px;}
+  a.lnk{color:var(--accent);font-weight:700;text-decoration:none;background-image:linear-gradient(var(--accent),var(--accent));background-size:0% 1.5px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .3s;}
+  a.lnk:hover{background-size:100% 1.5px;}
+  a.lnk::after{content:" ↗";font-size:.8em;opacity:.6;}
+  .act .tag a{color:var(--accent);font-weight:700;text-decoration:none;border-bottom:1.5px solid rgba(77,85,96,.25);}
+  .act .tag a:hover{border-bottom-color:var(--accent);}
+  .day .meta a.lnk{font-size:.92em;}
 
   .kidfact{background:var(--paper);border:2px dashed var(--accent);border-radius:6px;padding:16px 20px;margin:28px 0;display:flex;gap:16px;align-items:flex-start;}
   .alt-band .kidfact{background:var(--paper-2);}
@@ -499,27 +508,67 @@
     <div class="day-grid">
       <div class="day reveal">
         <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/The_Villa_del_Balbianello_in_Italy.jpg/1280px-The_Villa_del_Balbianello_in_Italy.jpg" alt="Villa del Balbianello"></div>
-        <div class="pad"><div class="dno">The icon</div><h4>Villa del Balbianello</h4><p>The most beautiful villa on the lake, on a wooded promontory at Lenno — terraced gardens, a loggia with a view down both arms, and a film-set pedigree (<em>Star Wars</em>, <em>Casino Royale</em>). Reach it by a short walk or a wooden taxi-boat from Lenno.</p><div class="meta"><span class="k">Plan it</span>Gardens (and the optional villa interior) are timed — book ahead; closed some days. The boat approach is half the magic.</div></div>
+        <div class="pad"><div class="dno">The icon</div><h4>Villa del Balbianello</h4><p>The most cinematic villa on the lake, on a wooded promontory at Lenno — terraced gardens, an arcaded loggia, and a film pedigree the kid will love (Naboo in <em>Star Wars: Attack of the Clones</em>; where Bond recovers in <em>Casino Royale</em>). Arrive by little taxi-boat from Lido di Lenno — half the magic.</p><div class="meta"><span class="k">Plan it</span>Run by the FAI: park €15 / villa+park €25 / family (2+2) €42; closed Mon &amp; Wed. July slots sell out weeks ahead — <a class="lnk" href="https://fondoambiente.it/luoghi/villa-del-balbianello" target="_blank" rel="noopener">book on fondoambiente.it</a></div></div>
       </div>
       <div class="day reveal d1">
         <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Villa_Carlotta_%28Tremezzo%29_-_DSC02467.JPG/1280px-Villa_Carlotta_%28Tremezzo%29_-_DSC02467.JPG" alt="Villa Carlotta gardens"></div>
-        <div class="pad"><div class="dno">Gardens</div><h4>Villa Carlotta &amp; Villa Melzi</h4><p>Two great garden villas a ferry-hop apart: <strong>Carlotta</strong> at Tremezzo — terraced botanical gardens, a fountain, citrus and a kid-pleasing grotto — and <strong>Melzi</strong> at Bellagio, a romantic lakeside park of statues and giant trees. Room to run, shade to flop in.</p><div class="meta"><span class="k">Tip</span>Both are right by their ferry piers — easy to chain in one relaxed day.</div></div>
+        <div class="pad"><div class="dno">Gardens</div><h4>Villa Carlotta &amp; Villa Melzi</h4><p>Two great garden villas a ferry-hop apart: <strong>Carlotta</strong> at Tremezzo — botanical terraces, a bamboo grove, a fern-valley "jungle" and a free <em>kids' treasure-trail quiz</em> (ages 6–12) — and <strong>Melzi</strong> at Bellagio, a flat lakeside park of statues, a Japanese pond and giant trees. Room to run, shade to flop in.</p><div class="meta"><span class="k">Tickets</span>Carlotta €17.50 ad / €7 kids (<a class="lnk" href="https://www.villacarlotta.it/en/" target="_blank" rel="noopener">villacarlotta.it</a>) · Melzi €10, under-11 free (<a class="lnk" href="https://www.giardinidivillamelzi.it/en/home2/" target="_blank" rel="noopener">villamelzi</a>). Both at their ferry piers.</div></div>
       </div>
       <div class="day reveal">
         <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Como%E2%80%93Brunate_funicular_October_2012_09.jpg/1280px-Como%E2%80%93Brunate_funicular_October_2012_09.jpg" alt="Como–Brunate funicular"></div>
-        <div class="pad"><div class="dno">Up high</div><h4>The Como–Brunate funicular</h4><p>From Como town, a steep little <strong>funicular railway</strong> (since 1894) climbs to the village of Brunate for a hawk's-eye view over the whole lake. A short, fun ride up, a gelato and a viewpoint at the top, an easy stroll to the lighthouse — a proper kid highlight with no white knuckles.</p><div class="meta"><span class="k">Pair it</span>With a Como-town day: the cathedral, the silk museum, and Tempio Voltiano.</div></div>
+        <div class="pad"><div class="dno">Up high</div><h4>The Como–Brunate funicular</h4><p>From Como's lakefront, a steep little <strong>funicular</strong> (since 1894) climbs 500 m to the balcony village of Brunate — out of a tunnel to a hawk's-eye view of the whole lake. A gelato at the top, then an easy stroll to the <strong>Volta lighthouse</strong> you can climb. A proper kid highlight with no white knuckles.</p><div class="meta"><span class="k">Ride it</span>~€3.60 single / €6.60 return, every 15 min, ~6:00–22:30 — <a class="lnk" href="https://www.funicolarecomo.it/" target="_blank" rel="noopener">funicolarecomo.it</a></div></div>
       </div>
       <div class="day reveal d1">
         <div class="ph"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Varenna_Italy%2C_waterfront_at_sunset.jpg/1280px-Varenna_Italy%2C_waterfront_at_sunset.jpg" alt="Varenna waterfront"></div>
-        <div class="pad"><div class="dno">Swim &amp; stroll</div><h4>Lidos &amp; lakeside walks</h4><p>Cool off at a <strong>lido</strong> — Menaggio's pool-and-grass lakefront, Bellagio's little beach, or Villa Olmo's in Como. Then walk Varenna's stilted <strong>"Lovers' Walk,"</strong> or a stretch of the <strong>Greenway del Lago</strong>, the flat shoreline path through the Tremezzina villages.</p><div class="meta"><span class="k">Note</span>Como's water is cool and clean; lidos give you grass, shade, ladders and a snack bar — easiest with a kid.</div></div>
+        <div class="pad"><div class="dno">Swim &amp; stroll</div><h4>Lidos &amp; the Greenway</h4><p>Cool off at a <strong>lido</strong> — Bellagio's sandy beach club, Como's Villa Geno (a real kids' pool), or Menaggio's pool-and-grass lakefront. Then walk Varenna's stilted <strong>"Lovers' Walk,"</strong> or a flat stretch of the <strong>Greenway del Lago</strong>, the shoreline path through the Tremezzina villages.</p><div class="meta"><span class="k">Walk it</span>The Greenway is a free, signed ~10 km path (ferry between stages) — <a class="lnk" href="https://greenwaylagodicomo.com/en/" target="_blank" rel="noopener">greenwaylagodicomo.com</a></div></div>
       </div>
     </div>
-    <span class="section-label">More, if you've the time</span>
+
+    <span class="section-label">🏛️ Villas &amp; gardens — the full list</span>
     <ul class="gems reveal">
-      <li><strong>Greenway del Lago di Como</strong> — an easy ~10 km walking path (Colonno→Griante) through old villages and villa gates; do a short, flat stretch with the kid, picnic, and ferry back.</li>
-      <li><strong>Madonna del Ghisallo (above Bellagio)</strong> — the tiny chapel that's the patron shrine of cyclists, with a quirky bike museum and a huge view; a bus-and-walk for a clear morning.</li>
-      <li><strong>Como silk museum &amp; Tempio Voltiano</strong> — Como invented modern silk; the museum shows how, and the Volta temple celebrates the local who gave us the battery (the "volt" is named for him). Two quietly brilliant rainy-day stops.</li>
+      <li><strong><a class="lnk" href="https://fondoambiente.it/luoghi/villa-del-balbianello" target="_blank" rel="noopener">Villa del Balbianello</a></strong><span class="twn">Lenno</span> — the film-famous loggia and terraced gardens on a promontory; the taxi-boat arrival is the thrill. <span class="tkt"><b>€</b>Park €15 / Villa+Park €25 / family (2+2) €42 · closed Mon &amp; Wed · <b>car-free</b> ferry to Lenno + taxi-boat</span></li>
+      <li><strong><a class="lnk" href="https://www.villacarlotta.it/en/" target="_blank" rel="noopener">Villa Carlotta</a></strong><span class="twn">Tremezzo</span> — botanical terraces, bamboo &amp; a fern valley, with a free kids' treasure-trail quiz (6–12). <span class="tkt"><b>€</b>€17.50 ad / €7 kids / family €35 · <b>car-free</b> ferry stops at the gate</span></li>
+      <li><strong><a class="lnk" href="https://www.giardinidivillamelzi.it/en/home2/" target="_blank" rel="noopener">Giardini di Villa Melzi</a></strong><span class="twn">Bellagio</span> — the lake's first English garden: flat, statue-lined and right on the water, with a Japanese pond. <span class="tkt"><b>€</b>€10, under-11 free · <b>car-free</b> ~12-min walk from the Bellagio pier</span></li>
+      <li><strong><a class="lnk" href="https://www.villamonastero.eu/en/" target="_blank" rel="noopener">Villa Monastero</a></strong><span class="twn">Varenna</span> — a house-museum with a ~2 km botanical garden ribboning along the Varenna shore. <span class="tkt"><b>€</b>Garden €13 / +house €15 · 0–14 free · <b>car-free</b> walk from the Varenna pier/station</span></li>
+      <li><strong><a class="lnk" href="https://www.bellagiolakecomo.com/en/bellagio-lake-como-italy/poi-points-of-interest/villa-serbelloni-garden" target="_blank" rel="noopener">Parco di Villa Serbelloni</a></strong><span class="twn">Bellagio</span> — a 50-acre park on the very tip of the promontory; guided walks only (a steep ~2 h — best for older kids). <span class="tkt"><b>€</b>€13 ad / €7 kids · tours 11:00 &amp; 15:30, book online</span></li>
+      <li><strong><a class="lnk" href="https://www.cittadicomo.it/en/point-of-interest/villa-olmo-and-gardens/" target="_blank" rel="noopener">Villa Olmo park</a></strong><span class="twn">Como city</span> — a free public lakefront park of lawns and big shade trees (villa interior under restoration). <span class="tkt"><b>€</b>Free, daily 8–19 · <b>car-free</b> lakefront walk, bus 6, or boat to the Villa Olmo landing</span></li>
+      <li><strong><a class="lnk" href="https://www.sacrimonti.org/en/sacro-monte-di-ossuccio" target="_blank" rel="noopener">Sacro Monte di Ossuccio</a></strong><span class="twn">Ossuccio</span> — a UNESCO path of 14 baroque chapels full of life-size terracotta scenes, climbing through olive terraces. <span class="tkt"><b>€</b>Free walk · <b>car-free</b> ferry/C10 bus to Ossuccio, then on foot</span></li>
     </ul>
+
+    <span class="section-label">🚞 Up high &amp; easy walks</span>
+    <ul class="gems reveal">
+      <li><strong><a class="lnk" href="https://www.funicolarecomo.it/" target="_blank" rel="noopener">Como–Brunate funicular</a></strong><span class="twn">Como → Brunate</span> — a steep 7-min ride to a balcony village with a sweeping lake view and gelato at the top. <span class="tkt"><b>€</b>~€3.60 / €6.60 return · every 15 min · steps from the Como pier</span></li>
+      <li><strong><a class="lnk" href="https://www.comune.brunate.co.it/it/vivere/faro-voltiano" target="_blank" rel="noopener">Faro Voltiano (Volta lighthouse)</a></strong><span class="twn">Brunate</span> — climb a striped 1927 lighthouse named for the battery's inventor for a 360° view; an easy walk from the funicular. <span class="tkt"><b>€</b>~€2 ad / €1 kids · ~30–40-min village walk up</span></li>
+      <li><strong><a class="lnk" href="https://www.atm.it/en/AltriServizi/Trasporto/Pages/funiviaargegnopigra.aspx" target="_blank" rel="noopener">Funivia Argegno–Pigra</a></strong><span class="twn">Argegno</span> — a quieter, cheaper cable car that swoops up to a mountain balcony in 5 minutes, with a flat viewpoint and café. <span class="tkt"><b>€</b>~€4.10 / €5.50 return · <b>car-free</b> ferry to Argegno, station ~100 m</span></li>
+      <li><strong><a class="lnk" href="https://greenwaylagodicomo.com/en/" target="_blank" rel="noopener">Greenway del Lago di Como</a></strong><span class="twn">Colonno→Griante</span> — a flat ~10 km shoreline path through cobbled hamlets and villa gates; walk one stage, ferry the rest. <span class="tkt"><b>€</b>Free · stroller-friendly in parts · ferries stop all along it</span></li>
+      <li><strong><a class="lnk" href="https://griantecadenabbia.com/chiesa-di-san-martino/" target="_blank" rel="noopener">Santuario di San Martino hike</a></strong><span class="twn">Griante</span> — a steep but short climb to a white cliff-church with the best straight-on view of Bellagio; a real reward-at-the-top mini-hike. <span class="tkt"><b>€</b>Free · ~20–45-min climb (~220 m) · <b>car-free</b> ferry to Cadenabbia-Griante</span></li>
+      <li><strong><a class="lnk" href="https://www.planetariodisormano.it/" target="_blank" rel="noopener">Polo Astronomico di Sormano</a></strong><span class="twn">Pian del Tivano</span> — a 1,200 m mountain observatory + new planetarium dome; a public open day is listed for <b>26 Jul 2026</b> (a fit if your dates flex). <span class="tkt"><b>€</b>Per-event, by reservation · hard car-free — bus + taxi</span></li>
+    </ul>
+
+    <span class="section-label">⛪ Towns, museums &amp; the island</span>
+    <ul class="gems reveal">
+      <li><strong><a class="lnk" href="https://www.cattedraledicomo.it/en/" target="_blank" rel="noopener">Como Cathedral (Duomo)</a></strong><span class="twn">Como</span> — a candy-striped Gothic-Renaissance cathedral under a huge baroque dome, with giant Renaissance tapestries; carvings to hunt for. <span class="tkt"><b>€</b>Free tourist entry · 5 min from the Como pier</span></li>
+      <li><strong><a class="lnk" href="https://www.museosetacomo.com/homepage" target="_blank" rel="noopener">Museo della Seta (Silk Museum)</a></strong><span class="twn">Como</span> — the world's only silk museum, with silkworms, giant looms and a hands-on kids' route; entirely indoors (a rainy-day win). <span class="tkt"><b>€</b>€10 ad / €4 under-18 · audio guide included · closed Mon</span></li>
+      <li><strong><a class="lnk" href="https://www.oggiacomo.it/it/vivere/luoghi-della-cultura/tempio-voltiano/index.html" target="_blank" rel="noopener">Tempio Voltiano</a></strong><span class="twn">Como</span> — a lakefront temple of Alessandro Volta's actual batteries and electrical gadgets; great for a how-things-work kid. <span class="tkt"><b>€</b>Civic-museum ticket · Tue–Sun 10–18 · on the lakefront by the funicular</span></li>
+      <li><strong><a class="lnk" href="https://www.bellagiolakecomo.com/en/" target="_blank" rel="noopener">Bellagio old town &amp; Salita Serbelloni</a></strong><span class="twn">Bellagio</span> — the postcard village: flower-hung stepped lanes of silk and gelato shops, made for treasure-hunt wandering. <span class="tkt"><b>€</b>Free to wander · <b>car-free</b> ferry from Varenna/Menaggio/Como</span></li>
+      <li><strong><a class="lnk" href="https://isola-comacina.it/en/" target="_blank" rel="noopener">Isola Comacina</a></strong><span class="twn">Sala Comacina</span> — the lake's one and only island: a boat hop to a green speck of medieval ruins and Roman columns — a mini-expedition. <span class="tkt"><b>€</b>Park ticket + taxi-boat · daily 10–18 (May–Oct)</span></li>
+      <li><strong><a class="lnk" href="https://www.museobarcalariana.it/" target="_blank" rel="noopener">Museo della Barca Lariana</a></strong><span class="twn">Pianello del Lario</span> — a warehouse of hundreds of historic boats (mahogany speedboats, racing hydroplanes, gondolas) — heaven for a boat-mad kid. <span class="tkt"><b>€</b>€10 ad / €5 reduced · closed Sun · upper lake, allow travel time</span></li>
+      <li><strong><a class="lnk" href="https://www.villaerba.it/en/" target="_blank" rel="noopener">Villa Erba</a></strong><span class="twn">Cernobbio</span> — Visconti's lakeside villa &amp; English park, best on a public open-park or festival day. <span class="tkt"><b>€</b>Event-dependent · <b>car-free</b> boat or C10 bus to Cernobbio</span></li>
+    </ul>
+
+    <span class="section-label">🏊 Swim spots &amp; the ferries</span>
+    <ul class="gems reveal">
+      <li><strong><a class="lnk" href="https://www.navigazionelaghi.it/en/tickets-and-timetables-lake-como/" target="_blank" rel="noopener">Navigazione Laghi ferries</a></strong><span class="twn">Centro lago</span> — your car-free backbone <em>and</em> a sight: open-deck boats across the Bellagio–Varenna–Menaggio triangle, with the car-ferries to watch. <span class="tkt"><b>€</b>Hops ~€5.50; a centro-lago day pass ~€27 is best for villa days</span></li>
+      <li><strong><a class="lnk" href="https://www.lidodibellagio.com/beach/" target="_blank" rel="noopener">Lido di Bellagio</a></strong><span class="twn">Bellagio</span> — a rare <em>sandy</em> beach with roped-off swimming, a short stroll from town toward Villa Melzi. <span class="tkt"><b>€</b>Lake swim (no pool) · sunbed "box" ~€50 · ~mid-May–Sep</span></li>
+      <li><strong><a class="lnk" href="https://www.giuliettaallago.it/" target="_blank" rel="noopener">Lido di Villa Geno</a></strong><span class="twn">Como</span> — a relaxed lido with a real <strong>kids' pool</strong> and a big lawn, looking across the bay to the villas (lake swimming not allowed — use the pool). <span class="tkt"><b>€</b>~€15 · online booking only · lakefront walk or shuttle-boat</span></li>
+      <li><strong><a class="lnk" href="https://leccotourism.it/en/lierna/" target="_blank" rel="noopener">Riva Bianca beach, Lierna</a></strong><span class="twn">Lierna</span> — a free white-pebble public beach with clear, shallow water and a wood-oven pizzeria right on the sand. <span class="tkt"><b>€</b>Free · <b>car-free</b> the train stops at Lierna (bring water shoes)</span></li>
+      <li><strong><a class="lnk" href="https://lidodicernobbio.com/en/" target="_blank" rel="noopener">Lido di Cernobbio</a></strong><span class="twn">Cernobbio</span> — a smart lakeside club with an actual swimming pool plus lake access, close to Como. <span class="tkt"><b>€</b>Sunbed ~€3.50–4 · caps required in the pool · C10 bus/ferry from Como</span></li>
+    </ul>
+
+    <div class="kidfact reveal">
+      <span class="ico">📌</span>
+      <div><span class="lbl">Book these ahead</span><p><strong>Villa del Balbianello</strong> interior tours and the <strong>Bellagio→Balbianello</strong> boat cruises sell out weeks ahead for July — reserve as soon as your days are fixed. The villa is also closed <strong>Mondays &amp; Wednesdays</strong>, and Sirmione-style "closed-Monday" rules apply to a few sights, so pin the villa day to a Tue–Sun.</p></div>
+    </div>
   </div>
 </section>
 
@@ -533,40 +582,76 @@
     </div>
     <div class="acts reveal">
       <div class="act">
-        <span class="ico">🍝</span>
-        <h4>Make pasta together · a cooking class</h4>
-        <p>The family highlight in the kitchen: a <strong>hands-on pasta class</strong> where all three of you roll, fill and cook your own fresh pasta (plus a daily dessert) — then sit down and eat what you made. Classes around <strong>Bellagio, Tremezzina/Mezzegra and Cernobbio</strong> are explicitly kid-welcoming (little ones get their own dough to play with), often in a family home or a school with lake views.</p>
-        <div class="tag"><b>Book it</b> · ~½ day, from ~€140–160 pp · lunch or dinner sitting · reserve ahead</div>
-      </div>
-      <div class="act">
         <span class="ico">⛵</span>
         <h4>Captain your own boat</h4>
-        <p>The trip's centrepiece: Dad takes the helm of a small motorboat (no licence under 40 hp) and you nose past the Balbianello and into a swimming cove the ferries never reach. Let the 9-year-old "co-pilot" from the second seat.</p>
-        <div class="tag"><b>See</b> · <a href="#boat" style="color:var(--accent);font-weight:700;text-decoration:none;">the full boat brief ↑</a></div>
+        <p>The trip's centrepiece: Dad takes the helm of a small <strong>40 hp motorboat</strong> (no licence needed) and you nose past the Balbianello into a swimming cove the ferries never reach. Let the 9-year-old "co-pilot" and jump off for a mid-lake swim. <a href="#boat" style="color:var(--accent);font-weight:700;text-decoration:none;">Full boat brief ↑</a></p>
+        <div class="tag"><b>Book it</b> · <a href="https://www.boathirebellagio.com/en/" target="_blank" rel="noopener">Boat Hire Bellagio</a> (½-day ~€310) · <a href="https://nauticplanet.com/en/motorboat/" target="_blank" rel="noopener">Nautic Planet</a> · <a href="https://waterexperiencecenter.it/en/activity/boat-rental-lake-como/" target="_blank" rel="noopener">Water Experience Center</a></div>
       </div>
       <div class="act">
         <span class="ico">🛶</span>
-        <h4>Kayak or paddleboard</h4>
-        <p>For a calm morning, rent a <strong>kayak or SUP</strong> and potter the shoreline together under your own steam — close to the water, close to the villas, and a proper sense of achievement for a kid.</p>
-        <div class="tag"><b>Where</b> · rentals at Varenna, Bellagio &amp; the west-shore beaches</div>
+        <h4>Kayak or paddleboard together</h4>
+        <p>For a calm morning, take a <strong>guided kayak or SUP tour</strong> from the little Pescallo fishing beach and paddle the Villa Melzi shoreline at lake level. Rated "easy, for everyone," with an expert guide and swim stops — proper achievement for a kid.</p>
+        <div class="tag"><b>Book it</b> · <a href="https://www.bellagiowatersports.com/tours/" target="_blank" rel="noopener">Bellagio Water Sports</a> · 90-min small-group or private tours</div>
       </div>
       <div class="act">
-        <span class="ico">🚟</span>
-        <h4>Ride the funicular to Brunate</h4>
-        <p>From Como, the steep little 1894 <strong>funicular</strong> hauls you up to Brunate for the lake laid out below — then a short, easy walk to the <strong>lighthouse</strong> you can climb for an even bigger view. A gelato at the top is mandatory.</p>
-        <div class="tag"><b>Combine</b> · with a Como-town day &amp; a lido swim</div>
+        <span class="ico">🍝</span>
+        <h4>Make pasta together · a cooking class</h4>
+        <p>The family highlight in the kitchen: roll, fill and cook your own fresh pasta (plus tiramisù) in a local home, then eat what you made. Kids are full participants — <strong>under-12s get ~30% off</strong> at Cooking Class Lake Como.</p>
+        <div class="tag"><b>Book it</b> · <a href="https://cookingclasslakecomo.it/en/" target="_blank" rel="noopener">Cooking Class Lake Como</a> (Cernobbio/Tremezzina) · <a href="https://lakecomoexperiences.com/experiences/authentic-cooking-class-bellagio/" target="_blank" rel="noopener">Bellagio class</a></div>
+      </div>
+      <div class="act">
+        <span class="ico">🌲</span>
+        <h4>Treetop adventure park</h4>
+        <p>In a cool pine forest above Bellagio, <strong>Jungle Raider Park Civenna</strong> has 10 rope-and-zip courses graded by difficulty — including two gentle <em>kids' courses</em>. Your 9-year-old picks an easy loop and skips anything scary, clipped to a continuous safety line the whole way.</p>
+        <div class="tag"><b>Book it</b> · <a href="https://www.jungleraiderpark.com/en/discover-jungle-raider-park-civenna/" target="_blank" rel="noopener">jungleraiderpark.com</a> · C30 bus/taxi from Bellagio</div>
+      </div>
+      <div class="act">
+        <span class="ico">🚲</span>
+        <h4>A treasure-hunt e-bike ride</h4>
+        <p>A purpose-built <strong>family e-bike route</strong> above Bellagio (14 km, guided, e-assist does the climbing) with "treasure-hunt characters," a cave, a waterfall, and meet-ups with cows, llamas, goats and donkeys. Child-size bikes and tag-alongs available.</p>
+        <div class="tag"><b>Book it</b> · <a href="https://www.bikeitbellagio.com/routes/family" target="_blank" rel="noopener">Bike It! Bellagio — Family route</a></div>
+      </div>
+      <div class="act">
+        <span class="ico">🕵️</span>
+        <h4>Solve "The Como Heist"</h4>
+        <p>Turn Como's old town into a detective game: a <strong>phone-guided scavenger hunt</strong> leading you between 11 landmarks solving clues to catch a phantom thief. Self-paced, no booking, and the 9-year-old gets to crack the codes.</p>
+        <div class="tag"><b>Get it</b> · <a href="https://questoapp.com/como" target="_blank" rel="noopener">Questo · Como</a> · ~€4.99/phone, ~2 h, plays offline</div>
+      </div>
+      <div class="act">
+        <span class="ico">🚞</span>
+        <h4>Funicular to Brunate + the lighthouse</h4>
+        <p>From Como, the steep 1894 <strong>funicular</strong> hauls you up to Brunate for the lake laid out below — then an easy walk to the <strong>Volta lighthouse</strong> you can climb for an even bigger view. Gelato at the top is mandatory.</p>
+        <div class="tag"><b>Ride it</b> · <a href="https://www.funicolarecomo.it/" target="_blank" rel="noopener">funicolarecomo.it</a> · every 15 min from the lakefront</div>
+      </div>
+      <div class="act">
+        <span class="ico">🚣</span>
+        <h4>The vintage boat museum</h4>
+        <p>For a boat-mad kid, the <strong>Museo della Barca Lariana</strong> is a giant warehouse of hundreds of historic craft — mahogany speedboats, racing hydroplanes, gondolas — you can walk right up to. Pure wonder, all indoors (a rainy-day rescue too).</p>
+        <div class="tag"><b>Plan it</b> · <a href="https://www.museobarcalariana.it/" target="_blank" rel="noopener">museobarcalariana.it</a> · €10/€5 · closed Sun · upper lake</div>
+      </div>
+      <div class="act">
+        <span class="ico">⛳</span>
+        <h4>Minigolf + a lido swim</h4>
+        <p>An 18-hole <strong>crazy-golf course right on the Menaggio lakefront</strong> by the Lido — low-stakes family competition a 9-year-old can actually win, three minutes from a pool-and-lake swim to cool off after.</p>
+        <div class="tag"><b>Where</b> · <a href="https://menaggio.com/en/discover-menaggio/" target="_blank" rel="noopener">Menaggio lakefront</a> · ferry hub, walkable from the dock</div>
       </div>
       <div class="act">
         <span class="ico">🏊</span>
         <h4>A lido swim afternoon</h4>
-        <p>Earn the down-time at a lakeside <strong>lido</strong> — Menaggio's has a pool, grass, ladders into the lake and a snack bar; Bellagio and Como (Villa Olmo) have their own. The easiest way to actually get in the water with a kid.</p>
-        <div class="tag"><b>Best</b> · Lido di Menaggio (pool + lake)</div>
+        <p>Earn the down-time at a lakeside <strong>lido</strong> — <a href="https://www.lidodibellagio.com/beach/" target="_blank" rel="noopener">Bellagio's sandy beach</a>, Como's <a href="https://www.giuliettaallago.it/" target="_blank" rel="noopener">Villa Geno</a> (a real kids' pool), or <a href="https://lidodicernobbio.com/en/" target="_blank" rel="noopener">Cernobbio's pool</a>. The easiest way to actually get in the water with a kid.</p>
+        <div class="tag"><b>Best for kids</b> · Villa Geno (children's pool + lawn)</div>
       </div>
       <div class="act">
         <span class="ico">🚤</span>
-        <h4>A wooden taxi-boat at sunset</h4>
-        <p>If you'd rather not drive, climb aboard a classic varnished <strong>taxi-boat</strong> for a golden-hour loop past the villas with a skipper at the wheel — the most romantic hour on the lake, and a thrill for a kid to ride low and fast over the water.</p>
-        <div class="tag"><b>From</b> · Bellagio or Varenna · ~1 h</div>
+        <h4>A skippered boat to the Balbianello</h4>
+        <p>Don't fancy driving? Climb aboard a <strong>skippered boat cruise</strong> from Bellagio over to Villa del Balbianello and its film-famous gardens — all the scenic cruising with none of the logistics, and a dedicated child fare.</p>
+        <div class="tag"><b>Book it</b> · <a href="https://www.bellagioboatservice.com/en/tour/villa-del-balbianello-tour-from-bellagio/" target="_blank" rel="noopener">Bellagio Boat Service</a> · from ~€70pp (child fare)</div>
+      </div>
+      <div class="act">
+        <span class="ico">🍫</span>
+        <h4>A Swiss chocolate day-trip</h4>
+        <p>Swap one lake for another: train to <strong>Lugano</strong>, ride a glass-cabin funicular up Monte Brè, then tour the <strong>Alprose chocolate factory</strong> — smell the roasting cocoa and watch the line. Indoors and joyful — a perfect rainy-day rescue.</p>
+        <div class="tag"><b>Plan it</b> · <a href="https://alprose.ch/en/chocolate-experience/" target="_blank" rel="noopener">Alprose</a> (kids CHF 2) + <a href="https://www.lakelugano.ch/en" target="_blank" rel="noopener">Lugano boats/funiculars</a></div>
       </div>
     </div>
     <div class="kidfact reveal" style="margin-top:26px;">
@@ -581,7 +666,7 @@
   <div class="wrap">
     <div class="ch-head reveal">
       <span class="eyebrow">A suggested rhythm</span>
-      <h2>Your <em>three days</em></h2>
+      <h2>Your <em>four days</em></h2>
       <p class="lede">Base in Varenna and let the ferries set the pace — a villa day, a boat day, a funicular day, with swims and gelato in the gaps. Mornings on the water before the day-trippers and the Breva arrive; long golden evenings once they leave.</p>
     </div>
     <ul class="timeline reveal">
